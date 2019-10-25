@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/************************************************************************
+ * Written by Nicholas Mirchandani in October 2019                      *
+ *                                                                      *
+ * The purpose of GameManager.cs is to facilitate interplanetary travel *
+ * and keep track of values that must persist between planets.          *
+ *                                                                      *
+ * Updated by Nicholas Mirchandani on 10/25/19                          *
+ ************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,10 +24,12 @@ public class GameManager : MonoBehaviour {
         PLUTO
     }
 
-    public static GameManager Instance;
-    [SerializeField] private Planet targetPlanet;
+    public static GameManager Instance;     //Reference to GameManager at all times
+    [SerializeField] private Planet targetPlanet;   //Allows us to track and modify target planet to beam to
 
+    //Awake is called when script instance is loaded
     void Awake() {
+        //If this isn't the first instance of GameManager, destroy it.  There must only be one at any given time, accessible through GameManager.Instance
         if(Instance == null) {
             Instance = this;
             DontDestroyOnLoad(this);
@@ -31,6 +41,7 @@ public class GameManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        //Debug Code used to call BeamToPlanet and ReturnToCockpit for now
         if(Input.GetKeyDown(KeyCode.B)) {
             BeamToPlanet();
         }
@@ -77,6 +88,7 @@ public class GameManager : MonoBehaviour {
 
     }
 
+    //Returns to Cockpit
     void ReturnToCockpit() {
         SceneManager.LoadScene("Cockpit");
         Debug.Log("Return to cockpit!");
