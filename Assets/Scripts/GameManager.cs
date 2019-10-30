@@ -5,6 +5,7 @@
  * and keep track of values that must persist between planets.          *
  *                                                                      *
  * Updated by Nicholas Mirchandani on 10/25/19                          *
+ * Updated by Dan Haub on 10/29/19                                      *
  ************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
@@ -12,7 +13,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
-    [System.Serializable] public enum Planet {
+    [System.Serializable]
+    public enum Planet {
         MERCURY,
         VENUS,
         EARTH,
@@ -21,11 +23,17 @@ public class GameManager : MonoBehaviour {
         SATURN,
         URANUS,
         NEPTUNE,
-        PLUTO
+        PLUTO,
+        NONE
     }
 
     public static GameManager Instance;     //Reference to GameManager at all times
     [SerializeField] private Planet targetPlanet;   //Allows us to track and modify target planet to beam to
+    [SerializeField] public Planet currentPlanet;  //Allows us to track which planet is currently loaded
+
+    private float currentGravity; //Allows us to track current gravity
+    private bool gravityEnabled = true; //Allows us to track if gravity is currently enabled
+    private float diffToEarthGravity; //Allows us to track the difference between the current gravity and earth's gravity
 
     //Awake is called when script instance is loaded
     void Awake() {
@@ -37,6 +45,9 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);
         }
 
+        targetPlanet = Planet.NONE;
+        currentPlanet = Planet.NONE;
+        SetGravity();
     }
 
     // Update is called once per frame
@@ -80,32 +91,41 @@ public class GameManager : MonoBehaviour {
 
     //Beams to target planet
     public void BeamToPlanet() {
-        switch (targetPlanet) {
+        switch(targetPlanet) {
             case Planet.MERCURY:
+                currentPlanet = Planet.MERCURY;
                 SceneManager.LoadScene("Mercury");
                 break;
             case Planet.VENUS:
+                currentPlanet = Planet.VENUS;
                 SceneManager.LoadScene("Venus");
                 break;
             case Planet.EARTH:
+                currentPlanet = Planet.EARTH;
                 SceneManager.LoadScene("Earth");
                 break;
             case Planet.MARS:
+                currentPlanet = Planet.MARS;
                 SceneManager.LoadScene("Mars");
                 break;
             case Planet.JUPITER:
+                currentPlanet = Planet.JUPITER;
                 SceneManager.LoadScene("Jupiter");
                 break;
             case Planet.SATURN:
+                currentPlanet = Planet.SATURN;
                 SceneManager.LoadScene("Saturn");
                 break;
             case Planet.URANUS:
+                currentPlanet = Planet.URANUS;
                 SceneManager.LoadScene("Uranus");
                 break;
             case Planet.NEPTUNE:
+                currentPlanet = Planet.NEPTUNE;
                 SceneManager.LoadScene("Neptune");
                 break;
             case Planet.PLUTO:
+                currentPlanet = Planet.PLUTO;
                 SceneManager.LoadScene("Pluto");
                 break;
             default:
@@ -117,6 +137,61 @@ public class GameManager : MonoBehaviour {
 
     //Returns to Cockpit
     public void ReturnToCockpit() {
+        currentPlanet = Planet.NONE;
+
         SceneManager.LoadScene("Cockpit");
+    }
+
+    //Sets current gravity based on current planet
+    //Gravity values obtained from https://www.smartconversion.com/otherInfo/gravity_of_planets_and_the_sun.aspx
+    public void SetGravity() {
+        if(currentPlanet.Equals(Planet.MERCURY)) {
+            Physics.gravity = new Vector3(0, -3.7F, 0);
+        } else if(Instance.currentPlanet.Equals(Planet.VENUS)) {
+            Physics.gravity = new Vector3(0, -8.87F, 0);
+        } else if(currentPlanet.Equals(Planet.EARTH)) {
+            Physics.gravity = new Vector3(0, -9.798F, 0);
+        } else if(currentPlanet.Equals(Planet.MARS)) {
+            Physics.gravity = new Vector3(0, -3.71F, 0);
+        } else if(currentPlanet.Equals(Planet.JUPITER)) {
+            Physics.gravity = new Vector3(0, -24.92F, 0);
+        } else if(currentPlanet.Equals(Planet.SATURN)) {
+            Physics.gravity = new Vector3(0, -10.44F, 0);
+        } else if(currentPlanet.Equals(Planet.URANUS)) {
+            Physics.gravity = new Vector3(0, -8.87F, 0);
+        } else if(currentPlanet.Equals(Planet.NEPTUNE)) {
+            Physics.gravity = new Vector3(0, -11.15F, 0);
+        } else if(currentPlanet.Equals(Planet.PLUTO)) {
+            Physics.gravity = new Vector3(0, -0.58F, 0);
+        } else {
+            Physics.gravity = new Vector3(0, -9.798F, 0);
+        }
+
+        currentGravity = Physics.gravity.y;
+        calcDiffToEarthGravity();
+        Debug.Log(currentGravity);
+        Debug.Log(getDiffToEarthGravity());
+    }
+
+    //toggles gravity
+    public void ToggleGravity() {
+        Debug.Log("pressed");
+        if(gravityEnabled) {
+            Physics.gravity = new Vector3(0, 0, 0);
+        }
+        if(!gravityEnabled) {
+            Physics.gravity = new Vector3(0, currentGravity, 0);
+        }
+        gravityEnabled = !gravityEnabled;
+    }
+
+    //calculates difference between current gravity and Earth's gravity
+    private void calcDiffToEarthGravity() {
+        diffToEarthGravity = (-9.798F - currentGravity);
+    }
+
+    //accessor for diffToEarthGravity
+    public float getDiffToEarthGravity() {
+        return diffToEarthGravity;
     }
 }
