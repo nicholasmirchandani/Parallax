@@ -46,5 +46,10 @@ public class VRButton : MonoBehaviour {
             button.transform.localPosition = new Vector3(0f, maxYPos, 0f);
         }
 
+        if (button.transform.localPosition.y < minYPos)
+        {
+            button.transform.localPosition = new Vector3(0f, minYPos, 0f);
+        }
+
     }
 }

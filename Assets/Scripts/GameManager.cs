@@ -12,7 +12,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
-    public enum Planet {
+    [System.Serializable] public enum Planet {
         MERCURY,
         VENUS,
         EARTH,
@@ -50,8 +50,36 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    //Mutator for target planet
+    public void SetTargetPlanet(string planetName) {
+        Planet planet = Planet.MERCURY;
+        //Note: Using String instead of enum since Unity Events does not support enum parameters.  As such, input must be parsed
+        if(planetName.Equals("Mercury")) {
+            planet = Planet.MERCURY;
+        } else if(planetName.Equals("Venus")) {
+            planet = Planet.VENUS;
+        } else if(planetName.Equals("Earth")) {
+            planet = Planet.EARTH;
+        } else if(planetName.Equals("Mars")) {
+            planet = Planet.MARS;
+        } else if(planetName.Equals("Jupiter")) {
+            planet = Planet.JUPITER;
+        } else if(planetName.Equals("Saturn")) {
+            planet = Planet.SATURN;
+        } else if(planetName.Equals("Uranus")) {
+            planet = Planet.URANUS;
+        } else if(planetName.Equals("Neptune")) {
+            planet = Planet.NEPTUNE;
+        } else if(planetName.Equals("Pluto")) {
+            planet = Planet.PLUTO;
+        } else {
+            Debug.Log("NOTE: Unrecognized string '" + planetName + "' passed to SetTargetPlanet.  Defaulting to Mercury");
+        }
+        targetPlanet = planet;
+    }
+
     //Beams to target planet
-    void BeamToPlanet() {
+    public void BeamToPlanet() {
         Debug.Log("Beam to " + targetPlanet);
         switch (targetPlanet) {
             case Planet.MERCURY:
@@ -89,7 +117,7 @@ public class GameManager : MonoBehaviour {
     }
 
     //Returns to Cockpit
-    void ReturnToCockpit() {
+    public void ReturnToCockpit() {
         SceneManager.LoadScene("Cockpit");
         Debug.Log("Return to cockpit!");
     }
