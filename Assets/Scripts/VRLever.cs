@@ -29,7 +29,6 @@ public class VRLever : MonoBehaviour {
 
     //Runs when lever is fully rotated towards its maximum angle
     void OnMaxAngleReached(object sender, RotateTransformGrabAttachEventArgs e) {
-        Debug.Log("Max Angle Reached");
         //Ensures our MaxAngleReached UnityEvent is only called once per lever flip
         GetComponent<VRTK_RotateTransformGrabAttach>().MaxAngleReached -= OnMaxAngleReached;
         maxEnabled = false;
@@ -42,7 +41,6 @@ public class VRLever : MonoBehaviour {
 
     //Runs when lever is fully rotated towards its minimum angle
     void OnMinAngleReached(object sender, RotateTransformGrabAttachEventArgs e) {
-        Debug.Log("Min Angle reached");
         //Ensures our MinAngleReached UnityEvent is only called once per lever flip
         GetComponent<VRTK_RotateTransformGrabAttach>().MinAngleReached -= OnMinAngleReached;
         minEnabled = false;
