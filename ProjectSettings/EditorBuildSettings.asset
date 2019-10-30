@@ -10,29 +10,29 @@ EditorBuildSettings:
     guid: ae8df9d4d968be2498479b3de76e05fa
   - enabled: 1
     path: Assets/Scenes/Mercury.unity
-    guid: 213dca7e3374bcd41bc0343c90fcb7e2
+    guid: b442af498c4d4814cbcc8d0eb837a1fb
   - enabled: 1
     path: Assets/Scenes/Venus.unity
-    guid: 8b070717a16a4724d8ad04ce735d0458
+    guid: 4487f55edd01f1541950f97a407390a5
   - enabled: 1
     path: Assets/Scenes/Earth.unity
     guid: ccf6b800f42805b4ab94d1a36aa0ca0a
   - enabled: 1
     path: Assets/Scenes/Mars.unity
-    guid: 9aaaa0f05a1fcf646a83686f24ceab15
+    guid: 61adf8023b576724f9c0d5596952d323
   - enabled: 1
     path: Assets/Scenes/Jupiter.unity
-    guid: b78fc328aad318543a1f51fb37f6f243
+    guid: 3266c0265440f2441b60effc56d860cc
   - enabled: 1
     path: Assets/Scenes/Saturn.unity
-    guid: 9a0c0498d91bb814f9a78b441461e151
+    guid: 7f5a2fcb6770caa47a0f259177bd8818
   - enabled: 1
     path: Assets/Scenes/Uranus.unity
-    guid: 1fb9d4bcfb7286e4d83eafe054ab843b
+    guid: 59fea57c5845dd742bd318ec3ad26297
   - enabled: 1
     path: Assets/Scenes/Neptune.unity
-    guid: 9b80b5dcaa0af354491f199a9f1a7063
+    guid: ee2d6fcf176ac014099a929f734b454e
   - enabled: 1
     path: Assets/Scenes/Pluto.unity
-    guid: f6329074851bcbb41947d069dd9715f6
+    guid: 921b48fc9093add4781a01ad9b080e2b
   m_configObjects: {}
