@@ -1,7 +1,7 @@
 ﻿/************************************************************************
  * Written by Nicholas Mirchandani in October 2019                      *
  *                                                                      *
- * The purpose of PlanetManager.cs is to call GameManager functions.    *
+ * The purpose of CockpitManager.cs is to call GameManager functions.   *
  * Can't use GameManager for calls directly since UnityEvents require a *
  * GameObject in the scene for function calls, and since GameManager    *
  * floats between scenes you can't reference it in the inspector in     *
@@ -13,9 +13,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlanetManager : MonoBehaviour
+public class CockpitManager : MonoBehaviour
 {
-    public void ReturnToCockpit() {
-        GameManager.Instance.ReturnToCockpit();
+    //Mutator for target planet
+    public void SetTargetPlanet(string planetName)
+    {
+        GameManager.Instance.SetTargetPlanet(planetName);
+    }
+
+    //Beams to target planet
+    public void BeamToPlanet()
+    {
+        GameManager.Instance.BeamToPlanet();
     }
 }
