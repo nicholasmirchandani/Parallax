@@ -1,8 +1,9 @@
 ﻿/************************************************************************
  * Written by Nicholas Mirchandani in October 2019                      *
  *                                                                      *
- * The purpose of GameManager.cs is to facilitate interplanetary travel *
- * and keep track of values that must persist between planets.          *
+ * The purpose of GameManager.cs is to facilitate interplanetary travel,*
+ * keep track of values that must persist between planets, and maintain *
+ * directly modify the Physics.gravity vector                           *
  *                                                                      *
  * Updated by Nicholas Mirchandani on 10/25/19                          *
  * Updated by Dan Haub on 10/29/19                                      *
@@ -142,37 +143,23 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene("Cockpit");
     }
 
-    //Sets current gravity based on current planet
-    //Gravity values obtained from https://www.smartconversion.com/otherInfo/gravity_of_planets_and_the_sun.aspx
-    public void SetGravity() {
-        if(currentPlanet.Equals(Planet.MERCURY)) {
-            Physics.gravity = new Vector3(0, -3.7F, 0);
-        } else if(Instance.currentPlanet.Equals(Planet.VENUS)) {
-            Physics.gravity = new Vector3(0, -8.87F, 0);
-        } else if(currentPlanet.Equals(Planet.EARTH)) {
-            Physics.gravity = new Vector3(0, -9.798F, 0);
-        } else if(currentPlanet.Equals(Planet.MARS)) {
-            Physics.gravity = new Vector3(0, -3.71F, 0);
-        } else if(currentPlanet.Equals(Planet.JUPITER)) {
-            Physics.gravity = new Vector3(0, -24.92F, 0);
-        } else if(currentPlanet.Equals(Planet.SATURN)) {
-            Physics.gravity = new Vector3(0, -10.44F, 0);
-        } else if(currentPlanet.Equals(Planet.URANUS)) {
-            Physics.gravity = new Vector3(0, -8.87F, 0);
-        } else if(currentPlanet.Equals(Planet.NEPTUNE)) {
-            Physics.gravity = new Vector3(0, -11.15F, 0);
-        } else if(currentPlanet.Equals(Planet.PLUTO)) {
-            Physics.gravity = new Vector3(0, -0.58F, 0);
-        } else {
-            Physics.gravity = new Vector3(0, -9.798F, 0);
-        }
+    //Sets current gravity based to passed force value
+    //Note: newGravityForce represents the DOWNWARD force; pass positive values
+    public void SetGravity(float newGravityForce) {
+        Physics.gravity = new Vector3(0, -newGravityForce, 0);
 
-        currentGravity = Physics.gravity.y;
+        currentGravity = -newGravityForce;
         calcDiffToEarthGravity();
         Debug.Log(currentGravity);
         Debug.Log(getDiffToEarthGravity());
     }
 
+    //Sets gravity to Earth's gravity
+    public void SetGravity() {
+        SetGravity(9.798F);
+    }
+
+    //TODO: Make sure objects in zero gravity still conserve momentum
     //toggles gravity
     public void ToggleGravity() {
         Debug.Log("pressed");

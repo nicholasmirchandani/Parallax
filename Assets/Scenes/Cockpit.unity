@@ -1786,7 +1786,7 @@ GameObject:
   - component: {fileID: 391485737020307949}
   - component: {fileID: 391485737020307946}
   m_Layer: 0
-  m_Name: Debug_Button
+  m_Name: GravityToggleButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
