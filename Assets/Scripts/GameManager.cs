@@ -80,7 +80,6 @@ public class GameManager : MonoBehaviour {
 
     //Beams to target planet
     public void BeamToPlanet() {
-        Debug.Log("Beam to " + targetPlanet);
         switch (targetPlanet) {
             case Planet.MERCURY:
                 SceneManager.LoadScene("Mercury");
@@ -119,6 +118,5 @@ public class GameManager : MonoBehaviour {
     //Returns to Cockpit
     public void ReturnToCockpit() {
         SceneManager.LoadScene("Cockpit");
-        Debug.Log("Return to cockpit!");
     }
 }
