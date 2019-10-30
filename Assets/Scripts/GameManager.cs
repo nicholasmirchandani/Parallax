@@ -32,9 +32,9 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private Planet targetPlanet;   //Allows us to track and modify target planet to beam to
     [SerializeField] public Planet currentPlanet;  //Allows us to track which planet is currently loaded
 
-    private float currentGravity; //Allows us to track current gravity
-    private bool gravityEnabled = true; //Allows us to track if gravity is currently enabled
-    private float diffToEarthGravity; //Allows us to track the difference between the current gravity and earth's gravity
+    [SerializeField] private float currentGravity; //Allows us to track current gravity
+    [SerializeField] private bool gravityEnabled = true; //Allows us to track if gravity is currently enabled
+    [SerializeField] private float diffToEarthGravity; //Allows us to track the difference between the current gravity and earth's gravity
 
     //Awake is called when script instance is loaded
     void Awake() {
