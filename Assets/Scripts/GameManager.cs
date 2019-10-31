@@ -144,11 +144,11 @@ public class GameManager : MonoBehaviour {
     }
 
     //Sets current gravity based to passed force value
-    //Note: newGravityForce represents the DOWNWARD force; pass positive values
+    //Note: Only changes gravity in Y direction
     public void SetGravity(float newGravityForce) {
-        Physics.gravity = new Vector3(0, -newGravityForce, 0);
+        Physics.gravity = new Vector3(0, newGravityForce, 0);
 
-        currentGravity = -newGravityForce;
+        currentGravity = newGravityForce;
         calcDiffToEarthGravity();
         Debug.Log(currentGravity);
         Debug.Log(getDiffToEarthGravity());

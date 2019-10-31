@@ -1020,6 +1020,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b394aa68a06aa04aa81a513e1785c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPlanet: 0
+  planetGravity: -10.44
 --- !u!1 &787103651
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,6 +16,7 @@ using UnityEngine;
 
 public class PlanetManager : MonoBehaviour {
     public GameManager.Planet currentPlanet;
+    [SerializeField] private float planetGravity;
 
     //runs when new planet scene is opened
     public void Awake() {
@@ -32,6 +33,7 @@ public class PlanetManager : MonoBehaviour {
     private void SetGravity() {
         float newGravityForce;
 
+        /*
         //Gravity values obtained from https://www.smartconversion.com/otherInfo/gravity_of_planets_and_the_sun.aspx
         if(currentPlanet.Equals(GameManager.Planet.MERCURY)) {
             newGravityForce = 3.7F;
@@ -53,9 +55,9 @@ public class PlanetManager : MonoBehaviour {
             newGravityForce = 0.58F;
         } else {
             newGravityForce = 9.798F;
-        }
+        } */
 
-        GameManager.Instance.SetGravity(newGravityForce);
+        GameManager.Instance.SetGravity(planetGravity);
     }
 }
 
