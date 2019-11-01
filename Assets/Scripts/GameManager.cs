@@ -6,7 +6,7 @@
  * directly modify the Physics.gravity vector                           *
  *                                                                      *
  * Updated by Nicholas Mirchandani on 10/25/19                          *
- * Updated by Dan Haub on 10/29/19                                      *
+ * Updated by Dan Haub on 11/1/19                                       *
  ************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
@@ -30,11 +30,9 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager Instance;     //Reference to GameManager at all times
     [SerializeField] private Planet targetPlanet;   //Allows us to track and modify target planet to beam to
-    [SerializeField] public Planet currentPlanet;  //Allows us to track which planet is currently loaded
 
     [SerializeField] private float currentGravity; //Allows us to track current gravity
     [SerializeField] private bool gravityEnabled = true; //Allows us to track if gravity is currently enabled
-    [SerializeField] private float diffToEarthGravity; //Allows us to track the difference between the current gravity and earth's gravity
 
     //Awake is called when script instance is loaded
     void Awake() {
@@ -47,7 +45,6 @@ public class GameManager : MonoBehaviour {
         }
 
         targetPlanet = Planet.NONE;
-        currentPlanet = Planet.NONE;
         SetGravity();
     }
 
@@ -94,52 +91,40 @@ public class GameManager : MonoBehaviour {
     public void BeamToPlanet() {
         switch(targetPlanet) {
             case Planet.MERCURY:
-                currentPlanet = Planet.MERCURY;
                 SceneManager.LoadScene("Mercury");
                 break;
             case Planet.VENUS:
-                currentPlanet = Planet.VENUS;
                 SceneManager.LoadScene("Venus");
                 break;
             case Planet.EARTH:
-                currentPlanet = Planet.EARTH;
                 SceneManager.LoadScene("Earth");
                 break;
             case Planet.MARS:
-                currentPlanet = Planet.MARS;
                 SceneManager.LoadScene("Mars");
                 break;
             case Planet.JUPITER:
-                currentPlanet = Planet.JUPITER;
                 SceneManager.LoadScene("Jupiter");
                 break;
             case Planet.SATURN:
-                currentPlanet = Planet.SATURN;
                 SceneManager.LoadScene("Saturn");
                 break;
             case Planet.URANUS:
-                currentPlanet = Planet.URANUS;
                 SceneManager.LoadScene("Uranus");
                 break;
             case Planet.NEPTUNE:
-                currentPlanet = Planet.NEPTUNE;
                 SceneManager.LoadScene("Neptune");
                 break;
             case Planet.PLUTO:
-                currentPlanet = Planet.PLUTO;
                 SceneManager.LoadScene("Pluto");
                 break;
             default:
                 Debug.Log("ERROR: UNKNOWN PLANET TO BEAM TO");
                 break;
         }
-
     }
 
     //Returns to Cockpit
     public void ReturnToCockpit() {
-        currentPlanet = Planet.NONE;
-
         SceneManager.LoadScene("Cockpit");
     }
 
@@ -147,11 +132,7 @@ public class GameManager : MonoBehaviour {
     //Note: Only changes gravity in Y direction
     public void SetGravity(float newGravityForce) {
         Physics.gravity = new Vector3(0, newGravityForce, 0);
-
         currentGravity = newGravityForce;
-        calcDiffToEarthGravity();
-        Debug.Log(currentGravity);
-        Debug.Log(getDiffToEarthGravity());
     }
 
     //Sets gravity to Earth's gravity
@@ -160,9 +141,8 @@ public class GameManager : MonoBehaviour {
     }
 
     //TODO: Make sure objects in zero gravity still conserve momentum
-    //toggles gravity
+    //Toggles gravity
     public void ToggleGravity() {
-        Debug.Log("pressed");
         if(gravityEnabled) {
             Physics.gravity = new Vector3(0, 0, 0);
         }
@@ -172,13 +152,8 @@ public class GameManager : MonoBehaviour {
         gravityEnabled = !gravityEnabled;
     }
 
-    //calculates difference between current gravity and Earth's gravity
-    private void calcDiffToEarthGravity() {
-        diffToEarthGravity = (-9.798F - currentGravity);
-    }
-
-    //accessor for diffToEarthGravity
-    public float getDiffToEarthGravity() {
-        return diffToEarthGravity;
+    //Calculates difference to earth gravity
+    public float GetDiffToEarthGravity() {
+        return (-9.798F - currentGravity);
     }
 }
