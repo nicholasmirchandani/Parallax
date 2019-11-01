@@ -156,7 +156,7 @@ public class GameManager : MonoBehaviour {
 
     //Sets gravity to Earth's gravity
     public void SetGravity() {
-        SetGravity(9.798F);
+        SetGravity(-9.798F);
     }
 
     //TODO: Make sure objects in zero gravity still conserve momentum

@@ -1291,6 +1291,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlanet: 0
   currentPlanet: 0
+  currentGravity: 0
+  gravityEnabled: 1
+  diffToEarthGravity: 0
 --- !u!4 &1333568312
 Transform:
   m_ObjectHideFlags: 0
@@ -8019,6 +8022,75 @@ Transform:
   m_Father: {fileID: 9202446441806281538}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2846336344401859442
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2846336345485946306, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_Name
+      value: EarthBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.556
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.399
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.923
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12b48e145b5045347bfc443d5f628b30, type: 3}
 --- !u!23 &3040417931636678155
 MeshRenderer:
   m_ObjectHideFlags: 0
