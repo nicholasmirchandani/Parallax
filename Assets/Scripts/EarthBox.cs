@@ -1,12 +1,12 @@
 ﻿
 /************************************************************************
- * Written by Ryan Millares in October 2019                      *
+ * Written by Ryan Millares in October 2019                             *
  *                                                                      *
  * The purpose of EarthBox.cs is to provide Earth Box functionality     *
- * The Earth Box is to simulate Earth's gravity on other planets,  *
- * GameObject in the scene for function calls, and since GameManager    *
- * floats between scenes you can't reference it in the inspector in     *
- * every scene.                                                         *
+ * The Earth Box is to simulate Earth's gravity on other planets, by    *
+ * Applying a constant force upwards on interactable objects that enter *
+ * In the box that would generate a net downwards force of 9.798F. When *
+ * An object leaves the box, this consant force component is destroyed  *
  *                                                                      *
  * Updated by Ryan Millares on 11/01/19                                 *
  ************************************************************************/
