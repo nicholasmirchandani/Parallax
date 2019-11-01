@@ -4,37 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class EarthBox : MonoBehaviour
-{
-   
-    private ConstantForce cf;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class EarthBox : MonoBehaviour {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        //Debug.Log("enter");
-
-        cf = other.gameObject.AddComponent<ConstantForce>();
+    private void OnTriggerEnter(Collider other) {
+        string colliderName = other.gameObject.name;
+        if (colliderName.Substring(0,13).Equals("[VRTK][AUTOGEN]")) {
+            return;
+        }
+        ConstantForce cf = other.gameObject.AddComponent<ConstantForce>();
         cf.force = new Vector3(0F, GameManager.Instance.getDiffToEarthGravity(), 0F);
-        //cf.force = new Vector3(0F, 18.0F, 0F); //to test if works
 
 
 
     }
-    private void OnTriggerExit(Collider other)
-    {
+    private void OnTriggerExit(Collider other) {
         
+    ConstantForce cf = other.gameObject.GetComponent<ConstantForce>();
+        if (cf == null) {
+            return;
+        }
         Destroy(cf);
-       // Debug.Log("exit");
     }
     
 }
