@@ -1,4 +1,16 @@
-﻿using System.Collections;
+﻿
+/************************************************************************
+ * Written by Ryan Millares in October 2019                      *
+ *                                                                      *
+ * The purpose of EarthBox.cs is to provide Earth Box functionality     *
+ * The Earth Box is to simulate Earth's gravity on other planets,  *
+ * GameObject in the scene for function calls, and since GameManager    *
+ * floats between scenes you can't reference it in the inspector in     *
+ * every scene.                                                         *
+ *                                                                      *
+ * Updated by Ryan Millares on 11/01/19                                 *
+ ************************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,7 +20,7 @@ public class EarthBox : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         string colliderName = other.gameObject.name;
-        if (colliderName.Substring(0,13).Equals("[VRTK][AUTOGEN]")) {
+        if (colliderName.Substring(0,13).Equals("[VRTK][AUTOGEN]")) { //to exclude the controllers from receiving ConstantForce
             return;
         }
         ConstantForce cf = other.gameObject.AddComponent<ConstantForce>();
