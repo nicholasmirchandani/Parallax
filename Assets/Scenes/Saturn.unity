@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 25757584}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -308,7 +308,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &46982667
 MonoBehaviour:
@@ -454,7 +454,7 @@ GameObject:
   - component: {fileID: 99958619}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -758,7 +758,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &227823369
 GameObject:
@@ -776,7 +776,7 @@ GameObject:
   - component: {fileID: 227823375}
   m_Layer: 0
   m_Name: RightController
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -975,7 +975,7 @@ Transform:
   - {fileID: 227823370}
   - {fileID: 1803091383}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &707516943
 GameObject:
@@ -1006,7 +1006,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &707516945
 MonoBehaviour:
@@ -1020,7 +1020,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b394aa68a06aa04aa81a513e1785c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentPlanet: 0
   planetGravity: -10.44
 --- !u!1 &787103651
 GameObject:
@@ -1038,7 +1037,7 @@ GameObject:
   - component: {fileID: 787103657}
   m_Layer: 0
   m_Name: LeftController
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1542,7 +1541,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1803091382
 GameObject:
@@ -1594,6 +1593,75 @@ MonoBehaviour:
   targetListPolicy: {fileID: 0}
   navMeshData: {fileID: 0}
   navMeshLimitDistance: 0
+--- !u!1001 &1820425597
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2846336345485946306, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_Name
+      value: EarthBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.5221701
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3940003
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.9119444
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846336345485946311, guid: 12b48e145b5045347bfc443d5f628b30,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12b48e145b5045347bfc443d5f628b30, type: 3}
 --- !u!1 &1821102313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,7 +1751,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &2026684954
 GameObject:
@@ -1775,7 +1843,7 @@ Transform:
   m_LocalScale: {x: 50, y: 1, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &986363096136562983
 RectTransform:
@@ -2782,7 +2850,7 @@ GameObject:
   - component: {fileID: 1079075765633008753}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2903,7 +2971,7 @@ GameObject:
   - component: {fileID: 1080668843321522125}
   m_Layer: 0
   m_Name: VerticalPlane
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2921,7 +2989,7 @@ GameObject:
   - component: {fileID: 1078618104061895055}
   m_Layer: 0
   m_Name: VerticalPlane
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3150,7 +3218,7 @@ GameObject:
   - component: {fileID: 1078910975381727233}
   m_Layer: 0
   m_Name: Hand
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3329,7 +3397,7 @@ GameObject:
   - component: {fileID: 1078841971183463449}
   m_Layer: 0
   m_Name: Hand
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3367,7 +3435,7 @@ GameObject:
   - component: {fileID: 1078780926193650153}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3442,7 +3510,7 @@ GameObject:
   - component: {fileID: 1078669371550996623}
   m_Layer: 0
   m_Name: HorizontalPlane
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3535,7 +3603,7 @@ GameObject:
   - component: {fileID: 1098504446035162225}
   m_Layer: 0
   m_Name: RightHand
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3604,7 +3672,7 @@ GameObject:
   - component: {fileID: 1055310709247748939}
   m_Layer: 0
   m_Name: Guides
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3622,7 +3690,7 @@ GameObject:
   - component: {fileID: 1080630203376699685}
   m_Layer: 0
   m_Name: HorizontalPlane
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3925,7 +3993,7 @@ GameObject:
   - component: {fileID: 1055061528570001965}
   m_Layer: 0
   m_Name: Guides
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3943,7 +4011,7 @@ GameObject:
   - component: {fileID: 1098514794638243931}
   m_Layer: 0
   m_Name: LeftHand
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
