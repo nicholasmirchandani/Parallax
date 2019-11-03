@@ -153,7 +153,7 @@ public class GameManager : MonoBehaviour {
     }
 
     //Calculates difference to earth gravity
-    public float GetDiffToEarthGravity() {
+    public float CalcDiffToEarthGravity() {
         return (-9.798F - currentGravity);
     }
 }
