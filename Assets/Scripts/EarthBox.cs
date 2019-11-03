@@ -3,10 +3,10 @@
  * Written by Ryan Millares in October 2019                             *
  *                                                                      *
  * The purpose of EarthBox.cs is to provide Earth Box functionality     *
- * The Earth Box is to simulate Earth's gravity on other planets, by    *
- * Applying a constant force upwards on interactable objects that enter *
- * In the box that would generate a net downwards force of 9.798F. When *
- * An object leaves the box, this consant force component is destroyed  *
+ * the Earth Box is to simulate Earth's gravity on other planets, by    *
+ * applying a constant force upwards on interactable objects that enter *
+ * in the box that would generate a net downwards force of 9.798F. When *
+ * an object leaves the box, this consant force component is destroyed  *
  *                                                                      *
  * Updated by Ryan Millares on 11/01/19                                 *
  * Updated by Dan Haub on 11/2/19                                       *
@@ -19,6 +19,7 @@ using System;
 
 public class EarthBox : MonoBehaviour {
 
+    //Runs when an object enters the earth box, adds a constant force
     private void OnTriggerEnter(Collider other) {
         string colliderName = other.gameObject.name;
         if (!((colliderName.Length > 15) && colliderName.Substring(0,15).Equals("[VRTK][AUTOGEN]")) && !(other.gameObject.tag == "Hand")) { //to exclude the controllers from receiving ConstantForce
@@ -28,6 +29,7 @@ public class EarthBox : MonoBehaviour {
         }
     }
 
+    //Runs when an object leaves the earth box, removes the constant force
     private void OnTriggerExit(Collider other) {
         ConstantForce cf = other.gameObject.GetComponent<ConstantForce>();
         if (cf == null) {
