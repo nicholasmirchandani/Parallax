@@ -348,6 +348,237 @@ MonoBehaviour:
   objectHighlighter: {fileID: 46982667}
   touchHighlightColor: {r: 1, g: 0.955009, b: 0, a: 0}
   usingState: 0
+--- !u!4 &47006755 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6799282553278584125, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &54717286
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 787103652}
+    m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Name
+      value: grab
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8906954991570463033, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 090a59a56ad6cfa47b96ac6a12c6f391, type: 2}
+    - target: {fileID: -5657745817702753248, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -5433428196621012451, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -4663234368361302753, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -3542314025133547074, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -3479657881023191652, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -2936982799044020488, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -2738914720874739361, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -2573587940018909039, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -502423877341503495, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -85252246511472425, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881998788266378060, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281820009558525399, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481285763981748164, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3132100050250148911, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3598314257319408061, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3758270603597059293, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764543717837612879, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4038285024134203989, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064537136046763802, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843183489367887018, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052003579016331135, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8719719256707538032, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904012999411260444, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168680939806838487, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 53f38ed624870654ca76c954840815dc, type: 3}
+--- !u!4 &54717287 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &113253504
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,6 +807,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &211825146 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2057317761127872061, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &227823369
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,6 +827,7 @@ GameObject:
   - component: {fileID: 227823374}
   - component: {fileID: 227823373}
   - component: {fileID: 227823375}
+  - component: {fileID: 227823376}
   m_Layer: 0
   m_Name: RightController
   m_TagString: Hand
@@ -608,7 +846,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 533854721}
+  - {fileID: 2043549308}
   m_Father: {fileID: 663217087}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -690,7 +928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64e104da36bd3b04b90c6ae969ac66dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customColliderContainer: {fileID: 0}
+  customColliderContainer: {fileID: 391506254}
 --- !u!114 &227823374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -760,7 +998,323 @@ MonoBehaviour:
   controllerAttachPoint: {fileID: 0}
   controllerEvents: {fileID: 0}
   interactTouch: {fileID: 0}
---- !u!1 &533854720
+--- !u!114 &227823376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227823369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b7c8f5f1a0f45b4e99e3fbcbc5b94f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTriggerPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1110379753}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Grab
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTriggerReleased:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1110379753}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Release
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTriggerTouchStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTriggerTouchEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTriggerHairlineStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTriggerHairlineEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTriggerClicked:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTriggerUnclicked:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTriggerAxisChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGripPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGripReleased:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGripTouchStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGripTouchEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGripHairlineStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGripHairlineEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGripClicked:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGripUnclicked:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGripAxisChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTouchpadPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTouchpadReleased:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTouchpadTouchStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTouchpadTouchEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTouchpadAxisChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnButtonOnePressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnButtonOneReleased:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnButtonOneTouchStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnButtonOneTouchEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnButtonTwoPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnButtonTwoReleased:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnButtonTwoTouchStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnButtonTwoTouchEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnStartMenuPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnStartMenuReleased:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasPointerOn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasPointerOff:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasPointerSet:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasGrabOn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasGrabOff:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasUseOn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasUseOff:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasUIClickOn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasUIClickOff:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasMenuOn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasMenuOff:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnControllerEnabled:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnControllerDisabled:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnControllerIndexChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnControllerModelAvailable:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnControllerVisible:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnControllerHidden:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!1 &242944403 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5843183489367887018, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &242944406
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242944403}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 2916605317068671683, guid: 53f38ed624870654ca76c954840815dc, type: 3}
+--- !u!4 &257154518 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3830055627768321468, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &339390705 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8985917953682413983, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &391506254
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -768,51 +1322,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 533854721}
-  - component: {fileID: 533854724}
-  - component: {fileID: 533854723}
-  - component: {fileID: 533854722}
-  m_Layer: 9
-  m_Name: Cube
-  m_TagString: Hand
+  - component: {fileID: 391506255}
+  - component: {fileID: 391506257}
+  - component: {fileID: 391506256}
+  m_Layer: 0
+  m_Name: VRTK_Collision BOX
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &533854721
+--- !u!4 &391506255
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533854720}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_GameObject: {fileID: 391506254}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 22.881338, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 227823370}
-  m_RootOrder: 0
+  m_Father: {fileID: 2043549308}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &533854722
+--- !u!65 &391506256
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533854720}
+  m_GameObject: {fileID: 391506254}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &533854723
-MeshRenderer:
+  m_Size: {x: 20.852291, y: 22.4, z: 15.857583}
+  m_Center: {x: 1.6494666, y: 8.2, z: 1.7372966}
+--- !u!137 &391506257
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533854720}
+  m_GameObject: {fileID: 391506254}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -823,7 +1376,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 6271573414225017425, guid: 53f38ed624870654ca76c954840815dc, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -844,15 +1397,64 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &533854724
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 2916605317068671683, guid: 53f38ed624870654ca76c954840815dc, type: 3}
+  m_Bones:
+  - {fileID: 479220865}
+  - {fileID: 1593422267}
+  - {fileID: 1984796671}
+  - {fileID: 1311167654}
+  - {fileID: 1438261831}
+  - {fileID: 412960405}
+  - {fileID: 1166153554}
+  - {fileID: 211825146}
+  - {fileID: 47006755}
+  - {fileID: 594739351}
+  - {fileID: 1391894191}
+  - {fileID: 1525348598}
+  - {fileID: 485527016}
+  - {fileID: 1404989584}
+  - {fileID: 1827487540}
+  - {fileID: 2105863604}
+  - {fileID: 1228899515}
+  - {fileID: 1045787328}
+  - {fileID: 1704401017}
+  - {fileID: 506235367}
+  - {fileID: 257154518}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 479220865}
+  m_AABB:
+    m_Center: {x: -20.762825, y: -0.5537653, z: -1.8845358}
+    m_Extent: {x: 21.756748, y: 9.102144, z: 7.500307}
+  m_DirtyAABB: 0
+--- !u!4 &412960405 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -914307143735803065, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533854720}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &560175401
+--- !u!4 &479220865 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8985917953682413983, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &485527016 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9200825595750965900, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &506235367 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -705922016952651867, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &507139584
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -860,51 +1462,52 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 560175402}
-  - component: {fileID: 560175405}
-  - component: {fileID: 560175404}
-  - component: {fileID: 560175403}
-  m_Layer: 9
-  m_Name: Cube
-  m_TagString: Hand
+  - component: {fileID: 507139585}
+  - component: {fileID: 507139587}
+  - component: {fileID: 507139586}
+  - component: {fileID: 507139588}
+  m_Layer: 0
+  m_Name: VRTK_Collision BOX
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &560175402
+--- !u!4 &507139585
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560175401}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_GameObject: {fileID: 507139584}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 22.881338, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 787103652}
-  m_RootOrder: 0
+  m_Father: {fileID: 54717287}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &560175403
-BoxCollider:
+--- !u!64 &507139586
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560175401}
+  m_GameObject: {fileID: 507139584}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &560175404
-MeshRenderer:
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 2916605317068671683, guid: 53f38ed624870654ca76c954840815dc, type: 3}
+--- !u!137 &507139587
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560175401}
+  m_GameObject: {fileID: 507139584}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -915,7 +1518,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 6271573414225017425, guid: 53f38ed624870654ca76c954840815dc, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -936,14 +1539,76 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &560175405
-MeshFilter:
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 2916605317068671683, guid: 53f38ed624870654ca76c954840815dc, type: 3}
+  m_Bones:
+  - {fileID: 339390705}
+  - {fileID: 578253214}
+  - {fileID: 2073870204}
+  - {fileID: 1693814480}
+  - {fileID: 1457389291}
+  - {fileID: 1357036679}
+  - {fileID: 1797587384}
+  - {fileID: 1075923590}
+  - {fileID: 529788540}
+  - {fileID: 709124461}
+  - {fileID: 1100700870}
+  - {fileID: 1040060454}
+  - {fileID: 1736274645}
+  - {fileID: 1832883756}
+  - {fileID: 1010568329}
+  - {fileID: 1170953110}
+  - {fileID: 885777283}
+  - {fileID: 1027739160}
+  - {fileID: 595438761}
+  - {fileID: 1483871162}
+  - {fileID: 1382238314}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 339390705}
+  m_AABB:
+    m_Center: {x: -20.762825, y: -0.5537653, z: -1.8845358}
+    m_Extent: {x: 21.756748, y: 9.102144, z: 7.500307}
+  m_DirtyAABB: 0
+--- !u!65 &507139588
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560175401}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_GameObject: {fileID: 507139584}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20.852291, y: 22.4, z: 15.857583}
+  m_Center: {x: 1.6494666, y: 8.2, z: 1.7372966}
+--- !u!4 &529788540 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6799282553278584125, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &578253214 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8945913077968326295, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &594739351 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3719293718903835443, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &595438761 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7227979396024260250, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &663217086
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,6 +1642,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &709124461 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3719293718903835443, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &787103651
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,6 +1662,7 @@ GameObject:
   - component: {fileID: 787103656}
   - component: {fileID: 787103655}
   - component: {fileID: 787103657}
+  - component: {fileID: 787103658}
   m_Layer: 0
   m_Name: LeftController
   m_TagString: Hand
@@ -1009,7 +1681,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 560175402}
+  - {fileID: 54717287}
   m_Father: {fileID: 663217087}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1091,7 +1763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64e104da36bd3b04b90c6ae969ac66dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customColliderContainer: {fileID: 0}
+  customColliderContainer: {fileID: 507139584}
 --- !u!114 &787103656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1161,6 +1833,296 @@ MonoBehaviour:
   controllerAttachPoint: {fileID: 0}
   controllerEvents: {fileID: 0}
   interactTouch: {fileID: 0}
+--- !u!114 &787103658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787103651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b7c8f5f1a0f45b4e99e3fbcbc5b94f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTriggerPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1116532976}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Grab
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTriggerReleased:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1116532976}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Release
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTriggerTouchStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTriggerTouchEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTriggerHairlineStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTriggerHairlineEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTriggerClicked:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTriggerUnclicked:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTriggerAxisChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGripPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGripReleased:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGripTouchStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGripTouchEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGripHairlineStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGripHairlineEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGripClicked:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGripUnclicked:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGripAxisChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTouchpadPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTouchpadReleased:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTouchpadTouchStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTouchpadTouchEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTouchpadAxisChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnButtonOnePressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnButtonOneReleased:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnButtonOneTouchStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnButtonOneTouchEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnButtonTwoPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnButtonTwoReleased:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnButtonTwoTouchStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnButtonTwoTouchEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnStartMenuPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnStartMenuReleased:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasPointerOn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasPointerOff:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasPointerSet:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasGrabOn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasGrabOff:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasUseOn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasUseOff:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasUIClickOn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasUIClickOff:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasMenuOn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnAliasMenuOff:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnControllerEnabled:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnControllerDisabled:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnControllerIndexChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnControllerModelAvailable:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnControllerVisible:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnControllerHidden:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!4 &885777283 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8121291782125801871, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &955156916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1260,6 +2222,118 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 955156916}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1010568329 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 531652913850859234, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1027739160 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8413884856996893003, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1040060454 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4087082217167089022, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1045787328 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8413884856996893003, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1075923590 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2057317761127872061, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1100700870 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5138836391791325795, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1110379751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1110379752
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110379751}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
+--- !u!95 &1110379753 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1116532974 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1116532975
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116532974}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
+--- !u!95 &1116532976 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1166153554 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3937342766119768462, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1170953110 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3846225606037200818, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1228899515 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8121291782125801871, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1311167654 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7945267138393463593, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1333568310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,6 +2380,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1357036679 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -914307143735803065, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1382238314 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3830055627768321468, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1391894191 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5138836391791325795, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1404989584 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3175345126743336646, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1438261831 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1021087881588032013, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1457389291 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1021087881588032013, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1483871162 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -705922016952651867, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1525348598 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4087082217167089022, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1593422267 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8945913077968326295, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1648440189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1461,6 +2589,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1693814480 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7945267138393463593, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1704401017 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7227979396024260250, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1736274645 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9200825595750965900, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1797587384 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3937342766119768462, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1803091382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,6 +2754,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &1827487540 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 531652913850859234, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1832883756 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3175345126743336646, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1852616262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,6 +2809,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1984796671 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6952386111653332317, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2026684954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,6 +2907,263 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2043549307
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 227823370}
+    m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Name
+      value: grab
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8906954991570463033, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 090a59a56ad6cfa47b96ac6a12c6f391, type: 2}
+    - target: {fileID: -5657745817702753248, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -5433428196621012451, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -4663234368361302753, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -3542314025133547074, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -3479657881023191652, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -2936982799044020488, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -2738914720874739361, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -2573587940018909039, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -502423877341503495, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -85252246511472425, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881998788266378060, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281820009558525399, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481285763981748164, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3132100050250148911, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3598314257319408061, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3758270603597059293, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764543717837612879, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4038285024134203989, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064537136046763802, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843183489367887018, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052003579016331135, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8719719256707538032, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904012999411260444, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168680939806838487, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 53f38ed624870654ca76c954840815dc, type: 3}
+--- !u!4 &2043549308 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2068976364 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5843183489367887018, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &2068976367
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068976364}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 2916605317068671683, guid: 53f38ed624870654ca76c954840815dc, type: 3}
+--- !u!4 &2073870204 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6952386111653332317, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 54717286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2105863604 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3846225606037200818, guid: 53f38ed624870654ca76c954840815dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043549307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &391485737020307946
 MonoBehaviour:
   m_ObjectHideFlags: 0
