@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 25757586}
   - component: {fileID: 25757585}
   - component: {fileID: 25757584}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Hand
   m_Icon: {fileID: 0}
@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 99958621}
   - component: {fileID: 99958620}
   - component: {fileID: 99958619}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Hand
   m_Icon: {fileID: 0}

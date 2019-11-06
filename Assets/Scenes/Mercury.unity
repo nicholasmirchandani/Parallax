@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 25757586}
   - component: {fileID: 25757585}
   - component: {fileID: 25757584}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Hand
   m_Icon: {fileID: 0}
@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 99958621}
   - component: {fileID: 99958620}
   - component: {fileID: 99958619}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Hand
   m_Icon: {fileID: 0}
@@ -1316,6 +1316,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Debug_Button
       objectReference: {fileID: 0}
+    - target: {fileID: 1092883450090923652, guid: 6b37d9fa2f4bf3a43b2926dd4db3ff37,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1092883450090923653, guid: 6b37d9fa2f4bf3a43b2926dd4db3ff37,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1385,6 +1390,21 @@ PrefabInstance:
         type: 3}
       propertyPath: buttonPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946782666017819041, guid: 6b37d9fa2f4bf3a43b2926dd4db3ff37,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363502497444673093, guid: 6b37d9fa2f4bf3a43b2926dd4db3ff37,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016496888426852670, guid: 6b37d9fa2f4bf3a43b2926dd4db3ff37,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b37d9fa2f4bf3a43b2926dd4db3ff37, type: 3}

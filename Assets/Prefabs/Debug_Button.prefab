@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1092883450090923653}
   - component: {fileID: 1092883450090923650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Debug_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 2946782666017819102}
   - component: {fileID: 2946782666017819103}
   - component: {fileID: 2946782666017819040}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 3363502497444673088}
   - component: {fileID: 3363502497444673089}
   - component: {fileID: 3363502497444673091}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpringJointAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 6153762942777577951}
   - component: {fileID: 4461564768620261609}
   - component: {fileID: 1183583691935106809}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Housing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
