@@ -42,11 +42,12 @@ public class VerticalSpring : MonoBehaviour
         }
     }
 
-    // Fixed Update is called once per physics frame, calculates force in eq: F= -k * x
-    // Note: in equation, k is spring constant, F is the force, and x is the distance between
-    // the current Y position and the target Y position
+    // Fixed Update is called once per physics frame, calculates force in eq: F= (-k * x) - (b * v)
+    // Note: in equation, k is spring constant, F is the force, x is the distance between
+    // the current Y position and the target Y position, and v is the velocity
     private void FixedUpdate() {
         float currentYPos = this.gameObject.transform.localPosition.y;
+        //float currentYVelocity = this.gameObject.GetComponent<Rigidbody>().velocity;
 
         float positionDifference = currentYPos - targetYPos;
         float newForceStrength = -(springConstant) * positionDifference;
