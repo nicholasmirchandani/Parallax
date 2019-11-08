@@ -371,10 +371,60 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904012999411260444, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904012999411260444, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: -502423877341503495, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -502423877341503495, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843183489367887018, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843183489367887018, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764543717837612879, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764543717837612879, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: -8906954991570463033, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8906954991570463033, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
@@ -386,15 +436,30 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: -5657745817702753248, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: -5433428196621012451, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -5433428196621012451, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: -4663234368361302753, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -4663234368361302753, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
-      propertyPath: m_Layer
-      value: 9
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
@@ -404,7 +469,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
@@ -471,105 +536,170 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: -3542314025133547074, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: -3479657881023191652, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -3479657881023191652, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: -2936982799044020488, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: -2936982799044020488, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: -2738914720874739361, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -2738914720874739361, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: -2573587940018909039, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: -502423877341503495, guid: 53f38ed624870654ca76c954840815dc,
+    - target: {fileID: -2573587940018909039, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
-      propertyPath: m_Layer
-      value: 9
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: -85252246511472425, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: -85252246511472425, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: 1881998788266378060, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881998788266378060, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: 2281820009558525399, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 2281820009558525399, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: 2481285763981748164, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481285763981748164, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: 3132100050250148911, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 3132100050250148911, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: 3598314257319408061, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3598314257319408061, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: 3758270603597059293, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 3764543717837612879, guid: 53f38ed624870654ca76c954840815dc,
+    - target: {fileID: 3758270603597059293, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
-      propertyPath: m_Layer
-      value: 9
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: 4038285024134203989, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 4038285024134203989, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: 4064537136046763802, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 5843183489367887018, guid: 53f38ed624870654ca76c954840815dc,
+    - target: {fileID: 4064537136046763802, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
-      propertyPath: m_Layer
-      value: 9
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: 6052003579016331135, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 6052003579016331135, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: 8719719256707538032, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 8904012999411260444, guid: 53f38ed624870654ca76c954840815dc,
+    - target: {fileID: 8719719256707538032, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168680939806838487, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 9168680939806838487, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
-      propertyPath: m_Layer
-      value: 9
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53f38ed624870654ca76c954840815dc, type: 3}
@@ -1327,7 +1457,7 @@ GameObject:
   - component: {fileID: 391506256}
   m_Layer: 0
   m_Name: VRTK_Collision BOX
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1468,7 +1598,7 @@ GameObject:
   - component: {fileID: 507139588}
   m_Layer: 0
   m_Name: VRTK_Collision BOX
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2177,6 +2307,22 @@ PrefabInstance:
     - target: {fileID: 420908, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417306, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417306, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
+      propertyPath: createComponents
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417168, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417168, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
+      propertyPath: createComponents
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
@@ -2924,10 +3070,60 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904012999411260444, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904012999411260444, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: -502423877341503495, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -502423877341503495, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843183489367887018, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843183489367887018, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764543717837612879, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764543717837612879, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: -8906954991570463033, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8906954991570463033, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
@@ -2939,15 +3135,30 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: -5657745817702753248, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: -5433428196621012451, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -5433428196621012451, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: -4663234368361302753, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -4663234368361302753, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
-      propertyPath: m_Layer
-      value: 9
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
@@ -2957,7 +3168,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
@@ -3024,105 +3235,170 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: -3542314025133547074, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: -3479657881023191652, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -3479657881023191652, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: -2936982799044020488, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: -2936982799044020488, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: -2738914720874739361, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -2738914720874739361, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: -2573587940018909039, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: -502423877341503495, guid: 53f38ed624870654ca76c954840815dc,
+    - target: {fileID: -2573587940018909039, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
-      propertyPath: m_Layer
-      value: 9
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: -85252246511472425, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: -85252246511472425, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: 1881998788266378060, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881998788266378060, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: 2281820009558525399, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 2281820009558525399, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: 2481285763981748164, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481285763981748164, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: 3132100050250148911, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 3132100050250148911, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: 3598314257319408061, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3598314257319408061, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: 3758270603597059293, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 3764543717837612879, guid: 53f38ed624870654ca76c954840815dc,
+    - target: {fileID: 3758270603597059293, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
-      propertyPath: m_Layer
-      value: 9
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: 4038285024134203989, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 4038285024134203989, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: 4064537136046763802, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 5843183489367887018, guid: 53f38ed624870654ca76c954840815dc,
+    - target: {fileID: 4064537136046763802, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
-      propertyPath: m_Layer
-      value: 9
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: 6052003579016331135, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 6052003579016331135, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: 8719719256707538032, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 8904012999411260444, guid: 53f38ed624870654ca76c954840815dc,
+    - target: {fileID: 8719719256707538032, guid: 53f38ed624870654ca76c954840815dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168680939806838487, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 9168680939806838487, guid: 53f38ed624870654ca76c954840815dc,
         type: 3}
-      propertyPath: m_Layer
-      value: 9
+      propertyPath: m_TagString
+      value: Hand
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53f38ed624870654ca76c954840815dc, type: 3}
