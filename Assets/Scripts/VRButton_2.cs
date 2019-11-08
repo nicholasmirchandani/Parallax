@@ -1,11 +1,11 @@
 ﻿/************************************************************************
- * Written by Dan Haub in October 2019                                  *
+ * Written by Dan Haub in November 2019 (edited from VRButton_1.cs)     *
  *                                                                      *
- * The purpose of VRButton.cs is to serve as a basic button setup       *
+ * The purpose of VRButton_2.cs is to serve as a basic button setup     *
  * script to be used on any button in the scene.  It's meant to be as   *
  * simple as possible to run quickly and be intuitive.                  *
  *                                                                      *
- * Edited by Nicholas Mirchandani on 10/27/19                           *
+ *                                                                      *
  ************************************************************************/
 
 using UnityEngine;
@@ -19,8 +19,6 @@ public class VRButton_2 : MonoBehaviour {
     public float highPosTrigger;
 
     [SerializeField] private bool buttonPressed = false;
-
-    //TODO: Implement Custom Spring implementation to allow use of FixedUpdate instead of Update.  Currently, Spring Joints run after FixedUpdate code, nullifying any physics programming we'd do there.
 
     //Runs once per game frame
     private void Update() {

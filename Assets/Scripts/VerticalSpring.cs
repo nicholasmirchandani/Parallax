@@ -1,4 +1,15 @@
-﻿using System.Collections;
+﻿/************************************************************************
+ * Written by Dan Haub in November 2019                                 *
+ *                                                                      *
+ * The purpose of VerticalSpring.cs is to simulate the movement of      *
+ * a dampened spring that only moves in one direction. It allows the    *
+ * user to specify vertical bounds in local space and the spring and    *
+ * damper constants of the simulated spring.                            *
+ *                                                                      *
+ *                                                                      *
+ ************************************************************************/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

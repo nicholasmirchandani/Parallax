@@ -1,7 +1,7 @@
 ﻿/************************************************************************
  * Written by Dan Haub in October 2019                                  *
  *                                                                      *
- * The purpose of VRButton.cs is to serve as a basic button setup       *
+ * The purpose of VRButton_1.cs is to serve as a basic button setup       *
  * script to be used on any button in the scene.  It's meant to be as   *
  * simple as possible to run quickly and be intuitive.                  *
  *                                                                      *
