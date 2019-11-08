@@ -11,14 +11,12 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class VRButton : MonoBehaviour {
+public class VRButton_2 : MonoBehaviour {
     public UnityEvent buttonPress;
     public UnityEvent buttonRelease;
     public GameObject button;
     public float lowPosTrigger;
     public float highPosTrigger;
-    public float minYPos;
-    public float maxYPos;
 
     [SerializeField] private bool buttonPressed = false;
 
@@ -26,11 +24,6 @@ public class VRButton : MonoBehaviour {
 
     //Runs once per game frame
     private void Update() {
-        //Disallows x-z movement
-        if (button.transform.localPosition.x != 0.0f || button.transform.localPosition.z != 0.0f) {
-            button.transform.localPosition = new Vector3(0f, button.transform.localPosition.y, 0f);
-        }
-
         //Notes Button High/Low value
         if (!buttonPressed && button.transform.localPosition.y < lowPosTrigger) {
             buttonPressed = true;
@@ -40,16 +33,5 @@ public class VRButton : MonoBehaviour {
             buttonPressed = false;
             buttonRelease.Invoke();
         }
-
-        //Constrains y movement to bounds set in editor
-        if (button.transform.localPosition.y > maxYPos) {
-            button.transform.localPosition = new Vector3(0f, maxYPos, 0f);
-        }
-
-        if (button.transform.localPosition.y < minYPos)
-        {
-            button.transform.localPosition = new Vector3(0f, minYPos, 0f);
-        }
-
     }
 }

@@ -17,42 +17,61 @@ public class VerticalSpring : MonoBehaviour
         thisRigidBody = this.gameObject.GetComponent<Rigidbody>();
     }
 
-    // Update runs once per frame,
+    // Update runs once per frame, makes sure the object on the spring doesn't move laterally or beyond the bounds of the spring
     private void Update() {
+        //Allows us to only set the location of the game object when necessary
         bool resetPosXZ = false;
         bool resetPosY = false;
 
-        float oldYPos = this.gameObject.transform.localPosition.y;
-        float newYPos = oldYPos;
+        //Stores the current Y position and the new Y position to be calculated, by default they are the same
+        float currentYPos = this.gameObject.transform.localPosition.y;
+        float newYPos = currentYPos;
 
+        //Checks to see if the object has moved laterally
         if(this.gameObject.transform.localPosition.x != 0F || this.gameObject.transform.localPosition.z != 0F) {
-            resetPosXZ = true;
+           resetPosXZ = true;
         }
 
-        if(oldYPos < minYPos) {
+        //Checks to see if the object has moved beyond the bounds of the spring
+        if(currentYPos < minYPos) {
             resetPosY = true;
             newYPos = minYPos;
-        } else if (oldYPos > maxYPos) {
+        } else if (currentYPos > maxYPos) {
             resetPosY = true;
             newYPos = maxYPos;
         }
 
+        //Resets position of object if necessary
         if(resetPosY || resetPosXZ) {
             this.gameObject.transform.localPosition = new Vector3(0F, newYPos, 0F);
         }
     }
-
+    
     // Fixed Update is called once per physics frame, calculates force in eq: F= (-k * x) - (b * v)
     // Note: in equation, k is spring constant, F is the force, x is the distance between
     // the current Y position and the target Y position, and v is the velocity
     private void FixedUpdate() {
-        float currentYPos = this.gameObject.transform.localPosition.y;
-        //float currentYVelocity = this.gameObject.GetComponent<Rigidbody>().velocity;
+        float scaleMultiplier = this.gameObject.transform.lossyScale.y; // Takes Y scale of parent into account when calculating physics
 
+        float currentYPos = this.gameObject.transform.localPosition.y; 
+
+        float currentVelocity = 0;
+
+        //Calculates the magnitude and direction of the velocity of the object on the spring
+        if(this.gameObject.GetComponent<Rigidbody>().velocity.normalized == this.gameObject.transform.up) {
+            currentVelocity = this.gameObject.GetComponent<Rigidbody>().velocity.magnitude;
+        } else if(this.gameObject.GetComponent<Rigidbody>().velocity.normalized == -this.gameObject.transform.up) {
+            currentVelocity = -this.gameObject.GetComponent<Rigidbody>().velocity.magnitude;
+        }
+
+        //Calculates distance to the target position
         float positionDifference = currentYPos - targetYPos;
-        float newForceStrength = -(springConstant) * positionDifference;
 
-        Debug.Log("Force Applied: " + newForceStrength.ToString() + ", Position Difference: " + positionDifference.ToString());
-        this.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0F, newForceStrength, 0F));
+        //Calculates force necessary to model the spring
+        float newForceStrength = (-(springConstant) * positionDifference) - (damper * currentVelocity);
+
+        //Applies the force to the game object
+        this.gameObject.GetComponent<Rigidbody>().AddForce(newForceStrength * this.gameObject.transform.up * scaleMultiplier);
     }
+    
 }
