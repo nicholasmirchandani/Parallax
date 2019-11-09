@@ -3233,9 +3233,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c23e53028fd12438cb67180a558975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popup: {fileID: 0}
+  popup: {fileID: 6067326267316146551, guid: e0639e73488557144b659c82a1c60b12, type: 3}
   interacts: []
-  proximity: 10
+  range: 0.99
+  proximity: 4
 --- !u!1 &1056182225663598687
 GameObject:
   m_ObjectHideFlags: 0

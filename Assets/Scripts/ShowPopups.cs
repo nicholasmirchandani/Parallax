@@ -16,15 +16,14 @@ public class ShowPopups : MonoBehaviour {
     //double xpos, ypos, zpos, xrot, yrot, zrot;
     public GameObject popup;
     public GameObject[] interacts;
+    private GameObject store;
     private Vector3 dir;
     private float dotProd;
     private Vector3 adjustPos = new Vector3(0F, 0.5F, 0F);
     private Vector3 pos;
-    private Vector3 currentRot;
     public float range;
     private GameObject clone;
-    private Vector3 newRot;
-    private float x, y, z;
+    public float proximity;
     
 
     // Start is called before the first frame update
@@ -57,8 +56,11 @@ public class ShowPopups : MonoBehaviour {
     }
     void Popup() {
 
-        if (CheckInView()) { 
-            ShowOver();//show the popup if looking at/near the object
+        if (CheckInView() && CheckProximity()) { 
+            if(clone == null) {
+                ShowOver();
+            }
+            //show the popup if looking at/near the object
         }
         else {
             if(clone != null){
@@ -68,24 +70,24 @@ public class ShowPopups : MonoBehaviour {
         }
     }
     void ShowOver() {
-        float newX, newY, newZ;
         pos += adjustPos;
-        x = transform.forward.x;
-        y = transform.forward.y;
-        z = transform.forward.z;
-        newX = (Mathf.Atan2(Mathf.Sqrt(Mathf.Pow(y, 2) + Mathf.Pow(z, 2)), x))*180 / Mathf.PI;
-        newY = (Mathf.Atan2(Mathf.Sqrt(Mathf.Pow(x, 2) + Mathf.Pow(z, 2)), y))*180 / Mathf.PI;
-        newZ = (Mathf.Atan2(Mathf.Sqrt(Mathf.Pow(y, 2) + Mathf.Pow(x, 2)), z))*180 / Mathf.PI;
-        newRot = new Vector3(newX - 180F, newY - 90F, 0);
-        Debug.Log(newX);
-        Debug.Log(newY);
-        Debug.Log(newZ);
-
-
-
-        currentRot = new Vector3(-GameObject.Find("Neck").transform.rotation.x, this.transform.rotation.y - 90, 0);
-        clone = Instantiate(popup, pos, Quaternion.Euler(newRot - new Vector3(0F, 90F, 0F)));
         
+        clone = Instantiate(popup, pos, Quaternion.identity);
+        clone.transform.LookAt(this.transform);
+        clone.transform.Rotate(clone.transform.rotation.x, clone.transform.rotation.y + 180, clone.transform.rotation.z);
+
     }
-    
+    bool CheckProximity(){
+        float x = pos.x - transform.position.x;
+        float y = pos.y - transform.position.y;
+        float z = pos.z - transform.position.z;
+        if(Mathf.Sqrt(x*x + y*y + z*z) < proximity){
+            return true;
+        }
+        else{
+            return false;
+        }
+
+    }
+
 }
