@@ -13,10 +13,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ShowPopups : MonoBehaviour {
-    //double xpos, ypos, zpos, xrot, yrot, zrot;
     private GameObject popup;
     public GameObject[] interacts;
-    private GameObject store;
     private Vector3 dir;
     private float dotProd;
     private Vector3 adjustPos = new Vector3(0F, 0.5F, 0F);
@@ -26,16 +24,16 @@ public class ShowPopups : MonoBehaviour {
     public float proximity;
     
 
-    // Start is called before the first frame update
     void Awake() {
         interacts = GameObject.FindGameObjectsWithTag("Interactable");
-         //store all 
+         //store all interactable objects in array
 
     }
 
     // Update is called once per frame
     void Update(){
         InvokeRepeating("Popup", 2.0f, 1.0f);
+        //checks every second
     }
     
     bool CheckInView() {
@@ -46,10 +44,12 @@ public class ShowPopups : MonoBehaviour {
             popup = interact;
             dir = (pos - transform.position).normalized; //gets the vector from player to object
             
-            dotProd = Vector3.Dot(dir, transform.forward); //calculates the dot product wait...
+            dotProd = Vector3.Dot(dir, transform.forward); //calculates the dot product of the forward vector and directional vector
+
             if(dotProd > range) {
                
                 return true;
+                //return true if player is looking near any interactable object
             }
 
         }
@@ -67,18 +67,19 @@ public class ShowPopups : MonoBehaviour {
             if(clone != null){
                 Destroy(clone);
             }
-            //hide it once player looks away
+            //destroy it once player looks away
         }
     }
-    void ShowOver() {
+    void ShowOver() { //displays custom popup message right above interactable object, facing the player
         pos += adjustPos;
         
         clone = Instantiate(popup.GetComponent<CustomPopup>().message, pos, Quaternion.identity);
         clone.transform.LookAt(this.transform);
         clone.transform.Rotate(clone.transform.rotation.x, clone.transform.rotation.y + 180, clone.transform.rotation.z);
+        //instantiates the custom message to face the player
 
     }
-    bool CheckProximity(){
+    bool CheckProximity(){ //checks if player is certain distance from an interactable object
         float x = pos.x - transform.position.x;
         float y = pos.y - transform.position.y;
         float z = pos.z - transform.position.z;
