@@ -14,7 +14,7 @@ using UnityEngine.UI;
 
 public class ShowPopups : MonoBehaviour {
     //double xpos, ypos, zpos, xrot, yrot, zrot;
-    public GameObject popup;
+    private GameObject popup;
     public GameObject[] interacts;
     private GameObject store;
     private Vector3 dir;
@@ -43,6 +43,7 @@ public class ShowPopups : MonoBehaviour {
         foreach (GameObject interact in interacts){
 
             pos = interact.transform.position;
+            popup = interact;
             dir = (pos - transform.position).normalized; //gets the vector from player to object
             
             dotProd = Vector3.Dot(dir, transform.forward); //calculates the dot product wait...
@@ -72,7 +73,7 @@ public class ShowPopups : MonoBehaviour {
     void ShowOver() {
         pos += adjustPos;
         
-        clone = Instantiate(popup, pos, Quaternion.identity);
+        clone = Instantiate(popup.GetComponent<CustomPopup>().message, pos, Quaternion.identity);
         clone.transform.LookAt(this.transform);
         clone.transform.Rotate(clone.transform.rotation.x, clone.transform.rotation.y + 180, clone.transform.rotation.z);
 
