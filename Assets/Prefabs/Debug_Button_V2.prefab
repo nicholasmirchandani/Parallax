@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4431566554357849069}
   - component: {fileID: 4431566554357849068}
   - component: {fileID: 4431566554357849071}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4431566554357849065}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaaeb07e95e8b0045871f1a26da930b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9161896a3a666354e99941944afd194e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   targetYPos: 0.7
@@ -138,7 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4431566555080986335}
   - component: {fileID: 4431566555080986332}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Debug_Button_V2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,39 +170,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 4431566555080986334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ef5bcc803cbd742879869e54650e06, type: 3}
+  m_Script: {fileID: 11500000, guid: acf6dab3657555b4e87b5d3e4d688034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonPress:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: log
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: B2 Press
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   buttonRelease:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: log
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: B2 Release
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   button: {fileID: 4431566554357849065}
@@ -220,7 +198,7 @@ GameObject:
   - component: {fileID: 4431566555276175059}
   - component: {fileID: 4431566555276175057}
   - component: {fileID: 4431566555276175056}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Housing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
