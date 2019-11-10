@@ -156,4 +156,8 @@ public class GameManager : MonoBehaviour {
     public float CalcDiffToEarthGravity() {
         return (-9.798F - currentGravity);
     }
+
+    public void QuitGame() {
+        Application.Quit();
+    }
 }
