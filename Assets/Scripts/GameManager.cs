@@ -5,7 +5,7 @@
  * keep track of values that must persist between planets, and maintain *
  * directly modify the Physics.gravity vector                           *
  *                                                                      *
- * Updated by Nicholas Mirchandani on 10/25/19                          *
+ * Updated by Nicholas Mirchandani on 11/10/19                          *
  * Updated by Dan Haub on 11/1/19                                       *
  ************************************************************************/
 using System.Collections;
@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager Instance;     //Reference to GameManager at all times
     [SerializeField] private Planet targetPlanet;   //Allows us to track and modify target planet to beam to
+    [SerializeField] private bool isConfirmed = false;
 
     [SerializeField] private float currentGravity; //Allows us to track current gravity
     [SerializeField] private bool gravityEnabled = true; //Allows us to track if gravity is currently enabled
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);
         }
 
-        targetPlanet = Planet.NONE;
+        targetPlanet = Planet.MERCURY;
         SetGravity();
     }
 
@@ -87,8 +88,27 @@ public class GameManager : MonoBehaviour {
         targetPlanet = planet;
     }
 
+    public void ScrollTargetPlanetLeft() {
+        if(targetPlanet != Planet.MERCURY) {
+            targetPlanet -= 1;
+            //TODO: Scrolling anim here
+        }
+    }
+
+    public void ScrollTargetPlanetRight() {
+        if (targetPlanet != Planet.PLUTO) {
+            targetPlanet += 1;
+            //TODO: Scrolling anim here
+        }
+    }
+
     //Beams to target planet
     public void BeamToPlanet() {
+        if(!isConfirmed) {
+            Debug.Log("Need to confirm planet!");
+            //TODO: Need to confirm planet popup
+            return;
+        }
         switch(targetPlanet) {
             case Planet.MERCURY:
                 SceneManager.LoadScene("Mercury");
@@ -121,6 +141,7 @@ public class GameManager : MonoBehaviour {
                 Debug.Log("ERROR: UNKNOWN PLANET TO BEAM TO");
                 break;
         }
+        isConfirmed = false;
     }
 
     //Returns to Cockpit
@@ -155,6 +176,11 @@ public class GameManager : MonoBehaviour {
     //Calculates difference to earth gravity
     public float CalcDiffToEarthGravity() {
         return (-9.798F - currentGravity);
+    }
+
+    public void ToggleIsConfirmed() {
+        isConfirmed = !isConfirmed;
+        //TODO: Confirmed appear/disappear here
     }
 
     public void QuitGame() {

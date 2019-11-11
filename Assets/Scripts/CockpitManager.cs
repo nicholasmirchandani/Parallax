@@ -7,7 +7,7 @@
  * floats between scenes you can't reference it in the inspector in     *
  * every scene.                                                         *
  *                                                                      *
- * Updated by Nicholas Mirchandani on 10/29/19                          *
+ * Updated by Nicholas Mirchandani on 11/10/19                          *
  * Updated by Dan Haub on 10/29/19                                      *
  ************************************************************************/
 using System.Collections;
@@ -33,5 +33,17 @@ public class CockpitManager : MonoBehaviour {
     //Toggles use of gravity
     public void ToggleGravity() {
         GameManager.Instance.ToggleGravity();
+    }
+
+    public void ToggleIsConfirmed() {
+        GameManager.Instance.ToggleIsConfirmed();
+    }
+
+    public void ScrollTargetPlanetLeft() {
+        GameManager.Instance.ScrollTargetPlanetLeft();
+    }
+
+    public void ScrollTargetPlanetRight() {
+        GameManager.Instance.ScrollTargetPlanetRight();
     }
 }
