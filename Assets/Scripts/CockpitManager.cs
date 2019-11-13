@@ -7,7 +7,7 @@
  * floats between scenes you can't reference it in the inspector in     *
  * every scene.                                                         *
  *                                                                      *
- * Updated by Nicholas Mirchandani on 11/10/19                          *
+ * Updated by Nicholas Mirchandani on 11/12/19                          *
  * Updated by Dan Haub on 10/29/19                                      *
  ************************************************************************/
 using System.Collections;
@@ -31,6 +31,7 @@ public class CockpitManager : MonoBehaviour {
     //Runs each time cockpit scene is loaded
     private void Awake() {
         GameManager.Instance.SetGravity();
+        UpdateScreenPositions();
     }
 
     //Mutator for target planet
@@ -48,42 +49,27 @@ public class CockpitManager : MonoBehaviour {
         GameManager.Instance.ToggleGravity();
     }
 
+    //Mutator for isConfirmed; simply toggles the value
     public void ToggleIsConfirmed() {
         GameManager.Instance.ToggleIsConfirmed();
         ThePlanetsGreen.SetActive(GameManager.Instance.isConfirmed);
         ThePlanetsWhite.SetActive(!GameManager.Instance.isConfirmed);
     }
 
+    //Scrolls screen left and updates selected planet as needed
     public void ScrollTargetPlanetLeft() {
-        switch (GameManager.Instance.targetPlanet) {
-            case GameManager.Planet.MERCURY:
-                ThePlanetsHolder.transform.position = ThePlanetsMercury.transform.position;
-                break;
-            case GameManager.Planet.VENUS:
-                ThePlanetsHolder.transform.position = ThePlanetsVenus.transform.position;
-                break;
-            case GameManager.Planet.MARS:
-                ThePlanetsHolder.transform.position = ThePlanetsMars.transform.position;
-                break;
-            case GameManager.Planet.JUPITER:
-                ThePlanetsHolder.transform.position = ThePlanetsJupiter.transform.position;
-                break;
-            case GameManager.Planet.SATURN:
-                ThePlanetsHolder.transform.position = ThePlanetsSaturn.transform.position;
-                break;
-            case GameManager.Planet.URANUS:
-                ThePlanetsHolder.transform.position = ThePlanetsUranus.transform.position;
-                break;
-            case GameManager.Planet.NEPTUNE:
-                ThePlanetsHolder.transform.position = ThePlanetsNeptune.transform.position;
-                break;
-            default:
-                break;
-        }
         GameManager.Instance.ScrollTargetPlanetLeft();
+        UpdateScreenPositions();
     }
 
+    //Scrolls screen right and updates selected planet as needed
     public void ScrollTargetPlanetRight() {
+        GameManager.Instance.ScrollTargetPlanetRight();
+        UpdateScreenPositions();
+    }
+
+    //Contains case logic to update screen positions
+    public void UpdateScreenPositions() {
         switch (GameManager.Instance.targetPlanet) {
             case GameManager.Planet.MERCURY:
                 ThePlanetsHolder.transform.position = ThePlanetsMercury.transform.position;
@@ -109,6 +95,5 @@ public class CockpitManager : MonoBehaviour {
             default:
                 break;
         }
-        GameManager.Instance.ScrollTargetPlanetRight();
     }
 }

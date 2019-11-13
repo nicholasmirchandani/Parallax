@@ -5,7 +5,7 @@
  * keep track of values that must persist between planets, and maintain *
  * directly modify the Physics.gravity vector                           *
  *                                                                      *
- * Updated by Nicholas Mirchandani on 11/10/19                          *
+ * Updated by Nicholas Mirchandani on 11/12/19                          *
  * Updated by Dan Haub on 11/1/19                                       *
  ************************************************************************/
 using System.Collections;
@@ -14,8 +14,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
-    [System.Serializable]
-    public enum Planet {
+    [System.Serializable] public enum Planet {
         MERCURY,
         VENUS,
         MARS,
@@ -82,17 +81,17 @@ public class GameManager : MonoBehaviour {
         targetPlanet = planet;
     }
 
+    //Updates target planet left one
     public void ScrollTargetPlanetLeft() {
         if(targetPlanet != Planet.MERCURY) {
             targetPlanet -= 1;
-            //TODO: Scrolling anim here
         }
     }
 
+    //Updates target planet right one
     public void ScrollTargetPlanetRight() {
         if (targetPlanet != Planet.NEPTUNE) {
             targetPlanet += 1;
-            //TODO: Scrolling anim here
         }
     }
 
@@ -171,6 +170,7 @@ public class GameManager : MonoBehaviour {
         //TODO: Confirmed appear/disappear here
     }
 
+    //Quits Game
     public void QuitGame() {
         Application.Quit();
     }
