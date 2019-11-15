@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 46982670}
   - component: {fileID: 46982669}
   - component: {fileID: 46982668}
+  - component: {fileID: 46982673}
   - component: {fileID: 46982667}
   m_Layer: 0
   m_Name: Sphere
@@ -348,6 +349,19 @@ MonoBehaviour:
   objectHighlighter: {fileID: 46982667}
   touchHighlightColor: {r: 1, g: 0.955009, b: 0, a: 0}
   usingState: 0
+--- !u!114 &46982673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46982662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20d9464f33f83604c9af7bd2b8ff8bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: {fileID: 6067326267316146551, guid: e0639e73488557144b659c82a1c60b12, type: 3}
 --- !u!1 &113253504
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,6 +379,7 @@ GameObject:
   - component: {fileID: 113253508}
   - component: {fileID: 113253507}
   - component: {fileID: 113253506}
+  - component: {fileID: 113253515}
   - component: {fileID: 113253505}
   m_Layer: 0
   m_Name: Sphere (1)
@@ -576,6 +591,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &113253515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113253504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20d9464f33f83604c9af7bd2b8ff8bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: {fileID: 6067326267316146551, guid: e0639e73488557144b659c82a1c60b12, type: 3}
 --- !u!1 &227823369
 GameObject:
   m_ObjectHideFlags: 0
@@ -3233,7 +3261,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c23e53028fd12438cb67180a558975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popup: {fileID: 6067326267316146551, guid: e0639e73488557144b659c82a1c60b12, type: 3}
   interacts: []
   range: 0.99
   proximity: 4

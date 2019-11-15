@@ -7,6 +7,7 @@
  * camera's line of sight.                                              *
  *                                                                      *
  * Updated by Dan Haub on 11/10/19                                      *
+ * Updated by Dan Haub on 11/15/19                                      *
  ************************************************************************/
 
 using System.Collections;
