@@ -33,14 +33,16 @@ public class ShowPopups : MonoBehaviour {
 
     //Checks if there should be a popup above each interactable object
     void Popup() {
+        bool objectFound = false; //Allows us to determine if a popup has already been displayed
         foreach (GameObject interactable in interactables) {
-            if(CheckInView(interactable) && CheckProximity(interactable)) { //Show the popup if the player is looking at and is near the object
-                if(interactable.GetComponent<CustomPopup>().message == null) {
-                    ShowOver(interactable);
+            if(!objectFound && CheckInView(interactable) && CheckProximity(interactable)) { //Show the popup if the player is looking at and is near the object
+                objectFound = true;
+                if(!interactable.GetComponent<CustomPopup>().PopupIsShowing()) {
+                    interactable.GetComponent<CustomPopup>().ShowPopup(this.transform);
                 }
             } else { //destroy it once player looks away
-                if(interactable.GetComponent<CustomPopup>().message != null) {
-                    Destroy(interactable.GetComponent<CustomPopup>().message);
+                if(interactable.GetComponent<CustomPopup>().PopupIsShowing()) {
+                    interactable.GetComponent<CustomPopup>().HidePopup();
                 }
             }
         }
@@ -69,11 +71,5 @@ public class ShowPopups : MonoBehaviour {
 
     }
 
-    //Displays custom popup message right above interactable object, facing the player
-    void ShowOver(GameObject interactable) { 
-        //instantiates the custom message to face the player
-        GameObject clone = Instantiate(interactable.GetComponent<CustomPopup>().message, interactable.transform.position + adjustPos, Quaternion.identity);
-        clone.transform.LookAt(this.transform);
-        clone.transform.Rotate(clone.transform.rotation.x, clone.transform.rotation.y + 180, clone.transform.rotation.z);
-    }
+    
 }
