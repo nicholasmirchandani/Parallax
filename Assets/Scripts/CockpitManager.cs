@@ -58,14 +58,18 @@ public class CockpitManager : MonoBehaviour {
 
     //Scrolls screen left and updates selected planet as needed
     public void ScrollTargetPlanetLeft() {
-        GameManager.Instance.ScrollTargetPlanetLeft();
-        UpdateScreenPositions();
+        if (!GameManager.Instance.isConfirmed) {
+            GameManager.Instance.ScrollTargetPlanetLeft();
+            UpdateScreenPositions();
+        }
     }
 
     //Scrolls screen right and updates selected planet as needed
     public void ScrollTargetPlanetRight() {
-        GameManager.Instance.ScrollTargetPlanetRight();
-        UpdateScreenPositions();
+        if (!GameManager.Instance.isConfirmed) {
+            GameManager.Instance.ScrollTargetPlanetRight();
+            UpdateScreenPositions();
+        }
     }
 
     //Contains case logic to update screen positions

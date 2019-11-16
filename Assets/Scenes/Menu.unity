@@ -348,6 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPlanet: 0
+  isConfirmed: 0
   currentGravity: 0
   gravityEnabled: 1
 --- !u!1 &227823369
@@ -597,7 +598,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Quit
 --- !u!222 &449819340
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1236,7 +1237,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Play Game
 --- !u!222 &987135521
 CanvasRenderer:
   m_ObjectHideFlags: 0
