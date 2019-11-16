@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: 10KG.ma
-//Last modified: Sat, Nov 16, 2019 03:38:57 PM
+//Last modified: Sat, Nov 16, 2019 03:40:43 PM
 //Codeset: UTF-8
 requires maya "2019";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiStandardSurface"
@@ -15,8 +15,8 @@ fileInfo "osv" "Mac OS X 10.15.1";
 createNode transform -s -n "persp";
 	rename -uid "7CC063E5-D846-ABDE-4EA5-2CBCEB9827E3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 7.3100790944694056 3.1994702117575375 -4.0029040846461088 ;
-	setAttr ".r" -type "double3" -6.9383527295044622 467.39999999998844 0 ;
+	setAttr ".t" -type "double3" -5.1561199646444829 4.5256636547764266 -5.9617597479978031 ;
+	setAttr ".r" -type "double3" -15.338352729499208 943.39999999992119 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DC6ABD61-CD41-7A93-759D-5196BC42A79B";
 	setAttr -k off ".v" no;
