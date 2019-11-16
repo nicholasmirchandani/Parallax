@@ -1,0 +1,176 @@
+# XGen Palette File
+#
+# Version:  /Applications/Autodesk/maya2019/plug-ins/xgen/
+# Author:   scottcummings
+# Date:     Sat Nov 16 13:25:32 2019
+
+FileVersion 18
+
+Palette
+	name			Feathers
+	parent			
+	xgDataPath		${PROJECT}xgen/collections/Feathers
+	xgProjectPath		/Users/scottcummings/Documents/maya/projects/default/
+	xgDogTag		
+	endAttrs
+
+Description
+	name			FeathersMain1
+	flipNormals		false
+	strayPercentage		0.0
+	lodFlag			false
+	averageWidth		1.0
+	pixelCullSize		0.0
+	pixelFadeSize		20.0
+	cullFade		0.1
+	minDensity		0.01
+	cullWidthRatio		0.01
+	maxWidthRatio		20.0
+	groom			groom_FeathersMain1
+	descriptionId		0
+	xgDataPath		${PROJECT}xgen/collections/Feathers/
+	xgProjectPath		/Users/scottcummings/Documents/maya/projects/default/
+	endAttrs
+
+RendermanRenderer
+	percent			100.0
+	startPercent		0.0
+	inCameraOnly		false
+	inCameraMargin		0.0
+	length_XP		true
+	width_XP		true
+	T_XP			false
+	stray_XP		false
+	id_XP			false
+	descid_XP		false
+	ri_XP			true
+	rf_XP			true
+	u_XS			true
+	v_XS			true
+	faceid_XS		true
+	geomid_XS		false
+	geomName_XS		true
+	P_XS			true
+	Pref_XS			false
+	Pg_XS			false
+	Prefg_XS		false
+	N_XS			true
+	Ng_XS			false
+	Nref_XS			false
+	Nrefg_XS		false
+	dPdu_XS			true
+	dPduref_XS		false
+	dPdug_XS		false
+	dPdurefg_XS		false
+	dPdv_XS			true
+	dPdvref_XS		false
+	dPdvg_XS		false
+	dPdvrefg_XS		false
+	renderer		None
+	renderMethod		2
+	draMode			0
+	primitiveBound		1.0
+	custom__arnold_rendermode	0
+	custom__arnold_curveMode	0
+	custom__arnold_minPixelWidth	0.0
+	custom__arnold_motion_blur	0
+	custom__arnold_motion_blur_mode	1
+	custom__arnold_motion_blur_steps	2
+	custom__arnold_motion_blur_factor	0.5
+	custom__arnold_useAuxRenderPatch	0
+	custom__arnold_auxRenderPatch	0
+	custom__arnold_multithreading	1
+	endAttrs
+
+SplinePrimitive
+	_patchNames		
+	length			map('${DESC}/groom/length/')
+	width			map('${DESC}/groom/width/')
+	depth			$a=1.0;#0.05,5.0\n$a
+	offU			map('${DESC}/groom/orient/',0)
+	offV			map('${DESC}/groom/orient/',1)
+	offN			$a=0.0000;#-180.0,180.0\n$a
+	aboutN			$a=0.0000;#-180.0,180.0\n$a
+	regionMap		${DESC}/groom/region/
+	regionMask		0.0
+	iMethod			0
+	useCache		false
+	liveMode		true
+	_wireNames		
+	cacheFileName		${DESC}/guides.abc
+	attrCVCount		3
+	bendParam[0]		map('${DESC}/groom/bend/',0)
+	bendU[0]		map('${DESC}/groom/bend/',1)
+	bendV[0]		map('${DESC}/groom/bend/',2)
+	fxCVCount		5
+	uniformCVs		true
+	taper			$a=0.7500;#-1.0,1.0\n$a
+	taperStart		$a=0.0000;#0.0,1.0\n$a
+	displayWidth		true
+	faceCamera		true
+	tubeShade		true
+	tubes			
+	guideSpacing		1.0
+	guideMask		1.0
+	cutParam		1.0
+	texelsPerUnit		10.0
+	CVFrequency		1.0
+	widthRamp		rampUI(0.0,1.0,1:1.0,1.0,1)
+	endAttrs
+
+RandomGenerator
+	displacement		$a=0.0000;#-1.0,1.0\n$a
+	vectorDisplacement	0
+	bump			$a=0.0000;#-1.0,1.0\n$a
+	offset			$a=0.0000;#-1.0,1.0\n$a
+	cullFlag		false
+	cullBackface		false
+	cullFrustrum		false
+	cullAngleBF		0.0
+	cullAngleF		0.0
+	cullExpr		$a=0.0000;#0.0,1.0\n$a
+	density			300.0
+	mask			1.0 # map('${DESC}/density/')
+	dcFlag			false
+	scFlag			true
+	usePoints		false
+	pointDir		${DESC}/Points/
+	ptLength		1.0
+	endAttrs
+
+GLRenderer
+	percent			100.0
+	startPercent		0.0
+	inCameraOnly		true
+	inCameraMargin		0.0
+	patchNames		false
+	faceIds			false
+	primIDs			false
+	primIDsAt		1.0
+	vertices		false
+	poly			false
+	culled			false
+	unitCube		false
+	color			map('${DESC}/groom/region/')
+	guideColor		$a=[1.0,0.4313725,0.0];#color\n$a
+	TEXCOORD3		[ $cWidth, 0, 0 ]  # red channel reserved by XGen
+	TEXCOORD4		
+	TEXCOORD5		
+	TEXCOORD6		
+	TEXCOORD7		
+	splineSegments		2
+	primNumLimit		100000000
+	endAttrs
+
+	Active	SplinePrimitive
+	Active	RandomGenerator
+	Active	RendermanRenderer
+	Preview	GLRenderer
+
+Patches	FeathersMain1	0
+Patch	Subd
+	name		extrudedSurface1
+	faceIds		52	 26 27 31 32 39 40 46 47 54 56 57 63 65 66 74 75 79 80 87 88 94 95 103 105 106 112 114 115 123 124 128 129 136 137 143 144 151 152 156 157 164 165 171 172 178 179 183 184 191 192 198 199
+	animCurves	0	
+endObject
+endPatches
