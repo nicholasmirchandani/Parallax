@@ -61,6 +61,7 @@ public class MeasureMass : MonoBehaviour
         foreach(GameObject g in measuring) {
             totalMass += g.GetComponent<MassAttach>().mass;
         }
+        Debug.Log("Total weight is " + totalMass * GameManager.Instance.currentGravity * -1); //Brute forcing a weight reading every frame
     }
 
     /*called by the Mass Attach Script to store the game object 

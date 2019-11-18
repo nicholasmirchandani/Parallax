@@ -88,7 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8940718534460141481}
   m_Layer: 0
-  m_Name: Balance
+  m_Name: Debug_Balance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -215,11 +215,11 @@ MonoBehaviour:
   useStepAsValue: 0
   snapToStep: 1
   snapForce: 0.1
-  precisionGrab: 1
-  detachDistance: 1
+  precisionGrab: 0
+  detachDistance: 0
   rotationAction: 0
-  grabbedFriction: 1
-  releasedFriction: 1
+  grabbedFriction: 1000
+  releasedFriction: 1000
   onlyInteractWith: []
 --- !u!1 &8940718534655144492
 GameObject:
@@ -456,7 +456,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 90
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &1588187509
 MonoBehaviour:
@@ -490,11 +490,11 @@ MonoBehaviour:
   useStepAsValue: 0
   snapToStep: 1
   snapForce: 10
-  precisionGrab: 1
-  detachDistance: 1
+  precisionGrab: 0
+  detachDistance: 0
   rotationAction: 0
-  grabbedFriction: 1
-  releasedFriction: 1
+  grabbedFriction: 100
+  releasedFriction: 100
   onlyInteractWith: []
 --- !u!1 &8940718535233094660
 GameObject:
@@ -915,7 +915,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 90
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &1402908940533155073
 MonoBehaviour:
@@ -965,9 +965,9 @@ MonoBehaviour:
   useStepAsValue: 0
   snapToStep: 1
   snapForce: 10
-  precisionGrab: 1
-  detachDistance: 1
+  precisionGrab: 0
+  detachDistance: 0
   rotationAction: 0
-  grabbedFriction: 1
-  releasedFriction: 1
+  grabbedFriction: 100
+  releasedFriction: 100
   onlyInteractWith: []
