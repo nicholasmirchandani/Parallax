@@ -28,6 +28,7 @@ public class MeasureMass : MonoBehaviour
 
     //When there is a collision with on the surface of the scale this method is called to attach the mass attach script to the object
     private void OnCollisionStay(Collision collision) {
+        Debug.Log("COLLISION!!! with " + collision.gameObject.name);
         //When called store the game object of the collision generated 
         GameObject temp = collision.gameObject;
         //Check to see if the colliding object already has a mass atatch script
@@ -61,7 +62,6 @@ public class MeasureMass : MonoBehaviour
         foreach(GameObject g in measuring) {
             totalMass += g.GetComponent<MassAttach>().mass;
         }
-        Debug.Log("Total weight is " + totalMass * GameManager.Instance.currentGravity * -1); //Brute forcing a weight reading every frame
     }
 
     /*called by the Mass Attach Script to store the game object 

@@ -55,6 +55,15 @@ public class GameManager : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.R)) {
             ReturnToCockpit();
         }
+        if(Input.GetKeyDown(KeyCode.C)) {
+            ToggleIsConfirmed();
+        }
+        if(Input.GetKeyDown(KeyCode.LeftArrow)) {
+            ScrollTargetPlanetLeft();
+        }
+        if(Input.GetKeyDown(KeyCode.RightArrow)) {
+            ScrollTargetPlanetRight();
+        }
     }
 
     //Mutator for target planet

@@ -101,7 +101,7 @@ public class BalanceScript : MonoBehaviour
 
     public void Rotate() {
         //Check the direction of rotation based on the rotation value against the rest value
-        if( rotateValue < 1 && rotateValue > -1) {
+        if( rotateValue <.1 && rotateValue > -.1) {
             rotateValue = 0;
         } else if (rotateValue > REST_VALUE) {
             rotateAmount += rotateStrength;
