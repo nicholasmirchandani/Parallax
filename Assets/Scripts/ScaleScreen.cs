@@ -16,7 +16,7 @@ public class ScaleScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        screenText.text = (mMass.totalMass * GameManager.Instance.currentGravity * -1).ToString();
+        screenText.text = (mMass.totalMass * GameManager.Instance.currentGravity * -1).ToString() + " lbs";
         Debug.Log("Total weight is " + mMass.totalMass * GameManager.Instance.currentGravity * -1); //Brute forcing a weight reading every 
     }
 }
