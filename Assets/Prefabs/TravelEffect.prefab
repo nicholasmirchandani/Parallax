@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1703395610777287779}
   - component: {fileID: 9160978523686152403}
   - component: {fileID: 2380303170954775737}
+  - component: {fileID: 1160255922820581123}
   m_Layer: 0
   m_Name: TravelEffect
   m_TagString: Untagged
@@ -46,7 +47,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 0
+  looping: 1
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -4753,3 +4754,16 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &1160255922820581123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7096864181806268310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59beacc8904070e43b028afb3ebd9c82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 4
