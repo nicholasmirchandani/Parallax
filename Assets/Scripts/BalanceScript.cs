@@ -1,16 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using VRTK;
-using UnityEngine.Events;
-using VRTK.UnityEventHelper;
-using System;
-using VRTK.Controllables.PhysicsBased;
-using VRTK.Controllables.ArtificialBased;
-
-
-
-/************************************************************************
+﻿/************************************************************************
  * Written by Sean Robbins in November 2019                              *
  *                                                                       *
  * The purpose of BalanceScript.cs is to serve as a script to control    *
@@ -21,6 +9,16 @@ using VRTK.Controllables.ArtificialBased;
  * measure the mass                                                      *
  *                                                                       *
  ************************************************************************/
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using VRTK;
+using UnityEngine.Events;
+using VRTK.UnityEventHelper;
+using System;
+using VRTK.Controllables.PhysicsBased;
+using VRTK.Controllables.ArtificialBased;
 
 
     /* Notes 
