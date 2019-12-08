@@ -1,16 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using VRTK;
-using UnityEngine.Events;
-using VRTK.UnityEventHelper;
-using System;
-using VRTK.Controllables.PhysicsBased;
-using VRTK.Controllables.ArtificialBased;
-
-
-
-/************************************************************************
+﻿/************************************************************************
  * Written by Sean Robbins in November 2019                              *
  *                                                                       *
  * The purpose of BalanceScript.cs is to serve as a script to control    *
@@ -21,6 +9,16 @@ using VRTK.Controllables.ArtificialBased;
  * measure the mass                                                      *
  *                                                                       *
  ************************************************************************/
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using VRTK;
+using UnityEngine.Events;
+using VRTK.UnityEventHelper;
+using System;
+using VRTK.Controllables.PhysicsBased;
+using VRTK.Controllables.ArtificialBased;
 
 
     /* Notes 
@@ -101,7 +99,7 @@ public class BalanceScript : MonoBehaviour
 
     public void Rotate() {
         //Check the direction of rotation based on the rotation value against the rest value
-        if( rotateValue < 1 && rotateValue > -1) {
+        if( rotateValue <.1 && rotateValue > -.1) {
             rotateValue = 0;
         } else if (rotateValue > REST_VALUE) {
             rotateAmount += rotateStrength;

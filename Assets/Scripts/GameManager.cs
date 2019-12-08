@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour {
     public Planet targetPlanet;   //Allows us to track and modify target planet to beam to
     public bool isConfirmed = false;
 
-    [SerializeField] private float currentGravity; //Allows us to track current gravity
+    public float currentGravity; //Allows us to track current gravity
     [SerializeField] private bool gravityEnabled = true; //Allows us to track if gravity is currently enabled
 
     //Awake is called when script instance is loaded
@@ -54,6 +54,15 @@ public class GameManager : MonoBehaviour {
         }
         if(Input.GetKeyDown(KeyCode.R)) {
             ReturnToCockpit();
+        }
+        if(Input.GetKeyDown(KeyCode.C)) {
+            ToggleIsConfirmed();
+        }
+        if(Input.GetKeyDown(KeyCode.LeftArrow)) {
+            ScrollTargetPlanetLeft();
+        }
+        if(Input.GetKeyDown(KeyCode.RightArrow)) {
+            ScrollTargetPlanetRight();
         }
     }
 
