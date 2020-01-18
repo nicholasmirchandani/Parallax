@@ -60,8 +60,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Alpha: 1
-    - _Brightness: 6
+    - _Alpha: 0.402
+    - _Brightness: 1.27
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -77,11 +77,13 @@ Material:
     - _GlowTiling: 0.01
     - _Metallic: 0
     - _Mode: 0
+    - _NoisePower: 1000
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RimPower: 3.85
-    - _ScanSpeed: 1.25
-    - _ScanTiling: 417
+    - _RimPower: 4.77
+    - _ScanSpeed: 2
+    - _ScanTiling: 117
+    - _ScreenNoisePower: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -91,5 +93,5 @@ Material:
     - _Color: {r: 0, g: 0.07347441, b: 1, a: 1}
     - _Direction: {r: 0, g: 1, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _MainColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 0.07058824}
+    - _MainColor: {r: 0.58152366, g: 0.9339623, b: 0.9127661, a: 0.07058824}
     - _RimColor: {r: 0, g: 0.9508197, b: 1, a: 1}

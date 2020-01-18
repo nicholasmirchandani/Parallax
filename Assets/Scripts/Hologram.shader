@@ -16,6 +16,8 @@
 		// Scanline
 		_ScanTiling("Scan Tiling", Range(0.01, 1000.0)) = 0.05
 		_ScanSpeed("Scan Speed", Range(-2.0, 2.0)) = 1.0
+		//Vertical Noise
+		_NoisePower("Noise Power", Range(0, 10000)) = 1000
 	}
 		SubShader
 			{
@@ -59,6 +61,7 @@
 					float _Alpha;
 					float _ScanTiling;
 					float _ScanSpeed;
+					float _NoisePower;
 
 					v2f vert(appdata v)
 					{
@@ -83,15 +86,15 @@
 
 						// Scanlines
 						float scan = 0.0;
-							scan = step(frac(dirVertex * _ScanTiling + _Time.w * _ScanSpeed), 0.5) * 0.65;
+							scan = saturate(frac(dirVertex * _ScanTiling + _Time.w * _ScanSpeed));
 
 								// Rim Light
 								half rim = 1.0 - saturate(dot(i.viewDir, i.worldNormal));
 								fixed4 rimColor = _RimColor * pow(rim, _RimPower);
 
 								fixed4 col = texColor * _MainColor + (0.35 * _MainColor) + rimColor;
-								col.a = texColor.a * _Alpha * (scan + rim);
-
+								//col.a = texColor.a * _Alpha * (scan + rim);
+								col.a = texColor.a * _Alpha * (scan + rim) * saturate((step(sin(i.worldVertex.z * _NoisePower), 0)) + 0.5f);
 								col.rgb *= _Brightness;
 
 								return col;
