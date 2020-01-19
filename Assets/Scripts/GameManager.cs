@@ -100,13 +100,21 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
     //Updates target planet left one
     public void ScrollTargetPlanetLeft() {
-        if(targetPlanet != Planet.MERCURY) {
+        if (!PhotonNetwork.IsMasterClient) {
+            return;
+        }
+
+        if (targetPlanet != Planet.MERCURY) {
             targetPlanet -= 1;
         }
     }
 
     //Updates target planet right one
     public void ScrollTargetPlanetRight() {
+        if (!PhotonNetwork.IsMasterClient) {
+            return;
+        }
+
         if (targetPlanet != Planet.NEPTUNE) {
             targetPlanet += 1;
         }
@@ -114,6 +122,9 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
     //Beams to target planet
     public void BeamToPlanet() {
+        if(!PhotonNetwork.IsMasterClient) {
+            return;
+        }
         if(!isConfirmed) {
             Debug.Log("Need to confirm planet!");
             //TODO: Need to confirm planet popup
@@ -150,6 +161,10 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
     //Returns to Cockpit
     public void ReturnToCockpit() {
+
+        if (!PhotonNetwork.IsMasterClient) {
+            return;
+        }
         PhotonNetwork.LoadLevel("Cockpit");
     }
 
