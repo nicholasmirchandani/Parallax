@@ -13,7 +13,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour {
+using Photon.Pun;
+using Photon.Realtime;
+
+public class GameManager : MonoBehaviourPunCallbacks {
     [System.Serializable] public enum Planet {
         MERCURY,
         VENUS,
@@ -183,4 +186,39 @@ public class GameManager : MonoBehaviour {
     public void QuitGame() {
         Application.Quit();
     }
+
+
+
+
+    //--------------------Photon Code Test Section----------------------------
+
+
+
+    #region Photon Callbacks
+
+
+    /// <summary>
+    /// Called when the local player left the room. We need to load the launcher scene.
+    /// </summary>
+    public override void OnLeftRoom()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+
+    #endregion
+
+
+    #region Public Methods
+
+
+    public void LeaveRoom()
+    {
+        PhotonNetwork.LeaveRoom();
+    }
+
+
+    #endregion
+
+
 }
