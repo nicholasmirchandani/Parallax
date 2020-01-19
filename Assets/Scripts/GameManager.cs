@@ -67,6 +67,11 @@ public class GameManager : MonoBehaviourPunCallbacks {
         if(Input.GetKeyDown(KeyCode.RightArrow)) {
             ScrollTargetPlanetRight();
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("Leaving the Networked Room");
+            LeaveRoom();
+        }
     }
 
     //Mutator for target planet
@@ -116,25 +121,25 @@ public class GameManager : MonoBehaviourPunCallbacks {
         }
         switch(targetPlanet) {
             case Planet.MERCURY:
-                SceneManager.LoadScene("Mercury");
+                PhotonNetwork.LoadLevel("Mercury");
                 break;
             case Planet.VENUS:
-                SceneManager.LoadScene("Venus");
+                PhotonNetwork.LoadLevel("Venus");
                 break;
             case Planet.MARS:
-                SceneManager.LoadScene("Mars");
+                PhotonNetwork.LoadLevel("Mars");
                 break;
             case Planet.JUPITER:
-                SceneManager.LoadScene("Jupiter");
+                PhotonNetwork.LoadLevel("Jupiter");
                 break;
             case Planet.SATURN:
-                SceneManager.LoadScene("Saturn");
+                PhotonNetwork.LoadLevel("Saturn");
                 break;
             case Planet.URANUS:
-                SceneManager.LoadScene("Uranus");
+                PhotonNetwork.LoadLevel("Uranus");
                 break;
             case Planet.NEPTUNE:
-                SceneManager.LoadScene("Neptune");
+                PhotonNetwork.LoadLevel("Neptune");
                 break;
             default:
                 Debug.Log("ERROR: UNKNOWN PLANET TO BEAM TO");
@@ -145,7 +150,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
     //Returns to Cockpit
     public void ReturnToCockpit() {
-        SceneManager.LoadScene("Cockpit");
+        PhotonNetwork.LoadLevel("Cockpit");
     }
 
     //Sets current gravity based to passed force value
@@ -204,6 +209,39 @@ public class GameManager : MonoBehaviourPunCallbacks {
     {
         SceneManager.LoadScene(0);
     }
+
+
+    public override void OnPlayerEnteredRoom(Player other)
+    {
+        Debug.LogFormat("OnPlayerEnteredRoom() {0}", other.NickName); // not seen if you're the player connecting
+
+
+        if (PhotonNetwork.IsMasterClient)
+        {
+            Debug.LogFormat("OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
+
+            //code to call when a player enters the room, called only by the master client in this if statement
+            
+            
+        }
+    }
+
+
+    public override void OnPlayerLeftRoom(Player other)
+    {
+        Debug.LogFormat("OnPlayerLeftRoom() {0}", other.NickName); // seen when other disconnects
+
+
+        if (PhotonNetwork.IsMasterClient)
+        {
+            Debug.LogFormat("OnPlayerLeftRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
+
+
+            //put in some code on what to do when the host quits out
+        }
+    }
+
+
 
 
     #endregion
