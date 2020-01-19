@@ -5,7 +5,7 @@
  * objects as if they were a hologram, completely separate from the		*
  * rest of the world.													*
  *                                                                      *
- * Edited by Nicholas Mirchandani on 1/18/19						    *
+ * Edited by Nicholas Mirchandani on 1/18/20						    *
  ************************************************************************/
 
 Shader "Custom/Hologram" {
