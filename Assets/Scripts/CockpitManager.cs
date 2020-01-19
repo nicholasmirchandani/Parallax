@@ -51,6 +51,9 @@ public class CockpitManager : MonoBehaviour {
 
     //Mutator for isConfirmed; simply toggles the value
     public void ToggleIsConfirmed() {
+        if(!Photon.Pun.PhotonNetwork.IsMasterClient) {
+            return;
+        }
         GameManager.Instance.ToggleIsConfirmed();
         ThePlanetsGreen.SetActive(GameManager.Instance.isConfirmed);
         ThePlanetsWhite.SetActive(!GameManager.Instance.isConfirmed);
