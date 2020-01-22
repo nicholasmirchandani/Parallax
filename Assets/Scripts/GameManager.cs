@@ -15,6 +15,7 @@ using UnityEngine.SceneManagement;
 
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviourPunCallbacks {
     [System.Serializable] public enum Planet {
@@ -32,6 +33,8 @@ public class GameManager : MonoBehaviourPunCallbacks {
     public Planet targetPlanet;   //Allows us to track and modify target planet to beam to
     public bool isConfirmed = false;
 
+    public Canvas Menu;
+
     public float currentGravity; //Allows us to track current gravity
     [SerializeField] private bool gravityEnabled = true; //Allows us to track if gravity is currently enabled
 
@@ -45,6 +48,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
             Destroy(gameObject);
         }
 
+        
         targetPlanet = Planet.MERCURY;
         SetGravity();
     }
@@ -71,6 +75,10 @@ public class GameManager : MonoBehaviourPunCallbacks {
         {
             Debug.Log("Leaving the Networked Room");
             LeaveRoom();
+        }
+        if (Input.GetKeyDown(KeyCode.M))//Brings up the in Game Menu
+        {
+            Menu.enabled = !Menu.enabled;
         }
     }
 
@@ -220,35 +228,34 @@ public class GameManager : MonoBehaviourPunCallbacks {
     /// <summary>
     /// Called when the local player left the room. We need to load the launcher scene.
     /// </summary>
-    public override void OnLeftRoom()
-    {
+    public override void OnLeftRoom() {
         SceneManager.LoadScene(0);
     }
 
 
-    public override void OnPlayerEnteredRoom(Player other)
-    {
+    public override void OnPlayerEnteredRoom(Player other) {
         Debug.LogFormat("OnPlayerEnteredRoom() {0}", other.NickName); // not seen if you're the player connecting
 
-
-        if (PhotonNetwork.IsMasterClient)
-        {
+        Menu.GetComponent<Text>().text += "\n" + other.NickName;
+        if (PhotonNetwork.IsMasterClient) {
             Debug.LogFormat("OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
-
+            
             //code to call when a player enters the room, called only by the master client in this if statement
-            
-            
+
+
         }
     }
 
 
-    public override void OnPlayerLeftRoom(Player other)
-    {
+    public override void OnPlayerLeftRoom(Player other) {
         Debug.LogFormat("OnPlayerLeftRoom() {0}", other.NickName); // seen when other disconnects
+        Menu.GetComponent<Text>().text = "Players: ";
 
+        foreach (Player p in PhotonNetwork.PlayerList) {
+            Menu.GetComponent<Text>().text += "\n" + p.NickName;
+        }
 
-        if (PhotonNetwork.IsMasterClient)
-        {
+        if (PhotonNetwork.IsMasterClient) {
             Debug.LogFormat("OnPlayerLeftRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
 
 
@@ -265,9 +272,12 @@ public class GameManager : MonoBehaviourPunCallbacks {
     #region Public Methods
 
 
-    public void LeaveRoom()
-    {
+    public void LeaveRoom() {
         PhotonNetwork.LeaveRoom();
+    }
+
+    void Start() {
+        Menu.enabled = false;
     }
 
 
