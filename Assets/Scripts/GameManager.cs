@@ -7,6 +7,7 @@
  *                                                                      *
  * Updated by Nicholas Mirchandani on 11/12/19                          *
  * Updated by Dan Haub on 11/1/19                                       *
+ * Updated by Sean Robbins on 1/21/2020                                 *
  ************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
@@ -33,8 +34,6 @@ public class GameManager : MonoBehaviourPunCallbacks {
     public Planet targetPlanet;   //Allows us to track and modify target planet to beam to
     public bool isConfirmed = false;
 
-    public Canvas Menu;
-    public Text PlayerList;
 
     public float currentGravity; //Allows us to track current gravity
     [SerializeField] private bool gravityEnabled = true; //Allows us to track if gravity is currently enabled
@@ -77,10 +76,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
             Debug.Log("Leaving the Networked Room");
             LeaveRoom();
         }
-        if (Input.GetKeyDown(KeyCode.M))//Brings up the in Game Menu
-        {
-            Menu.enabled = !Menu.enabled;
-        }
+        
     }
 
     //Mutator for target planet
@@ -231,14 +227,14 @@ public class GameManager : MonoBehaviourPunCallbacks {
     /// </summary>
     public override void OnLeftRoom() {
         SceneManager.LoadScene(0);
+        Cursor.lockState = CursorLockMode.None;
     }
 
-
+    //Called when a player enters the photon room called by every player in the room
     public override void OnPlayerEnteredRoom(Player other) {
         Debug.LogFormat("OnPlayerEnteredRoom() {0}",  other.NickName); // not seen if you're the player connecting
 
-        PlayerList.text += "\n" + other.NickName;
-        Debug.Log("MENU TEXT: " + PlayerList.text);
+        
         if (PhotonNetwork.IsMasterClient) {
             Debug.LogFormat("OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
             
@@ -248,20 +244,13 @@ public class GameManager : MonoBehaviourPunCallbacks {
         }
     }
 
-
+    //Called When a Player leaves the Photon Room by every other player in the room
     public override void OnPlayerLeftRoom(Player other) {
         Debug.LogFormat("OnPlayerLeftRoom() {0}", other.NickName); // seen when other disconnects
-        PlayerList.text = "Players: ";
-
-        foreach (Player p in PhotonNetwork.PlayerList) {
-            PlayerList.text += "\n" + p.NickName;
-        }
+        
 
         if (PhotonNetwork.IsMasterClient) {
             Debug.LogFormat("OnPlayerLeftRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
-
-
-            //put in some code on what to do when the host quits out
         }
     }
 
@@ -273,17 +262,17 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
     #region Public Methods
 
-
+    //Called when player leaves the Photon Networked Room
     public void LeaveRoom() {
         PhotonNetwork.LeaveRoom();
     }
 
-    void Start() {
-        Menu.enabled = false;
-    }
+    //Called 
+   
 
 
     #endregion
+
 
 
 }

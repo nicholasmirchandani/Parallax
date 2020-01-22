@@ -14,8 +14,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using Photon.Pun;
+using Photon.Realtime;
+using UnityEngine.UI;
 
-public class CockpitManager : MonoBehaviour {
+
+public class CockpitManager : MonoBehaviourPunCallbacks {
 
     public GameObject ThePlanetsGreen;
     public GameObject ThePlanetsWhite;
@@ -27,6 +31,7 @@ public class CockpitManager : MonoBehaviour {
     public GameObject ThePlanetsSaturn;
     public GameObject ThePlanetsUranus;
     public GameObject ThePlanetsNeptune;
+
 
     //Runs each time cockpit scene is loaded
     private void Awake() {
@@ -103,4 +108,7 @@ public class CockpitManager : MonoBehaviour {
                 break;
         }
     }
+
+
+    
 }
