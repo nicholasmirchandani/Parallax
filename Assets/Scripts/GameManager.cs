@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
     public bool isConfirmed = false;
 
     public Canvas Menu;
+    public Text PlayerList;
 
     public float currentGravity; //Allows us to track current gravity
     [SerializeField] private bool gravityEnabled = true; //Allows us to track if gravity is currently enabled
@@ -224,7 +225,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
     #region Photon Callbacks
 
-
+    
     /// <summary>
     /// Called when the local player left the room. We need to load the launcher scene.
     /// </summary>
@@ -234,9 +235,10 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
 
     public override void OnPlayerEnteredRoom(Player other) {
-        Debug.LogFormat("OnPlayerEnteredRoom() {0}", other.NickName); // not seen if you're the player connecting
+        Debug.LogFormat("OnPlayerEnteredRoom() {0}",  other.NickName); // not seen if you're the player connecting
 
-        Menu.GetComponent<Text>().text += "\n" + other.NickName;
+        PlayerList.text += "\n" + other.NickName;
+        Debug.Log("MENU TEXT: " + PlayerList.text);
         if (PhotonNetwork.IsMasterClient) {
             Debug.LogFormat("OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
             
@@ -249,10 +251,10 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
     public override void OnPlayerLeftRoom(Player other) {
         Debug.LogFormat("OnPlayerLeftRoom() {0}", other.NickName); // seen when other disconnects
-        Menu.GetComponent<Text>().text = "Players: ";
+        PlayerList.text = "Players: ";
 
         foreach (Player p in PhotonNetwork.PlayerList) {
-            Menu.GetComponent<Text>().text += "\n" + p.NickName;
+            PlayerList.text += "\n" + p.NickName;
         }
 
         if (PhotonNetwork.IsMasterClient) {
