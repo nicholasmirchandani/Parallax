@@ -22,7 +22,7 @@ using VRTK;
 
 public class MenuManager : MonoBehaviourPunCallbacks
 {
-    #region Menu Managment
+    #region private fields
 
     [SerializeField]
     private Canvas Menu;
@@ -30,11 +30,17 @@ public class MenuManager : MonoBehaviourPunCallbacks
     [SerializeField]
     private Text PlayerList;
 
+    private List<Player> Plist;
+
     [SerializeField]
     private GameObject Lcontroller;
 
     [SerializeField]
     private GameObject Rcontroller;
+
+    #endregion
+
+    #region UnityMethods
 
     /// <summary>
     /// On the load of the scene makes sure that the menu is disabled, and is not
@@ -42,7 +48,14 @@ public class MenuManager : MonoBehaviourPunCallbacks
     /// </summary>
     public void Start() {
         Menu.enabled = false;
+
+        PrintPlayers();
     }
+
+    #endregion
+
+
+    #region VRTK Methods
 
     /// <summary>
     /// When the Start menu button is pressed this method is called by the Unity Events component on the controller
@@ -66,27 +79,47 @@ public class MenuManager : MonoBehaviourPunCallbacks
         
     }
 
-    /// <summary>
-    /// Debug option that should be removed in the final game.
-    /// opens and closes the menu on the m key press
-    /// </summary>
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.M)) {
-            OpenCloseMenu();
-        }
+    #endregion
 
-        PrintPlayers();
-    }
+
+    #region PUNCallbacks
 
     /// <summary>
     /// Method for displaying all the players in the photon room in the menu.
     /// </summary>
-    private void PrintPlayers() {
+    private void PrintPlayers()
+    {
         PlayerList.text = "Players: ";
 
-        foreach (Player p in PhotonNetwork.PlayerList) {
+        foreach (Player p in PhotonNetwork.PlayerList)
+        {
             PlayerList.text += "\n" + p.NickName;
         }
+
+
+
+    }
+
+    /// <summary>
+    /// This Method is called when a player enters the room and calls the PrintPlayers Method to update the playerList
+    /// in the ingame Menu
+    /// </summary>
+    public override void OnPlayerEnteredRoom(Player newPlayer)
+    {
+        base.OnPlayerEnteredRoom(newPlayer);
+        
+        PrintPlayers();
+    }
+
+    /// <summary>
+    /// This Method is called when a player leaves the room and calls the PrintPlayers Method to update the playerList
+    /// in the ingame Menu
+    /// </summary>
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        base.OnPlayerLeftRoom(otherPlayer);
+        
+        PrintPlayers();
     }
 
     #endregion
