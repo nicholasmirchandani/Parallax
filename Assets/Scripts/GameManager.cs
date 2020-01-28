@@ -17,7 +17,6 @@ using UnityEngine.SceneManagement;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
-
 public class GameManager : MonoBehaviourPunCallbacks {
     [System.Serializable] public enum Planet {
         MERCURY,
