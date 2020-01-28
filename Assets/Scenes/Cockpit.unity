@@ -1535,7 +1535,18 @@ MonoBehaviour:
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnButtonOnePressed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6534957048248382006}
+        m_MethodName: OpenCloseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnButtonOneReleased:
@@ -1575,18 +1586,7 @@ MonoBehaviour:
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnStartMenuPressed:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6534957048248382006}
-        m_MethodName: OpenCloseMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnStartMenuReleased:
@@ -2824,7 +2824,18 @@ MonoBehaviour:
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnButtonOnePressed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6534957048248382006}
+        m_MethodName: OpenCloseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnButtonOneReleased:
@@ -2864,18 +2875,7 @@ MonoBehaviour:
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnStartMenuPressed:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6534957048248382006}
-        m_MethodName: OpenCloseMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_ControllerEvents_UnityEvents+ControllerInteractionEvent,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnStartMenuReleased:
