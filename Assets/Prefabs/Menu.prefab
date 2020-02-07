@@ -47,6 +47,7 @@ MonoBehaviour:
   PlayerList: {fileID: 6534957048885813626}
   Lcontroller: {fileID: 0}
   Rcontroller: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1 &1806941258144228173
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6534957047029753063}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.88, z: 0}
+  m_LocalPosition: {x: 0, y: -1.88, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6534957047187419427}
@@ -696,7 +697,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6534957048175886944}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 579425748149984763}
@@ -1067,7 +1068,7 @@ PrefabInstance:
     - target: {fileID: 4173292103107928830, guid: 4ffe1a70dc354b841b43eb543d03155d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4173292103107928830, guid: 4ffe1a70dc354b841b43eb543d03155d,
         type: 3}
@@ -1221,7 +1222,7 @@ PrefabInstance:
     - target: {fileID: 2968473331065227051, guid: 9bfadb3bac21cec43bc39058f7e7f143,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2968473331065227051, guid: 9bfadb3bac21cec43bc39058f7e7f143,
         type: 3}

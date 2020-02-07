@@ -13080,7 +13080,7 @@ PrefabInstance:
         type: 3}
       propertyPath: gameManager
       value: 
-      objectReference: {fileID: 1333568310}
+      objectReference: {fileID: 0}
     - target: {fileID: 6534957047306768968, guid: 1f89abda5f4f9974d836a2fc7bca8e56,
         type: 3}
       propertyPath: m_Name
@@ -13160,6 +13160,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534957047029753057, guid: 1f89abda5f4f9974d836a2fc7bca8e56,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534957048175886946, guid: 1f89abda5f4f9974d836a2fc7bca8e56,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f89abda5f4f9974d836a2fc7bca8e56, type: 3}

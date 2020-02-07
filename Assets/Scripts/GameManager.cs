@@ -58,9 +58,9 @@ public class GameManager : MonoBehaviourPunCallbacks {
         if(Input.GetKeyDown(KeyCode.B)) {
             BeamToPlanet();
         }
-        if(Input.GetKeyDown(KeyCode.R)) {
-            ReturnToCockpit();
-        }
+        //if(Input.GetKeyDown(KeyCode.R)) {
+          //  ReturnToCockpit();
+        //}
         if(Input.GetKeyDown(KeyCode.C)) {
             ToggleIsConfirmed();
         }
