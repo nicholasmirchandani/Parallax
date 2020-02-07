@@ -7,13 +7,17 @@
  *                                                                      *
  * Updated by Nicholas Mirchandani on 11/12/19                          *
  * Updated by Dan Haub on 11/1/19                                       *
+ * Updated by Sean Robbins on 1/21/2020                                 *
  ************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour {
+using Photon.Pun;
+using Photon.Realtime;
+using UnityEngine.UI;
+public class GameManager : MonoBehaviourPunCallbacks {
     [System.Serializable] public enum Planet {
         MERCURY,
         VENUS,
@@ -29,6 +33,7 @@ public class GameManager : MonoBehaviour {
     public Planet targetPlanet;   //Allows us to track and modify target planet to beam to
     public bool isConfirmed = false;
 
+
     public float currentGravity; //Allows us to track current gravity
     [SerializeField] private bool gravityEnabled = true; //Allows us to track if gravity is currently enabled
 
@@ -42,6 +47,7 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);
         }
 
+        
         targetPlanet = Planet.MERCURY;
         SetGravity();
     }
@@ -52,9 +58,9 @@ public class GameManager : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.B)) {
             BeamToPlanet();
         }
-        if(Input.GetKeyDown(KeyCode.R)) {
-            ReturnToCockpit();
-        }
+        //if(Input.GetKeyDown(KeyCode.R)) {
+          //  ReturnToCockpit();
+        //}
         if(Input.GetKeyDown(KeyCode.C)) {
             ToggleIsConfirmed();
         }
@@ -64,6 +70,12 @@ public class GameManager : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.RightArrow)) {
             ScrollTargetPlanetRight();
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("Leaving the Networked Room");
+            LeaveRoom();
+        }
+        
     }
 
     //Mutator for target planet
@@ -92,13 +104,21 @@ public class GameManager : MonoBehaviour {
 
     //Updates target planet left one
     public void ScrollTargetPlanetLeft() {
-        if(targetPlanet != Planet.MERCURY) {
+        if (!PhotonNetwork.IsMasterClient) {
+            return;
+        }
+
+        if (targetPlanet != Planet.MERCURY) {
             targetPlanet -= 1;
         }
     }
 
     //Updates target planet right one
     public void ScrollTargetPlanetRight() {
+        if (!PhotonNetwork.IsMasterClient) {
+            return;
+        }
+
         if (targetPlanet != Planet.NEPTUNE) {
             targetPlanet += 1;
         }
@@ -106,6 +126,9 @@ public class GameManager : MonoBehaviour {
 
     //Beams to target planet
     public void BeamToPlanet() {
+        if(!PhotonNetwork.IsMasterClient) {
+            return;
+        }
         if(!isConfirmed) {
             Debug.Log("Need to confirm planet!");
             //TODO: Need to confirm planet popup
@@ -113,25 +136,25 @@ public class GameManager : MonoBehaviour {
         }
         switch(targetPlanet) {
             case Planet.MERCURY:
-                SceneManager.LoadScene("Mercury");
+                PhotonNetwork.LoadLevel("Mercury");
                 break;
             case Planet.VENUS:
-                SceneManager.LoadScene("Venus");
+                PhotonNetwork.LoadLevel("Venus");
                 break;
             case Planet.MARS:
-                SceneManager.LoadScene("Mars");
+                PhotonNetwork.LoadLevel("Mars");
                 break;
             case Planet.JUPITER:
-                SceneManager.LoadScene("Jupiter");
+                PhotonNetwork.LoadLevel("Jupiter");
                 break;
             case Planet.SATURN:
-                SceneManager.LoadScene("Saturn");
+                PhotonNetwork.LoadLevel("Saturn");
                 break;
             case Planet.URANUS:
-                SceneManager.LoadScene("Uranus");
+                PhotonNetwork.LoadLevel("Uranus");
                 break;
             case Planet.NEPTUNE:
-                SceneManager.LoadScene("Neptune");
+                PhotonNetwork.LoadLevel("Neptune");
                 break;
             default:
                 Debug.Log("ERROR: UNKNOWN PLANET TO BEAM TO");
@@ -142,7 +165,11 @@ public class GameManager : MonoBehaviour {
 
     //Returns to Cockpit
     public void ReturnToCockpit() {
-        SceneManager.LoadScene("Cockpit");
+
+        if (!PhotonNetwork.IsMasterClient) {
+            return;
+        }
+        PhotonNetwork.LoadLevel("Cockpit");
     }
 
     //Sets current gravity based to passed force value
@@ -183,4 +210,68 @@ public class GameManager : MonoBehaviour {
     public void QuitGame() {
         Application.Quit();
     }
+
+
+
+
+    //--------------------Photon Code Test Section----------------------------
+
+
+
+    #region Photon Callbacks
+
+    
+    /// <summary>
+    /// Called when the local player left the room. We need to load the launcher scene.
+    /// </summary>
+    public override void OnLeftRoom() {
+        SceneManager.LoadScene(0);
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    //Called when a player enters the photon room called by every player in the room
+    public override void OnPlayerEnteredRoom(Player other) {
+        Debug.LogFormat("OnPlayerEnteredRoom() {0}",  other.NickName); // not seen if you're the player connecting
+
+        
+        if (PhotonNetwork.IsMasterClient) {
+            Debug.LogFormat("OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
+            
+            //code to call when a player enters the room, called only by the master client in this if statement
+
+
+        }
+    }
+
+    //Called When a Player leaves the Photon Room by every other player in the room
+    public override void OnPlayerLeftRoom(Player other) {
+        Debug.LogFormat("OnPlayerLeftRoom() {0}", other.NickName); // seen when other disconnects
+        
+
+        if (PhotonNetwork.IsMasterClient) {
+            Debug.LogFormat("OnPlayerLeftRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
+        }
+    }
+
+
+
+
+    #endregion
+
+
+    #region Public Methods
+
+    //Called when player leaves the Photon Networked Room
+    public void LeaveRoom() {
+        PhotonNetwork.LeaveRoom();
+    }
+
+    //Called 
+   
+
+
+    #endregion
+
+
+
 }
