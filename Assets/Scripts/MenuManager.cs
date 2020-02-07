@@ -109,11 +109,9 @@ public class MenuManager : MonoBehaviourPunCallbacks
             Lcontroller.GetComponent<VRTK_UIPointer>().enabled = false;
             Rcontroller.GetComponent<VRTK_UIPointer>().enabled = false;
 
-            //enable Teleportif not in cockpit
-            if (FindObjectOfType<CockpitManager>() != null) {
-                Lcontroller.GetComponent<VRTK_Pointer>().enableTeleport = true;
-                Rcontroller.GetComponent<VRTK_Pointer>().enableTeleport = true;
-            }
+            //enable Teleport
+            Lcontroller.GetComponent<VRTK_Pointer>().enableTeleport = true;
+            Rcontroller.GetComponent<VRTK_Pointer>().enableTeleport = true;
         }
         
     }
@@ -131,7 +129,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
 
     //leaves the Photon Room and returns to menu
     public void QuitToMenu() {
-        gameManager.LeaveRoom();
+        //gameManager.LeaveRoom();
     }
 
     #endregion

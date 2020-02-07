@@ -17,7 +17,7 @@ using UnityEngine.SceneManagement;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
-public class GameManager : MonoBehaviourPunCallbacks {
+public class GameManager : MonoBehaviour {
     [System.Serializable] public enum Planet {
         MERCURY,
         VENUS,
@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Debug.Log("Leaving the Networked Room");
-            LeaveRoom();
+            //LeaveRoom();
         }
         
     }
@@ -165,11 +165,13 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
     //Returns to Cockpit
     public void ReturnToCockpit() {
-
+        /*
         if (!PhotonNetwork.IsMasterClient) {
             return;
         }
         PhotonNetwork.LoadLevel("Cockpit");
+        */
+        SceneManager.LoadScene("Cockpit");
     }
 
     //Sets current gravity based to passed force value
@@ -215,7 +217,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
 
     //--------------------Photon Code Test Section----------------------------
-
+    /*
 
 
     #region Photon Callbacks
@@ -272,6 +274,6 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
     #endregion
 
-
+    */
 
 }

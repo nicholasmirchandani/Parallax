@@ -304,6 +304,53 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99958617}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &143638818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 143638820}
+  - component: {fileID: 143638819}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &143638819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143638818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b2a04980ee841248ae6ec75d6fe56e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventSystem: {fileID: 688769732}
+  RightPointerController: {fileID: 227823376}
+  LeftPointerController: {fileID: 787103658}
+  inputModule: {fileID: 0}
+--- !u!4 &143638820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143638818}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &226239487
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,7 +923,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688769732}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -5774,6 +5821,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e19ec58d4a9e844970103e5bd8946a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RenderParts: []
+  isLeftHand: 1
 --- !u!114 &1097781721087363739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6025,6 +6074,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f3402a2ea5bff4880c0313515240cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oculusUserID: 
+  Driver: {fileID: 0}
+  EnableBody: 1
+  EnableHands: 1
+  EnableBase: 1
+  EnableExpressive: 0
+  RecordPackets: 0
+  UseSDKPackets: 1
+  PacketSettings:
+    UpdateRate: 0.033333335
+  StartWithControllers: 0
+  FirstPersonLayer:
+    layerIndex: 0
+  ThirdPersonLayer:
+    layerIndex: 0
+  ShowFirstPerson: 1
+  ShowThirdPerson: 0
+  LevelOfDetail: 5
+  UseTransparentRenderQueue: 1
+  Monochrome_SurfaceShader: {fileID: 0}
+  Monochrome_SurfaceShader_SelfOccluding: {fileID: 0}
+  Monochrome_SurfaceShader_PBS: {fileID: 0}
+  Skinshaded_SurfaceShader_SingleComponent: {fileID: 0}
+  Skinshaded_VertFrag_SingleComponent: {fileID: 0}
+  Skinshaded_VertFrag_CombinedMesh: {fileID: 0}
+  Skinshaded_Expressive_SurfaceShader_SingleComponent: {fileID: 0}
+  Skinshaded_Expressive_VertFrag_SingleComponent: {fileID: 0}
+  Skinshaded_Expressive_VertFrag_CombinedMesh: {fileID: 0}
+  Loader_VertFrag_CombinedMesh: {fileID: 0}
+  EyeLens: {fileID: 0}
+  ControllerShader: {fileID: 0}
+  CanOwnMicrophone: 1
+  EnableLaughter: 1
+  MouthAnchor: {fileID: 0}
+  LeftHandCustomPose: {fileID: 0}
+  RightHandCustomPose: {fileID: 0}
+  VoiceAmplitude: 0
+  EnableMouthVertexAnimation: 0
 --- !u!114 &1097913214790520793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6168,6 +6255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb7a6650b6cb46545967d3b380b7396c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RenderParts: []
 --- !u!114 &1097990487543023541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6180,6 +6268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e53b07ad62d980a4da9fffff0b05fd2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RenderParts: []
+  isLeftHand: 1
 --- !u!114 &1098019716052987667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6192,6 +6282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0e33623ec5372748b5703f61a4df82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RenderParts: []
 --- !u!114 &1098047407227503993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6238,6 +6329,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e933e81d3c20c74ea6fdc708a67e3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  queueAhead: 1
+  useRecommendedMSAALevel: 1
+  _monoscopic: 0
+  enableAdaptiveResolution: 0
+  minRenderScale: 0.7
+  maxRenderScale: 1
+  _headPoseRelativeOffsetRotation: {x: 0, y: 0, z: 0}
+  _headPoseRelativeOffsetTranslation: {x: 0, y: 0, z: 0}
+  profilerTcpPort: 32419
+  expandMixedRealityCapturePropertySheet: 0
+  enableMixedReality: 0
+  compositionMethod: 0
+  extraHiddenLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  externalCompositionBackdropColorRift: {r: 0, g: 1, b: 0, a: 1}
+  externalCompositionBackdropColorQuest: {r: 0, g: 0, b: 0, a: 0}
+  capturingCameraDevice: 0
+  flipCameraFrameHorizontally: 0
+  flipCameraFrameVertically: 0
+  handPoseStateLatency: 0
+  sandwichCompositionRenderLatency: 0
+  sandwichCompositionBufferedFrames: 8
+  chromaKeyColor: {r: 0, g: 1, b: 0, a: 1}
+  chromaKeySimilarity: 0.6
+  chromaKeySmoothRange: 0.03
+  chromaKeySpillRange: 0.06
+  useDynamicLighting: 0
+  depthQuality: 1
+  dynamicLightingSmoothFactor: 8
+  dynamicLightingDepthVariationClampingValue: 0.001
+  virtualGreenScreenType: 0
+  virtualGreenScreenTopY: 10
+  virtualGreenScreenBottomY: -10
+  virtualGreenScreenApplyDepthCulling: 0
+  virtualGreenScreenDepthTolerance: 0.2
+  mrcActivationMode: 0
+  _trackingOriginType: 0
+  usePositionTracking: 1
+  useRotationTracking: 1
+  useIPDInPositionTracking: 1
+  resetTrackerOnLoad: 0
+  AllowRecenter: 1
+  _reorientHMDOnControllerRecenter: 1
+  LateControllerUpdate: 1
 --- !u!114 &1098059027924466221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6645,6 +6781,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e53b07ad62d980a4da9fffff0b05fd2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RenderParts: []
+  isLeftHand: 1
 --- !u!114 &1098303426632921777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6741,6 +6879,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e19ec58d4a9e844970103e5bd8946a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RenderParts: []
+  isLeftHand: 1
 --- !u!114 &1098322652892429683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6901,6 +7041,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePerEyeCameras: 0
+  useFixedUpdateForTracking: 0
+  disableEyeAnchorCameras: 0
 --- !u!114 &1098574444818021767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6933,6 +7076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac27124318cf8e84aa7350c2ac1cdb80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Mode: 0
 --- !u!114 &1098589073181211713
 MonoBehaviour:
   m_ObjectHideFlags: 0
