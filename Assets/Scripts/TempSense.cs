@@ -74,7 +74,9 @@ public class TempSense : MonoBehaviour {
             yield return new WaitForEndOfFrame();
         }
         hasFinished = true;
-        Debug.Log("Fzinished Count");
+        Debug.Log("Finished Count");
+        //TODO: Remove Destroy and update gameManager instead
+        Destroy(gameObject);
     }
     #endregion
 }
