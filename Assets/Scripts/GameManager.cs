@@ -17,7 +17,7 @@ using UnityEngine.SceneManagement;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviourPunCallbacks {
     [System.Serializable] public enum Planet {
         MERCURY,
         VENUS,
@@ -29,6 +29,34 @@ public class GameManager : MonoBehaviour {
         NONE
     }
 
+    [System.Serializable] public enum Lesson {
+        LESSON1,
+        LESSON2,
+        LESSON3
+    }
+
+    [System.Serializable]
+    public struct PlanetProgress {
+        public Planet planet;
+        public bool isComplete;
+        public bool hasChemicalComp;
+        public bool hasGravity;
+        public bool hasTemperature;
+        public bool hasPressure;
+        public bool hasAtmosphericComp;
+    }
+
+    [Header("Lesson Properties")]
+    [SerializeField] Lesson currentLesson;
+    [SerializeField] PlanetProgress mercury;
+    [SerializeField] PlanetProgress venus;
+    [SerializeField] PlanetProgress mars;
+    [SerializeField] PlanetProgress jupiter;
+    [SerializeField] PlanetProgress saturn;
+    [SerializeField] PlanetProgress uranus;
+    [SerializeField] PlanetProgress neptune;
+
+    [Header("Game Properties")]
     public static GameManager Instance;     //Reference to GameManager at all times
     public Planet targetPlanet;   //Allows us to track and modify target planet to beam to
     public bool isConfirmed = false;
@@ -46,9 +74,15 @@ public class GameManager : MonoBehaviour {
         } else {
             Destroy(gameObject);
         }
-
         
         targetPlanet = Planet.MERCURY;
+        mercury.planet = Planet.MERCURY;
+        venus.planet = Planet.VENUS;
+        mars.planet = Planet.MARS;
+        jupiter.planet = Planet.JUPITER;
+        saturn.planet = Planet.SATURN;
+        uranus.planet = Planet.URANUS;
+        neptune.planet = Planet.NEPTUNE;
         SetGravity();
     }
 
@@ -58,9 +92,9 @@ public class GameManager : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.B)) {
             BeamToPlanet();
         }
-        //if(Input.GetKeyDown(KeyCode.R)) {
-          //  ReturnToCockpit();
-        //}
+        /* if(Input.GetKeyDown(KeyCode.R)) { Commented out since it's button 2 in the VR simulator
+            ReturnToCockpit();
+        }*/
         if(Input.GetKeyDown(KeyCode.C)) {
             ToggleIsConfirmed();
         }
@@ -70,8 +104,7 @@ public class GameManager : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.RightArrow)) {
             ScrollTargetPlanetRight();
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
             Debug.Log("Leaving the Networked Room");
             //LeaveRoom();
         }
@@ -217,7 +250,6 @@ public class GameManager : MonoBehaviour {
 
 
     //--------------------Photon Code Test Section----------------------------
-    /*
 
 
     #region Photon Callbacks
@@ -273,7 +305,5 @@ public class GameManager : MonoBehaviour {
 
 
     #endregion
-
-    */
 
 }
