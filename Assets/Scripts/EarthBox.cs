@@ -25,7 +25,6 @@ public class EarthBox : MonoBehaviour {
         string colliderName = other.gameObject.name;
         string colliderParentName = other.gameObject.transform.parent.name;
         if (!((colliderName.Length > 15) && colliderName.Substring(0,15).Equals("[VRTK][AUTOGEN]") || (colliderParentName.Length > 15) && colliderParentName.Substring(0,15).Equals("[VRTK][AUTOGEN]")) && !(other.gameObject.tag == "Hand")) { //to exclude the controllers from receiving ConstantForce
-            Debug.Log("In Earth Box [tag: \"" + other.gameObject.tag + "\", name: \"" + colliderName + "\" " + "Parent name: " + colliderParentName);
             ConstantForce cf = other.gameObject.AddComponent<ConstantForce>();
             cf.force = new Vector3(0F, GameManager.Instance.CalcDiffToEarthGravity(), 0F);
         }
