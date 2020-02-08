@@ -1,5 +1,5 @@
 ﻿/************************************************************************
- * Written by Sean Robbins and Nick Mirchandani in October 2019         *
+ * Written by Sean Robbins and Nick Mirchandani in January 2020         *
  *                                                                      *
  *                                                                      *
  * The Purpose of the Breakdown script is to generate smaller rocks     *
