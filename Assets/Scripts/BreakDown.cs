@@ -5,7 +5,8 @@
  * The Purpose of the Breakdown script is to generate smaller rocks     *
  * when a larger rock is interacted with by the player for the purpose  *
  * of sample collection.                                                *
- *                                                                      *                                       *
+ *                                                                      *
+ * Updated by Nicholas Mirchandani on 2/8/20                            *
  ************************************************************************/
 
 
@@ -28,13 +29,5 @@ public class BreakDown : MonoBehaviour {
             part.transform.position = desiredPositions[i].position;
         }
         Destroy(gameObject);
-    }
-
-    //debug method to test the script
-    //When testing finished remove
-    private void Update() {
-        if(Input.GetKeyDown(KeyCode.J)) {
-            Breakdown();
-        }
     }
 }
