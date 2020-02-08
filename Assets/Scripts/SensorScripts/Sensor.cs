@@ -14,7 +14,7 @@ using UnityEngine;
 using VRTK;
 
 //TODO: Use VRTK Grab Events
-public class TempSense : MonoBehaviour {
+public class Sensor : MonoBehaviour {
     #region variables
     public float timeMax = 5;
     private float currentTime = 0;
