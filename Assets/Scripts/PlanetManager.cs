@@ -16,6 +16,7 @@ using UnityEngine;
 
 public class PlanetManager : MonoBehaviour {
     [SerializeField] private float planetGravity; //allows us to keep track of the current planet's gravity
+    public GameManager.Planet currentPlanet;
 
     //Runs when new planet scene is opened
     public void Awake() {

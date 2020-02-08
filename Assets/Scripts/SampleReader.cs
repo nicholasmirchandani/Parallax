@@ -8,6 +8,7 @@
  *                                                                      *
  ************************************************************************/
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,6 +24,8 @@ public class SampleReader : MonoBehaviour {
             //TODO: Update GameManaager as well as destroy
             //TODO: Implement Dans Animation
             Destroy(collision.gameObject);
+            GameManager.Instance.planetProgresses[(int)FindObjectOfType<PlanetManager>().currentPlanet].hasChemicalComp = true;
+            GameManager.Instance.planetProgresses[(int)FindObjectOfType<PlanetManager>().currentPlanet].CheckIsComplete();
         }
     }
 

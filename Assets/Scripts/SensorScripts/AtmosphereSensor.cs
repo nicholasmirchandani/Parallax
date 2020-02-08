@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TempSensor : Sensor
+public class AtmosphereSensor: Sensor
 {
-    //TODO: code specific to the Temp sensor
+    //TODO: code specific to the Atmosphere sensor
 
     #region Variables
 
@@ -13,7 +13,7 @@ public class TempSensor : Sensor
     #region Methods
 
     protected override void OnComplete() {
-        GameManager.Instance.planetProgresses[(int)FindObjectOfType<PlanetManager>().currentPlanet].hasTemperature = true;
+        GameManager.Instance.planetProgresses[(int)FindObjectOfType<PlanetManager>().currentPlanet].hasAtmosphericComp = true;
         GameManager.Instance.planetProgresses[(int)FindObjectOfType<PlanetManager>().currentPlanet].CheckIsComplete();
     }
     #endregion

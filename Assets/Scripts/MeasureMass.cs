@@ -69,6 +69,8 @@ public class MeasureMass : MonoBehaviour
     public void Store(GameObject value) {
         //Adds the passed in game object to the list of items to measured
         measuring.Add(value);
+        GameManager.Instance.planetProgresses[(int)FindObjectOfType<PlanetManager>().currentPlanet].hasGravity = true;
+        GameManager.Instance.planetProgresses[(int)FindObjectOfType<PlanetManager>().currentPlanet].CheckIsComplete();
     }
 
     //Called when an object has exited the collision

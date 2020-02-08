@@ -11,7 +11,10 @@ public class GravitySensor : Sensor
     #endregion
 
     #region Methods
-
+    protected override void OnComplete() {
+        GameManager.Instance.planetProgresses[(int)FindObjectOfType<PlanetManager>().currentPlanet].hasGravity = true;
+        GameManager.Instance.planetProgresses[(int)FindObjectOfType<PlanetManager>().currentPlanet].CheckIsComplete();
+    }
 
     #endregion
 }

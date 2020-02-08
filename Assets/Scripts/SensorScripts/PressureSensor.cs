@@ -12,6 +12,9 @@ public class PressureSensor : Sensor
 
     #region Methods
 
-
+    protected override void OnComplete() {
+        GameManager.Instance.planetProgresses[(int)FindObjectOfType<PlanetManager>().currentPlanet].hasPressure = true;
+        GameManager.Instance.planetProgresses[(int)FindObjectOfType<PlanetManager>().currentPlanet].CheckIsComplete();
+    }
     #endregion
 }

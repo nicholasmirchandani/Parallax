@@ -44,17 +44,15 @@ public class GameManager : MonoBehaviourPunCallbacks {
         public bool hasTemperature;
         public bool hasPressure;
         public bool hasAtmosphericComp;
+
+        public void CheckIsComplete() {
+            isComplete = hasChemicalComp && hasGravity && hasTemperature && hasPressure && hasAtmosphericComp;
+        }
     }
 
     [Header("Lesson Properties")]
     [SerializeField] Lesson currentLesson;
-    [SerializeField] PlanetProgress mercury;
-    [SerializeField] PlanetProgress venus;
-    [SerializeField] PlanetProgress mars;
-    [SerializeField] PlanetProgress jupiter;
-    [SerializeField] PlanetProgress saturn;
-    [SerializeField] PlanetProgress uranus;
-    [SerializeField] PlanetProgress neptune;
+    public PlanetProgress[] planetProgresses;
 
     [Header("Game Properties")]
     public static GameManager Instance;     //Reference to GameManager at all times
@@ -76,13 +74,14 @@ public class GameManager : MonoBehaviourPunCallbacks {
         }
         
         targetPlanet = Planet.MERCURY;
-        mercury.planet = Planet.MERCURY;
-        venus.planet = Planet.VENUS;
-        mars.planet = Planet.MARS;
-        jupiter.planet = Planet.JUPITER;
-        saturn.planet = Planet.SATURN;
-        uranus.planet = Planet.URANUS;
-        neptune.planet = Planet.NEPTUNE;
+        planetProgresses = new PlanetProgress[7];
+        planetProgresses[0].planet = Planet.MERCURY;
+        planetProgresses[1].planet = Planet.VENUS;
+        planetProgresses[2].planet = Planet.MARS;
+        planetProgresses[3].planet = Planet.JUPITER;
+        planetProgresses[4].planet = Planet.SATURN;
+        planetProgresses[5].planet = Planet.URANUS;
+        planetProgresses[6].planet = Planet.NEPTUNE;
         SetGravity();
     }
 
