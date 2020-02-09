@@ -32,6 +32,9 @@ public class MenuManager : MonoBehaviourPunCallbacks
     [SerializeField]
     private Text PlayerList;
 
+    [SerializeField]
+    private Text PlayerNameLocation;
+
     private List<Player> Plist;
 
     [SerializeField]
@@ -40,7 +43,12 @@ public class MenuManager : MonoBehaviourPunCallbacks
     [SerializeField]
     private GameObject Rcontroller;
 
-    [SerializeField] private GameManager gameManager;
+    private GameManager gameManager;
+
+    [SerializeField]
+    private Text time;
+
+
     #endregion
 
     #region UnityMethods
@@ -68,6 +76,10 @@ public class MenuManager : MonoBehaviourPunCallbacks
     /// </summary>
     public void OpenCloseMenu() {
         gameManager = FindObjectOfType<GameManager>();
+        string LocationName = SceneManagerHelper.ActiveSceneName;
+        PlayerNameLocation.text = gameManager.PlayerName + ", " + LocationName;
+        PrintPlayers();
+        CurrentTime();
         Menu.enabled = !Menu.enabled;
         if(Menu.enabled) {
 
@@ -116,6 +128,12 @@ public class MenuManager : MonoBehaviourPunCallbacks
         
     }
 
+    private void CurrentTime()
+    {
+        string currentTime = System.DateTime.Now.ToString();
+        time.text = currentTime;
+    }
+
     
 
     #endregion
@@ -142,15 +160,17 @@ public class MenuManager : MonoBehaviourPunCallbacks
     /// </summary>
     private void PrintPlayers()
     {
-        PlayerList.text = "Players: ";
+        if(gameManager.isNetworked) {
+            PlayerList.text = "Players: ";
 
-        foreach (Player p in PhotonNetwork.PlayerList)
-        {
-            PlayerList.text += "\n" + p.NickName;
+            foreach (Player p in PhotonNetwork.PlayerList) {
+                if (p.IsMasterClient) {
+                    PlayerList.text += "\n" + "<b>" + p.NickName + "</b>";
+                } else {
+                    PlayerList.text += "\n" + p.NickName;
+                }
+            }
         }
-
-
-
     }
 
     /// <summary>

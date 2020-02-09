@@ -63,6 +63,9 @@ public class GameManager : MonoBehaviourPunCallbacks {
     public float currentGravity; //Allows us to track current gravity
     [SerializeField] private bool gravityEnabled = true; //Allows us to track if gravity is currently enabled
 
+
+    public string PlayerName = null;
+
     //Awake is called when script instance is loaded
     void Awake() {
         //If this isn't the first instance of GameManager, destroy it.  There must only be one at any given time, accessible through GameManager.Instance
@@ -231,6 +234,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
     //Returns to Cockpit
     public void ReturnToCockpit() {
+        Debug.Log("Return to Cockpit called");
         if(isNetworked) {
             if (!PhotonNetwork.IsMasterClient) {
                 return;
@@ -281,7 +285,9 @@ public class GameManager : MonoBehaviourPunCallbacks {
     }
 
 
-
+    public void setPlayerName(string name) {
+        PlayerName = name;
+    }
 
     //--------------------Photon Code Test Section----------------------------
 

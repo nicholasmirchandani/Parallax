@@ -73,7 +73,7 @@ namespace Com.MyCompany.MyGame
             }
             PhotonNetwork.NickName = value;
 
-
+            GameManager.Instance.setPlayerName(value);
             PlayerPrefs.SetString(playerNamePrefKey, value);
         }
 
