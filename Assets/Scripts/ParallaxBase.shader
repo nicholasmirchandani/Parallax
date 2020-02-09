@@ -116,8 +116,7 @@ Shader "Custom/ParallaxBase" {
 
 				float shadowToMidInterpolation = LOW_MID_THRESHOLD - _InterpolationAmount;
 				float midToHighInterpolation = MID_HIGH_THRESHOLD - _InterpolationAmount;
-				//float lightIntensity = smoothstep(0.0, 0.01, NdotL * shadow); //NOTE: This is designed to work solely on a two-tone shader, as the upper/lower bounds are 0 and 0.01.  Interpolates when the value is between 0 and 0.01 to ensure some overal blend
-				//float lightIntensity = NdotL > LOW_MID_THRESHOLD ? (NdotL > MID_HIGH_THRESHOLD ? HIGHLIGHT_LIGHTINTENSITY : MIDTONE_LIGHTINTENSITY) : SHADOW_LIGHTINTENSITY;
+				//lightIntensity's expression is a long concatenation of conditional operators designed to segment the shader into 3 tones but interpolate between them along the edges at the threshold
 				float lightIntensity = NdotL > shadowToMidInterpolation ? (NdotL >= LOW_MID_THRESHOLD ? (NdotL > midToHighInterpolation ? (NdotL >= MID_HIGH_THRESHOLD ? 1.0 : (NdotL - MID_HIGH_THRESHOLD + _InterpolationAmount) * ((HIGHLIGHT_LIGHTINTENSITY - MIDTONE_LIGHTINTENSITY) / (_InterpolationAmount)) + MIDTONE_LIGHTINTENSITY) : MIDTONE_LIGHTINTENSITY) : (NdotL - LOW_MID_THRESHOLD + _InterpolationAmount) * ((MIDTONE_LIGHTINTENSITY - SHADOW_LIGHTINTENSITY)/(_InterpolationAmount)) + SHADOW_LIGHTINTENSITY) : SHADOW_LIGHTINTENSITY;
 				//Multiply in the main light color to the light for shader calculations
 				float4 light = lightIntensity * _LightColor0;
