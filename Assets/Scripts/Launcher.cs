@@ -92,6 +92,8 @@ public class Launcher : MonoBehaviourPunCallbacks
         // keep track of the will to join a room, because when we come back from the game we will get a callback that we are connected, so we need to know what to do then
         isConnecting = PhotonNetwork.ConnectUsingSettings();
 
+        GameManager.Instance.isNetworked = true;
+
         progressLabel.SetActive(true);
         controlPanel.SetActive(false);
 

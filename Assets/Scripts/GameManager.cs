@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
         }
         if (Input.GetKeyDown(KeyCode.Escape)) {
             Debug.Log("Leaving the Networked Room");
-            //LeaveRoom();
+            LeaveRoom();
         }
         
     }
@@ -136,7 +136,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
     //Updates target planet left one
     public void ScrollTargetPlanetLeft() {
-        if (!PhotonNetwork.IsMasterClient) {
+        if (isNetworked && !PhotonNetwork.IsMasterClient) {
             return;
         }
 
@@ -147,7 +147,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
     //Updates target planet right one
     public void ScrollTargetPlanetRight() {
-        if (!PhotonNetwork.IsMasterClient) {
+        if (isNetworked && !PhotonNetwork.IsMasterClient) {
             return;
         }
 
@@ -158,52 +158,87 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
     //Beams to target planet
     public void BeamToPlanet() {
-        if(!PhotonNetwork.IsMasterClient) {
-            return;
+        if(isNetworked) {
+            if (!PhotonNetwork.IsMasterClient) {
+                return;
+            }
+            if (!isConfirmed) {
+                Debug.Log("Need to confirm planet!");
+                //TODO: Need to confirm planet popup
+                return;
+            }
+            switch (targetPlanet) {
+                case Planet.MERCURY:
+                    PhotonNetwork.LoadLevel("Mercury");
+                    break;
+                case Planet.VENUS:
+                    PhotonNetwork.LoadLevel("Venus");
+                    break;
+                case Planet.MARS:
+                    PhotonNetwork.LoadLevel("Mars");
+                    break;
+                case Planet.JUPITER:
+                    PhotonNetwork.LoadLevel("Jupiter");
+                    break;
+                case Planet.SATURN:
+                    PhotonNetwork.LoadLevel("Saturn");
+                    break;
+                case Planet.URANUS:
+                    PhotonNetwork.LoadLevel("Uranus");
+                    break;
+                case Planet.NEPTUNE:
+                    PhotonNetwork.LoadLevel("Neptune");
+                    break;
+                default:
+                    Debug.Log("ERROR: UNKNOWN PLANET TO BEAM TO");
+                    break;
+            }
+            isConfirmed = false;
+        } else {
+            if (!isConfirmed) {
+                return;
+            }
+            switch (targetPlanet) {
+                case Planet.MERCURY:
+                    SceneManager.LoadScene("Mercury");
+                    break;
+                case Planet.VENUS:
+                    SceneManager.LoadScene("Venus");
+                    break;
+                case Planet.MARS:
+                    SceneManager.LoadScene("Mars");
+                    break;
+                case Planet.JUPITER:
+                    SceneManager.LoadScene("Jupiter");
+                    break;
+                case Planet.SATURN:
+                    SceneManager.LoadScene("Saturn");
+                    break;
+                case Planet.URANUS:
+                    SceneManager.LoadScene("Uranus");
+                    break;
+                case Planet.NEPTUNE:
+                    SceneManager.LoadScene("Neptune");
+                    break;
+                default:
+                    Debug.Log("ERROR: UNKNOWN PLANET TO BEAM TO");
+                    break;
+            }
+            isConfirmed = false;
         }
-        if(!isConfirmed) {
-            Debug.Log("Need to confirm planet!");
-            //TODO: Need to confirm planet popup
-            return;
-        }
-        switch(targetPlanet) {
-            case Planet.MERCURY:
-                PhotonNetwork.LoadLevel("Mercury");
-                break;
-            case Planet.VENUS:
-                PhotonNetwork.LoadLevel("Venus");
-                break;
-            case Planet.MARS:
-                PhotonNetwork.LoadLevel("Mars");
-                break;
-            case Planet.JUPITER:
-                PhotonNetwork.LoadLevel("Jupiter");
-                break;
-            case Planet.SATURN:
-                PhotonNetwork.LoadLevel("Saturn");
-                break;
-            case Planet.URANUS:
-                PhotonNetwork.LoadLevel("Uranus");
-                break;
-            case Planet.NEPTUNE:
-                PhotonNetwork.LoadLevel("Neptune");
-                break;
-            default:
-                Debug.Log("ERROR: UNKNOWN PLANET TO BEAM TO");
-                break;
-        }
-        isConfirmed = false;
+        
     }
 
     //Returns to Cockpit
     public void ReturnToCockpit() {
-        /*
-        if (!PhotonNetwork.IsMasterClient) {
-            return;
+        if(isNetworked) {
+            if (!PhotonNetwork.IsMasterClient) {
+                return;
+            }
+            PhotonNetwork.LoadLevel("Cockpit");
+        } else {
+            SceneManager.LoadScene("Cockpit");
         }
-        PhotonNetwork.LoadLevel("Cockpit");
-        */
-        SceneManager.LoadScene("Cockpit");
     }
 
     //Sets current gravity based to passed force value
@@ -253,6 +288,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
     #region Photon Callbacks
 
+    public bool isNetworked = false;
     
     /// <summary>
     /// Called when the local player left the room. We need to load the launcher scene.
@@ -296,7 +332,11 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
     //Called when player leaves the Photon Networked Room
     public void LeaveRoom() {
-        PhotonNetwork.LeaveRoom();
+        if(isNetworked) {
+            PhotonNetwork.LeaveRoom();
+        } else {
+            SceneManager.LoadScene("UI Menu");
+        }
     }
 
     //Called 

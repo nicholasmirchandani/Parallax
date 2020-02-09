@@ -56,7 +56,7 @@ public class CockpitManager : MonoBehaviourPunCallbacks {
 
     //Mutator for isConfirmed; simply toggles the value
     public void ToggleIsConfirmed() {
-        if(!Photon.Pun.PhotonNetwork.IsMasterClient) {
+        if(GameManager.Instance.isNetworked && !Photon.Pun.PhotonNetwork.IsMasterClient) {
             return;
         }
         GameManager.Instance.ToggleIsConfirmed();
