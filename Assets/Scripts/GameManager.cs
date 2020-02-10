@@ -14,6 +14,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
+    private AudioManager am;
     [System.Serializable]
     public enum Planet {
         MERCURY,
@@ -46,8 +47,17 @@ public class GameManager : MonoBehaviour {
 
         targetPlanet = Planet.NONE;
         SetGravity();
+
+
     }
 
+    //DEBUG FUCNTION
+    void playContinuous(string name)
+    {
+            Debug.Log("In continuous function");
+            am.PlayFile(0);
+       
+    }
     // Update is called once per frame
     void Update() {
         //Debug Code used to call BeamToPlanet and ReturnToCockpit for now
@@ -56,6 +66,11 @@ public class GameManager : MonoBehaviour {
         }
         if(Input.GetKeyDown(KeyCode.R)) {
             ReturnToCockpit();
+        }
+        if(Input.GetKeyDown(KeyCode.E)) {
+
+            am = FindObjectOfType<AudioManager>();
+            am.PlayFile(0);
         }
     }
 
