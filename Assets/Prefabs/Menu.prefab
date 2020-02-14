@@ -1029,8 +1029,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -163.1, y: -94}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -117.5, y: -94}
+  m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4545144758201444338
 CanvasRenderer:
@@ -1214,71 +1214,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 579425748149984763}
     m_Modifications:
-    - target: {fileID: 4173292103351391317, guid: 4ffe1a70dc354b841b43eb543d03155d,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173292103351391317, guid: 4ffe1a70dc354b841b43eb543d03155d,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Quit
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173292103351391317, guid: 4ffe1a70dc354b841b43eb543d03155d,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173292103351391316, guid: 4ffe1a70dc354b841b43eb543d03155d,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -173
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173292103351391316, guid: 4ffe1a70dc354b841b43eb543d03155d,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173292103673279190, guid: 4ffe1a70dc354b841b43eb543d03155d,
-        type: 3}
-      propertyPath: m_Text
-      value: Quit
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173292103673279190, guid: 4ffe1a70dc354b841b43eb543d03155d,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173292103673279190, guid: 4ffe1a70dc354b841b43eb543d03155d,
-        type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173292103927385849, guid: 4ffe1a70dc354b841b43eb543d03155d,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -131
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173292103927385849, guid: 4ffe1a70dc354b841b43eb543d03155d,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173292104883819965, guid: 4ffe1a70dc354b841b43eb543d03155d,
-        type: 3}
-      propertyPath: m_Text
-      value: Play
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173292104883819965, guid: 4ffe1a70dc354b841b43eb543d03155d,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173292104883819965, guid: 4ffe1a70dc354b841b43eb543d03155d,
-        type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4173292103107928830, guid: 4ffe1a70dc354b841b43eb543d03155d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1334,6 +1269,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4173292103107928824, guid: 4ffe1a70dc354b841b43eb543d03155d,
+        type: 3}
+      propertyPath: m_Name
+      value: MenuFollower
+      objectReference: {fileID: 0}
     - target: {fileID: 4173292103199012668, guid: 4ffe1a70dc354b841b43eb543d03155d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1344,10 +1284,65 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4173292103107928825, guid: 4ffe1a70dc354b841b43eb543d03155d,
+        type: 3}
+      propertyPath: gameObjectToFollow
+      value: 
+      objectReference: {fileID: 6534957048175886944}
+    - target: {fileID: 4173292103107928825, guid: 4ffe1a70dc354b841b43eb543d03155d,
+        type: 3}
+      propertyPath: maxAllowedPerFrameAngleDifference
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173292103107928825, guid: 4ffe1a70dc354b841b43eb543d03155d,
+        type: 3}
+      propertyPath: maxAllowedPerFrameDistanceDifference
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173292103351391316, guid: 4ffe1a70dc354b841b43eb543d03155d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -173
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173292103351391316, guid: 4ffe1a70dc354b841b43eb543d03155d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173292103927385849, guid: 4ffe1a70dc354b841b43eb543d03155d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -131
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173292103927385849, guid: 4ffe1a70dc354b841b43eb543d03155d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 4173292103351391319, guid: 4ffe1a70dc354b841b43eb543d03155d,
         type: 3}
       propertyPath: m_Name
       value: QuitGameButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173292103927385848, guid: 4ffe1a70dc354b841b43eb543d03155d,
+        type: 3}
+      propertyPath: m_Name
+      value: ResumeButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173292103351391317, guid: 4ffe1a70dc354b841b43eb543d03155d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173292103351391317, guid: 4ffe1a70dc354b841b43eb543d03155d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173292103351391317, guid: 4ffe1a70dc354b841b43eb543d03155d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4173292103927385854, guid: 4ffe1a70dc354b841b43eb543d03155d,
         type: 3}
@@ -1364,30 +1359,35 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 4173292103927385848, guid: 4ffe1a70dc354b841b43eb543d03155d,
+    - target: {fileID: 4173292103673279190, guid: 4ffe1a70dc354b841b43eb543d03155d,
         type: 3}
-      propertyPath: m_Name
-      value: ResumeButton
+      propertyPath: m_Text
+      value: Quit
       objectReference: {fileID: 0}
-    - target: {fileID: 4173292103107928824, guid: 4ffe1a70dc354b841b43eb543d03155d,
+    - target: {fileID: 4173292103673279190, guid: 4ffe1a70dc354b841b43eb543d03155d,
         type: 3}
-      propertyPath: m_Name
-      value: MenuFollower
+      propertyPath: m_FontData.m_FontSize
+      value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 4173292103107928825, guid: 4ffe1a70dc354b841b43eb543d03155d,
+    - target: {fileID: 4173292103673279190, guid: 4ffe1a70dc354b841b43eb543d03155d,
         type: 3}
-      propertyPath: gameObjectToFollow
-      value: 
-      objectReference: {fileID: 6534957048175886944}
-    - target: {fileID: 4173292103107928825, guid: 4ffe1a70dc354b841b43eb543d03155d,
-        type: 3}
-      propertyPath: maxAllowedPerFrameAngleDifference
-      value: 500
+      propertyPath: m_FontData.m_MinSize
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4173292103107928825, guid: 4ffe1a70dc354b841b43eb543d03155d,
+    - target: {fileID: 4173292104883819965, guid: 4ffe1a70dc354b841b43eb543d03155d,
         type: 3}
-      propertyPath: maxAllowedPerFrameDistanceDifference
-      value: 15
+      propertyPath: m_Text
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173292104883819965, guid: 4ffe1a70dc354b841b43eb543d03155d,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173292104883819965, guid: 4ffe1a70dc354b841b43eb543d03155d,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ffe1a70dc354b841b43eb543d03155d, type: 3}

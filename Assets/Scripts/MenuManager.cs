@@ -26,6 +26,8 @@ public class MenuManager : MonoBehaviourPunCallbacks
 {
     #region private fields
 
+    private Coroutine timeRoutine;
+
     [SerializeField]
     private Canvas Menu;
 
@@ -79,9 +81,9 @@ public class MenuManager : MonoBehaviourPunCallbacks
         string LocationName = SceneManagerHelper.ActiveSceneName;
         PlayerNameLocation.text = gameManager.PlayerName + ", " + LocationName;
         PrintPlayers();
-        CurrentTime();
         Menu.enabled = !Menu.enabled;
         if(Menu.enabled) {
+            StartTimer();
 
             Menu.GetComponent<VRTK_UICanvas>().enabled = true;
             //Enable the straight Pointer Renderer attached to the controller
@@ -105,6 +107,8 @@ public class MenuManager : MonoBehaviourPunCallbacks
             Rcontroller.GetComponent<VRTK_UIPointer>().enabled = true;
         }
         else {
+            StopTimer();
+
             //enable the bezier pointer renderer
             Lcontroller.GetComponent<VRTK_BezierPointerRenderer>().enabled = true;
             Rcontroller.GetComponent<VRTK_BezierPointerRenderer>().enabled = true;
@@ -128,10 +132,30 @@ public class MenuManager : MonoBehaviourPunCallbacks
         
     }
 
+    private void StartTimer()
+    {
+        timeRoutine = StartCoroutine(Timer());
+    }
+
+    private void StopTimer()
+    {
+        StopCoroutine(timeRoutine);
+    }
+
+    IEnumerator Timer()
+    {
+        while (true) {
+            CurrentTime();
+            yield return new WaitForEndOfFrame();
+        }
+    }
+
     private void CurrentTime()
     {
         string currentTime = System.DateTime.Now.ToString();
-        time.text = currentTime;
+        string formatedTime = currentTime.Substring(8);
+        formatedTime = formatedTime.Substring(0, 5);
+        time.text = formatedTime;
     }
 
     
