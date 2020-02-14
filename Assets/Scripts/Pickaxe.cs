@@ -17,6 +17,7 @@ public class Pickaxe : MonoBehaviour
 {
     //Utilizing OnTriggerEnter to detect when entering a breakable object
     private void OnTriggerEnter(Collider other) {
+        Debug.Log("Pickaxe On Trigger Enter Called");
         if(other.GetComponent<BreakDown>() != null) {
             other.GetComponent<BreakDown>().Breakdown();
         }

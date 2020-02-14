@@ -24,6 +24,7 @@ public class BreakDown : MonoBehaviour {
 
     //generates the desired prefabs and deletes the larger starting object
     public void Breakdown() {
+        Debug.Log("Desired Positions Length: " + desiredPositions.Length);
         for(int i = 0; i < desiredPositions.Length; ++i) {
             GameObject part = GameObject.Instantiate(smallPrefab);
             part.transform.position = desiredPositions[i].position;
