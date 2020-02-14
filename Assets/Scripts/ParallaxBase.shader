@@ -10,7 +10,7 @@ Shader "Custom/ParallaxBase" {
 		_MidtoneDetailStrength("Midtones Detail Strength", Float) = 1
 		_ShadowDetailTex("Shadows Detail Texture", 2D) = "white" {}
 		_ShadowDetailStrength("Shadow Detail Strength", Float) = 1
-		_InterpolationAmount("Interpolation Amount", Float) = 0.05
+		_InterpolationAmount("Interpolation Amount", Range(0,1)) = 0.05
 		//Ambient Color is applied Uniformly to all surfaces of the object
 		[HDR] _AmbientColor("Ambient Color", Color) = (0.4, 0.4, 0.4, 1)
 		[HDR] _SpecularColor("Specular Color", Color) = (0.9, 0.9, 0.9, 1)
