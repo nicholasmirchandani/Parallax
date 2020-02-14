@@ -153,19 +153,22 @@ Shader "Custom/ParallaxBase" {
 				float4 midtoneDetail = float4(midtoneDetailAvg, midtoneDetailAvg, midtoneDetailAvg, midtoneDetailRaw.a);
 				float4 shadowDetail = float4(shadowDetailAvg, shadowDetailAvg, shadowDetailAvg, shadowDetailRaw.a);
 
+				//0.75: (HIGHLIGHT_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY)/2
+				//0.25: (SHADOW_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY)/2
+
 				//Highlight Detail, with hard coded intensity of 1.0
-				float highlightSat = saturate((lightIntensity - (0.75 + _TexInterp)) * 1/(1-(0.75+_TexInterp)));
-				mainTex = mainTex + (_HighlightDetailStrength * (lightIntensity > (0.75 + _TexInterp)) * highlightSat * highlightSat * highlightSat * highlightDetail);
+				float highlightSat = saturate((lightIntensity - ((HIGHLIGHT_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2 + _TexInterp)) * 1/(1-((HIGHLIGHT_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2 +_TexInterp)));
+				mainTex = mainTex + (_HighlightDetailStrength * (lightIntensity > ((HIGHLIGHT_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2 + _TexInterp)) * highlightSat * highlightSat * highlightSat * highlightDetail);
 
 				//Midtone Detail, with hard coded intensity of 0.5
-				float midtoneSatLower = saturate((lightIntensity - (0.25 + _TexInterp)) * 1 / (0.5 - (0.25 + _TexInterp)));
-				float midtoneSatUpper = saturate(((1 - lightIntensity) - ((1 - 0.75) + _TexInterp)) * 1 / ((1 - 0.75) - _TexInterp));
-				float midtoneSat = lightIntensity > 0.5 ? midtoneSatUpper : midtoneSatLower;
-				mainTex = mainTex + (_MidtoneDetailStrength * (lightIntensity > (0.25 + _TexInterp) && lightIntensity < (0.75 - _TexInterp)) * midtoneSat * midtoneSat * midtoneSat * midtoneDetail);
+				float midtoneSatLower = saturate((lightIntensity - ((SHADOW_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2 + _TexInterp)) * 1 / (MIDTONE_LIGHTINTENSITY - ((SHADOW_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2 + _TexInterp)));
+				float midtoneSatUpper = saturate(((1 - lightIntensity) - ((1 - (HIGHLIGHT_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2) + _TexInterp)) * 1 / ((1 - (HIGHLIGHT_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2) - _TexInterp));
+				float midtoneSat = lightIntensity > MIDTONE_LIGHTINTENSITY ? midtoneSatUpper : midtoneSatLower;
+				mainTex = mainTex + (_MidtoneDetailStrength * (lightIntensity > ((SHADOW_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2 + _TexInterp) && lightIntensity < ((HIGHLIGHT_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2 - _TexInterp)) * midtoneSat * midtoneSat * midtoneSat * midtoneDetail);
 
 				//Shadow Detail, with hard coded intensity of 0.00
-				float shadowSat = saturate(1-(lightIntensity/(0.25 - _TexInterp)));
-				mainTex = mainTex + (_ShadowDetailStrength * (lightIntensity >= SHADOW_LIGHTINTENSITY && lightIntensity <= (0.25 - _TexInterp)) * shadowSat * shadowSat * shadowSat * shadowDetail);
+				float shadowSat = saturate(1-(lightIntensity/((SHADOW_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2 - _TexInterp)));
+				mainTex = mainTex + (_ShadowDetailStrength * (lightIntensity >= SHADOW_LIGHTINTENSITY && lightIntensity <= ((SHADOW_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2 - _TexInterp)) * shadowSat * shadowSat * shadowSat * shadowDetail);
 				//TODO: Implement detail textures to whiten sample
 
 				return (light + _AmbientColor + rimDot + specular) * _Color * mainTex;
