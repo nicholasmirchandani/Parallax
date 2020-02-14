@@ -169,6 +169,6 @@ Shader "Custom/ParallaxTransparent" {
             ENDCG
         }
     //Cast generic flat shadows
-	UsePass "Legacy Shaders/VertexLit/SHADOWCASTER"
+//	UsePass "Legacy Shaders/VertexLit/SHADOWCASTER"
 	}
 }
