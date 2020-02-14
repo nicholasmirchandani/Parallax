@@ -154,7 +154,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
     {
         string currentTime = System.DateTime.Now.ToString();
         string formatedTime = currentTime.Substring(8);
-        formatedTime = formatedTime.Substring(0, 5);
+        formatedTime = formatedTime.Substring(1, 5);
         time.text = formatedTime;
     }
 
