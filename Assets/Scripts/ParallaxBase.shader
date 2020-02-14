@@ -18,9 +18,6 @@ Shader "Custom/ParallaxBase" {
 		//Controls the size of the specular reflection
 		_Glossiness("Glossiness", Float) = 32
 		[HDR] _RimColor("Rim Color", Color) = (1, 1, 1, 1)
-		/*_RimAmount("Rim Amount", Range(0,1)) = 0.716
-		//Controls how the rim edges get blended out on unlit parts of the surface.
-		_RimThreshold("Rim Threshold", Range(0,1)) = 0.1*/
     }
     SubShader {
         Tags { "RenderType"="Opaque" }
@@ -134,10 +131,6 @@ Shader "Custom/ParallaxBase" {
 				//Rim Lighting
 				float rimDot = 1 - dot(viewDir, normal);
 				rimDot = rimDot * _RimColor;
-				/*//Ensuring the rim lighting only appears on thelit side of the surface
-				float rimIntensity = rimDot * pow(NdotL, _RimThreshold);
-				rimIntensity = smoothstep(_RimAmount - 0.01, _RimAmount + 0.01, rimIntensity);
-				float4 rim = rimIntensity * _RimColor;*/
 
 				//Getting the texture at that point and combining the rest of the calculations
 				float4 mainTex = tex2D(_MainTex, i.uv);
@@ -153,25 +146,22 @@ Shader "Custom/ParallaxBase" {
 				float4 midtoneDetail = float4(midtoneDetailAvg, midtoneDetailAvg, midtoneDetailAvg, midtoneDetailRaw.a);
 				float4 shadowDetail = float4(shadowDetailAvg, shadowDetailAvg, shadowDetailAvg, shadowDetailRaw.a);
 
-				//0.75: (HIGHLIGHT_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY)/2
-				//0.25: (SHADOW_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY)/2
-
-				//Highlight Detail, with hard coded intensity of 1.0
+				//Highlight Detail with Interpolation
 				float highlightSat = saturate((lightIntensity - ((HIGHLIGHT_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2 + _TexInterp)) * 1/(1-((HIGHLIGHT_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2 +_TexInterp)));
 				mainTex = mainTex + (_HighlightDetailStrength * (lightIntensity > ((HIGHLIGHT_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2 + _TexInterp)) * highlightSat * highlightSat * highlightSat * highlightDetail);
 
-				//Midtone Detail, with hard coded intensity of 0.5
+				//Midtone Detail with Interpolation
 				float midtoneSatLower = saturate((lightIntensity - ((SHADOW_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2 + _TexInterp)) * 1 / (MIDTONE_LIGHTINTENSITY - ((SHADOW_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2 + _TexInterp)));
 				float midtoneSatUpper = saturate(((1 - lightIntensity) - ((1 - (HIGHLIGHT_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2) + _TexInterp)) * 1 / ((1 - (HIGHLIGHT_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2) - _TexInterp));
 				float midtoneSat = lightIntensity > MIDTONE_LIGHTINTENSITY ? midtoneSatUpper : midtoneSatLower;
 				mainTex = mainTex + (_MidtoneDetailStrength * (lightIntensity > ((SHADOW_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2 + _TexInterp) && lightIntensity < ((HIGHLIGHT_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2 - _TexInterp)) * midtoneSat * midtoneSat * midtoneSat * midtoneDetail);
 
-				//Shadow Detail, with hard coded intensity of 0.00
+				//Shadow Detail with Interpolation
 				float shadowSat = saturate(1-(lightIntensity/((SHADOW_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2 - _TexInterp)));
 				mainTex = mainTex + (_ShadowDetailStrength * (lightIntensity >= SHADOW_LIGHTINTENSITY && lightIntensity <= ((SHADOW_LIGHTINTENSITY + MIDTONE_LIGHTINTENSITY) / 2 - _TexInterp)) * shadowSat * shadowSat * shadowSat * shadowDetail);
 				//TODO: Implement detail textures to whiten sample
 
-				return (light + _AmbientColor + rimDot + specular) * _Color * mainTex;
+				return (light + _AmbientColor + rimDot + specular) * _Color * mainTex * shadow;
             }
             ENDCG
         }
