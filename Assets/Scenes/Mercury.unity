@@ -1322,6 +1322,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerDisplay
       objectReference: {fileID: 0}
+    - target: {fileID: 471075693670509678, guid: cdab1733b93714b459cd30adcf5ccfd1,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerDisplay
+      objectReference: {fileID: 0}
     - target: {fileID: 778916426749077053, guid: cdab1733b93714b459cd30adcf5ccfd1,
         type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -1361,11 +1366,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MinSize
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 471075693670509678, guid: cdab1733b93714b459cd30adcf5ccfd1,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayerDisplay
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdab1733b93714b459cd30adcf5ccfd1, type: 3}
@@ -1794,6 +1794,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock1
       objectReference: {fileID: 0}
+    - target: {fileID: 3712837592531479438, guid: ec8e9ea87ea4e914fba85ed070879f0e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 422775168530176413, guid: ec8e9ea87ea4e914fba85ed070879f0e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1887,6 +1892,11 @@ PrefabInstance:
     - target: {fileID: 7029896469495924863, guid: ec8e9ea87ea4e914fba85ed070879f0e,
         type: 3}
       propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426994383637186725, guid: ec8e9ea87ea4e914fba85ed070879f0e,
+        type: 3}
+      propertyPath: desiredPositions.Array.size
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
