@@ -40,20 +40,20 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HighlightDetailTex:
-        m_Texture: {fileID: 2800000, guid: d81738bc4ee33cb43b6d320ca1173b48, type: 3}
-        m_Scale: {x: 4.66, y: 1}
+        m_Texture: {fileID: 2800000, guid: 967fbd09cc33b2c48a85e79d4054cff4, type: 3}
+        m_Scale: {x: -5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 0, y: 0}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MidDetailTex:
-        m_Texture: {fileID: 2800000, guid: f68f943c8526f1e41b58f69d2d2b4be6, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: 967fbd09cc33b2c48a85e79d4054cff4, type: 3}
+        m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
@@ -64,8 +64,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ShadowDetailTex:
-        m_Texture: {fileID: 2800000, guid: 66dca6a309c6027439a95a4632f99622, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: 3018290844afd934d8b6a8aa32f74822, type: 3}
+        m_Scale: {x: 3, y: 3}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
@@ -75,24 +75,25 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: -44.7
     - _GlossyReflections: 1
-    - _HighlightDetailStrength: 0
-    - _InterpolationAmount: 0
+    - _HighlightDetailStrength: 30
+    - _InterpolationAmount: 0.1
     - _Metallic: 0
-    - _MidtoneDetailStrength: 0
+    - _MidtoneDetailStrength: 10
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _RimAmount: 1
     - _RimThreshold: 1
-    - _ShadowDetailStrength: 0
+    - _ShadowDetailStrength: 6.97
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _TexInterp: 0
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
     - _AmbientColor: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
     - _Color: {r: 0.6509434, g: 0.09825561, b: 0.20491478, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
