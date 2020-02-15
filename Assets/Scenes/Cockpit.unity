@@ -1981,7 +1981,7 @@ MonoBehaviour:
   isConfirmed: 0
   currentGravity: 0
   gravityEnabled: 1
-  PlayerName: 
+  PlayerName: TestName
   isNetworked: 0
 --- !u!4 &1333568312
 Transform:

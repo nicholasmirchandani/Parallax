@@ -21,6 +21,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
 using VRTK;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviourPunCallbacks
 {
@@ -44,8 +45,6 @@ public class MenuManager : MonoBehaviourPunCallbacks
 
     [SerializeField]
     private GameObject Rcontroller;
-
-    private GameManager gameManager;
 
     [SerializeField]
     private Text time;
@@ -77,9 +76,8 @@ public class MenuManager : MonoBehaviourPunCallbacks
     /// pointer renderer on the controller from the bezier pointer to the straight pointer
     /// </summary>
     public void OpenCloseMenu() {
-        gameManager = FindObjectOfType<GameManager>();
         string LocationName = SceneManagerHelper.ActiveSceneName;
-        PlayerNameLocation.text = gameManager.PlayerName + ", " + LocationName;
+        PlayerNameLocation.text = GameManager.Instance.PlayerName + " - " + LocationName;
         PrintPlayers();
         Menu.enabled = !Menu.enabled;
         if(Menu.enabled) {
@@ -154,7 +152,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
     {
         string currentTime = System.DateTime.Now.ToString();
         string formatedTime = currentTime.Substring(8);
-        formatedTime = formatedTime.Substring(1, 5);
+        formatedTime = formatedTime.Substring(1, 6);
         time.text = formatedTime;
     }
 
@@ -166,12 +164,16 @@ public class MenuManager : MonoBehaviourPunCallbacks
 
     //calls the GameManagerQuit Method to exit the Game
     public void Quit() {
-        gameManager.QuitGame();
+        GameManager.Instance.QuitGame();
     }
 
     //leaves the Photon Room and returns to menu
     public void QuitToMenu() {
-        //gameManager.LeaveRoom();
+        if(GameManager.Instance.isNetworked) {
+            GameManager.Instance.LeaveRoom();
+        } else {
+            SceneManager.LoadScene("Menu");
+        }
     }
 
     #endregion
@@ -184,7 +186,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
     /// </summary>
     private void PrintPlayers()
     {
-        if(gameManager.isNetworked) {
+        if(GameManager.Instance.isNetworked) {
             PlayerList.text = "Players: ";
 
             foreach (Player p in PhotonNetwork.PlayerList) {
@@ -194,6 +196,8 @@ public class MenuManager : MonoBehaviourPunCallbacks
                     PlayerList.text += "\n" + p.NickName;
                 }
             }
+        } else {
+            PlayerList.text = "Players: " + GameManager.Instance.PlayerName;
         }
     }
 
