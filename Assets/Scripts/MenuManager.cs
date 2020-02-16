@@ -150,10 +150,9 @@ public class MenuManager : MonoBehaviourPunCallbacks
 
     private void CurrentTime()
     {
-        string currentTime = System.DateTime.Now.ToString();
-        string formatedTime = currentTime.Substring(8);
-        formatedTime = formatedTime.Substring(1, 6);
-        time.text = formatedTime;
+        string currentTime = System.DateTime.Now.ToShortTimeString();
+        
+        time.text = currentTime;
     }
 
     
