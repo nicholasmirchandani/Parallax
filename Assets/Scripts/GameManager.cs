@@ -5,7 +5,7 @@
  * keep track of values that must persist between planets, and maintain *
  * directly modify the Physics.gravity vector                           *
  *                                                                      *
- * Updated by Nicholas Mirchandani on 11/12/19                          *
+ * Updated by Nicholas Mirchandani on 2/16/19                           *
  * Updated by Dan Haub on 11/1/19                                       *
  * Updated by Sean Robbins on 1/21/2020                                 *
  ************************************************************************/
@@ -35,6 +35,10 @@ public class GameManager : MonoBehaviourPunCallbacks {
         LESSON3
     }
 
+    public delegate void SimpleEventHandler();
+    public event SimpleEventHandler PlanetComplete;
+    public event SimpleEventHandler LessonComplete;
+
     [System.Serializable]
     public struct PlanetProgress {
         public Planet planet;
@@ -47,6 +51,9 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
         public void CheckIsComplete() {
             isComplete = hasChemicalComp && hasGravity && hasTemperature && hasPressure && hasAtmosphericComp;
+            if(isComplete) {
+                GameManager.Instance.PlanetComplete?.Invoke();
+            }
         }
     }
 
@@ -65,6 +72,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
 
     public string PlayerName = null;
+
 
     //Awake is called when script instance is loaded
     void Awake() {
@@ -85,6 +93,9 @@ public class GameManager : MonoBehaviourPunCallbacks {
         planetProgresses[4].planet = Planet.SATURN;
         planetProgresses[5].planet = Planet.URANUS;
         planetProgresses[6].planet = Planet.NEPTUNE;
+
+        PlanetComplete += OnPlanetComplete;
+        LessonComplete += OnLessonComplete;
         SetGravity();
     }
 
@@ -287,6 +298,23 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
     public void setPlayerName(string name) {
         PlayerName = name;
+    }
+
+    public void OnPlanetComplete() {
+        Debug.Log("Planet complete!");
+        bool lessonComplete = true;
+        foreach (PlanetProgress pp in planetProgresses) {
+            if (!pp.isComplete) {
+                lessonComplete = false;
+            }
+        }
+        if (lessonComplete) {
+            LessonComplete?.Invoke();
+        }
+    }
+
+    public void OnLessonComplete() {
+        Debug.Log("Lesson complete!");
     }
 
     //--------------------Photon Code Test Section----------------------------

@@ -29,8 +29,6 @@ public class MassAttach : MonoBehaviour
     }
     private void OnCollisionExit(Collision collision)
     {
-        Debug.Log("ON Collision Exit Called Mass Attach");
-
         GameObject temp = collision.gameObject;
         if ((!temp.Equals(scale)) && (!temp.Equals(scaleSurface)))
         {
