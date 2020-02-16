@@ -144,7 +144,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
     {
         while (true) {
             CurrentTime();
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForSeconds(1);
         }
     }
 
