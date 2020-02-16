@@ -5,7 +5,7 @@
  * keep track of values that must persist between planets, and maintain *
  * directly modify the Physics.gravity vector                           *
  *                                                                      *
- * Updated by Nicholas Mirchandani on 11/12/19                          *
+ * Updated by Nicholas Mirchandani on 2/16/19                           *
  * Updated by Dan Haub on 11/1/19                                       *
  * Updated by Sean Robbins on 1/21/2020                                 *
  ************************************************************************/
@@ -36,8 +36,8 @@ public class GameManager : MonoBehaviourPunCallbacks {
     }
 
     public delegate void SimpleEventHandler();
-    public event SimpleEventHandler OnPlanetComplete;
-    public event SimpleEventHandler OnLessonComplete;
+    public event SimpleEventHandler PlanetComplete;
+    public event SimpleEventHandler LessonComplete;
 
     [System.Serializable]
     public struct PlanetProgress {
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
         public void CheckIsComplete() {
             isComplete = hasChemicalComp && hasGravity && hasTemperature && hasPressure && hasAtmosphericComp;
             if(isComplete) {
-                GameManager.Instance.OnPlanetComplete?.Invoke();
+                GameManager.Instance.PlanetComplete?.Invoke();
             }
         }
     }
@@ -94,8 +94,8 @@ public class GameManager : MonoBehaviourPunCallbacks {
         planetProgresses[5].planet = Planet.URANUS;
         planetProgresses[6].planet = Planet.NEPTUNE;
 
-        OnPlanetComplete += onPlanetComplete;
-        OnLessonComplete += onLessonComplete;
+        PlanetComplete += OnPlanetComplete;
+        LessonComplete += OnLessonComplete;
         SetGravity();
     }
 
@@ -300,7 +300,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
         PlayerName = name;
     }
 
-    public void onPlanetComplete() {
+    public void OnPlanetComplete() {
         Debug.Log("Planet complete!");
         bool lessonComplete = true;
         foreach (PlanetProgress pp in planetProgresses) {
@@ -309,11 +309,11 @@ public class GameManager : MonoBehaviourPunCallbacks {
             }
         }
         if (lessonComplete) {
-            OnLessonComplete?.Invoke();
+            LessonComplete?.Invoke();
         }
     }
 
-    public void onLessonComplete() {
+    public void OnLessonComplete() {
         Debug.Log("Lesson complete!");
     }
 
