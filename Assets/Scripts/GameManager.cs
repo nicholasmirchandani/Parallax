@@ -35,6 +35,10 @@ public class GameManager : MonoBehaviourPunCallbacks {
         LESSON3
     }
 
+    public delegate void SimpleEventHandler();
+    public event SimpleEventHandler OnPlanetComplete;
+    public event SimpleEventHandler OnLessonComplete;
+
     [System.Serializable]
     public struct PlanetProgress {
         public Planet planet;
@@ -47,6 +51,9 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
         public void CheckIsComplete() {
             isComplete = hasChemicalComp && hasGravity && hasTemperature && hasPressure && hasAtmosphericComp;
+            if(isComplete) {
+                GameManager.Instance.OnPlanetComplete?.Invoke();
+            }
         }
     }
 
@@ -65,6 +72,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
 
     public string PlayerName = null;
+
 
     //Awake is called when script instance is loaded
     void Awake() {
@@ -85,6 +93,9 @@ public class GameManager : MonoBehaviourPunCallbacks {
         planetProgresses[4].planet = Planet.SATURN;
         planetProgresses[5].planet = Planet.URANUS;
         planetProgresses[6].planet = Planet.NEPTUNE;
+
+        OnPlanetComplete += onPlanetComplete;
+        OnLessonComplete += onLessonComplete;
         SetGravity();
     }
 
@@ -287,6 +298,23 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
     public void setPlayerName(string name) {
         PlayerName = name;
+    }
+
+    public void onPlanetComplete() {
+        Debug.Log("Planet complete!");
+        bool lessonComplete = true;
+        foreach (PlanetProgress pp in planetProgresses) {
+            if (!pp.isComplete) {
+                lessonComplete = false;
+            }
+        }
+        if (lessonComplete) {
+            OnLessonComplete?.Invoke();
+        }
+    }
+
+    public void onLessonComplete() {
+        Debug.Log("Lesson complete!");
     }
 
     //--------------------Photon Code Test Section----------------------------
