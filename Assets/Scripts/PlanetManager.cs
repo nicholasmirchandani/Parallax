@@ -15,7 +15,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlanetManager : MonoBehaviour {
-    [SerializeField] private float planetGravity; //allows us to keep track of the current planet's gravity
+    #region PLanetVariables
+    /// <summary>
+    /// The Variables that players will need to read using the sensors, Unique to each planet.
+    /// Set these variables in Unity Editor as they will need to be different per scene.
+    /// </summary>
+    [SerializeField] public float planetGravity; //allows us to keep track of the current planet's gravity
+    [SerializeField] public float planetTemp;
+    [SerializeField] public float planetPressure;
+    [SerializeField] public string planetAtmosphere;
+    [SerializeField] public string planetChemicalComp;
+
+    #endregion
     public GameManager.Planet currentPlanet;
 
     //Runs when new planet scene is opened

@@ -11,8 +11,7 @@ public class PlanetOrbit : Orbit
     private float VerticalAxisLength;
 
 
-    protected override void orbit(float t)
-    {
+    protected override void orbit(float t) {
         if(lineUp && t == 0) {
             return;
         }

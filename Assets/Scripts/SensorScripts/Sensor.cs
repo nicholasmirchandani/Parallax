@@ -76,8 +76,6 @@ public class Sensor : MonoBehaviour {
         hasFinished = true;
         Debug.Log("Finished Count");
         OnComplete();
-        //TODO: Remove Destroy and update gameManager instead
-        Destroy(gameObject);
     }
 
     protected virtual void OnComplete() {

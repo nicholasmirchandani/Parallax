@@ -32,13 +32,11 @@ public class Orbit : MonoBehaviour
     public float t;
 
 
-    public void StartOrbit()
-    {
+    public void StartOrbit() {
         OrbitRoutine = StartCoroutine(OrbitController());
     }
 
-    IEnumerator OrbitController()
-    {
+    IEnumerator OrbitController() {
         while(true) {
             for(int i = 0; i < planets.Length; ++i) {
                 planets[i].GetComponent<Orbit>().orbit(t);
@@ -48,8 +46,7 @@ public class Orbit : MonoBehaviour
         }
     }
 
-    public void StopOrbit()
-    {
+    public void StopOrbit() {
         StopCoroutine(OrbitController());
     }
   
