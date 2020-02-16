@@ -32,6 +32,7 @@ public class CockpitManager : MonoBehaviourPunCallbacks {
     public GameObject ThePlanetsUranus;
     public GameObject ThePlanetsNeptune;
     public GameObject PlanetCompleteIndicator;
+    private Coroutine scrollingCoroutine;
 
 
     //Runs each time cockpit scene is loaded
@@ -119,5 +120,48 @@ public class CockpitManager : MonoBehaviourPunCallbacks {
             PlanetCompleteIndicator.SetActive(false);
         }
     }
+
+    public void StartScrollingRight() {
+        Debug.Log("Start scrolling right");
+        if(scrollingCoroutine != null) {
+            StopCoroutine(scrollingCoroutine);
+        }
+        scrollingCoroutine = StartCoroutine(ScrollingRight());
+    }
+
+    public void StartScrollingLeft() {
+        Debug.Log("Start scrolling left");
+        if (scrollingCoroutine != null) {
+            StopCoroutine(scrollingCoroutine);
+        }
+        scrollingCoroutine = StartCoroutine(ScrollingLeft());
+    }
     
+    public void StopScrollingRight() {
+        Debug.Log("Stop scrolling right");
+        if (scrollingCoroutine != null) {
+            StopCoroutine(scrollingCoroutine);
+        }
+    }
+
+    public void StopScrollingLeft() {
+        Debug.Log("Stop scrolling left");
+        if (scrollingCoroutine != null) {
+            StopCoroutine(scrollingCoroutine);
+        }
+    }
+
+    private IEnumerator ScrollingRight() {
+        while(true) {
+            ScrollTargetPlanetRight();
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+
+    private IEnumerator ScrollingLeft() {
+        while (true) {
+            ScrollTargetPlanetLeft();
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
 }
