@@ -31,6 +31,7 @@ public class CockpitManager : MonoBehaviourPunCallbacks {
     public GameObject ThePlanetsSaturn;
     public GameObject ThePlanetsUranus;
     public GameObject ThePlanetsNeptune;
+    public GameObject PlanetCompleteIndicator;
 
 
     //Runs each time cockpit scene is loaded
@@ -107,8 +108,16 @@ public class CockpitManager : MonoBehaviourPunCallbacks {
             default:
                 break;
         }
+        CheckIsComplete();
     }
 
-
+    private void CheckIsComplete() {
+        if (GameManager.Instance.planetProgresses[(int)GameManager.Instance.targetPlanet].isComplete) {
+            PlanetCompleteIndicator.SetActive(true);
+        }
+        else {
+            PlanetCompleteIndicator.SetActive(false);
+        }
+    }
     
 }
