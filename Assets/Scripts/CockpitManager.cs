@@ -21,6 +21,14 @@ using UnityEngine.UI;
 
 public class CockpitManager : MonoBehaviourPunCallbacks {
 
+    public GameObject hologramPlanet;
+    public Material mercuryMaterial;
+    public Material venusMaterial;
+    public Material marsMaterial;
+    public Material jupiterMaterial;
+    public Material saturnMaterial;
+    public Material uranusMaterial;
+    public Material neptuneMaterial;
     public GameObject ThePlanetsGreen;
     public GameObject ThePlanetsWhite;
     public GameObject ThePlanetsHolder;
@@ -32,11 +40,14 @@ public class CockpitManager : MonoBehaviourPunCallbacks {
     public GameObject ThePlanetsUranus;
     public GameObject ThePlanetsNeptune;
     public GameObject PlanetCompleteIndicator;
+
+    private Renderer hologramPlanetRenderer;
     private Coroutine scrollingCoroutine;
 
 
     //Runs each time cockpit scene is loaded
     private void Awake() {
+        hologramPlanetRenderer = hologramPlanet.GetComponent<Renderer>();
         GameManager.Instance.SetGravity();
         UpdateScreenPositions();
     }
@@ -109,7 +120,36 @@ public class CockpitManager : MonoBehaviourPunCallbacks {
             default:
                 break;
         }
+        UpdatePlanetHologram();
         CheckIsComplete();
+    }
+
+    private void UpdatePlanetHologram() {
+        switch (GameManager.Instance.targetPlanet) {
+            case GameManager.Planet.MERCURY:
+                hologramPlanetRenderer.material = mercuryMaterial;
+                break;
+            case GameManager.Planet.VENUS:
+                hologramPlanetRenderer.material = venusMaterial;
+                break;
+            case GameManager.Planet.MARS:
+                hologramPlanetRenderer.material = marsMaterial;
+                break;
+            case GameManager.Planet.JUPITER:
+                hologramPlanetRenderer.material = jupiterMaterial;
+                break;
+            case GameManager.Planet.SATURN:
+                hologramPlanetRenderer.material = saturnMaterial;
+                break;
+            case GameManager.Planet.URANUS:
+                hologramPlanetRenderer.material = uranusMaterial;
+                break;
+            case GameManager.Planet.NEPTUNE:
+                hologramPlanetRenderer.material = neptuneMaterial;
+                break;
+            default:
+                break;
+        }
     }
 
     private void CheckIsComplete() {

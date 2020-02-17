@@ -98,7 +98,7 @@ Shader "Custom/Hologram" {
 						col.a = texColor.a * _Alpha * (scan + rim) * saturate((step(sin(i.worldVertex.z * _NoisePower), 0)) + 0.5f);
 						col.rgb *= _Brightness;
 
-						return col;
+						return col * texColor;
 					}
 					ENDCG
 				}
