@@ -2397,7 +2397,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1712985681}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &1970984040
+--- !u!64 &1970984043
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4124,6 +4124,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1333568311}
+    - target: {fileID: 5315748819160609365, guid: cdab1733b93714b459cd30adcf5ccfd1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdab1733b93714b459cd30adcf5ccfd1, type: 3}
 --- !u!114 &5143181696398439387 stripped
