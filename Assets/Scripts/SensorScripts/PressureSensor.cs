@@ -13,12 +13,20 @@ public class PressureSensor : Sensor
 
     #region Methods
 
+    protected override void Start() {
+        base.Start();
+        if (GameManager.Instance.planetProgresses[(int)FindObjectOfType<PlanetManager>().currentPlanet].hasPressure) {
+            OnComplete();
+        }
+    }
+
     protected override void OnComplete() {
         string readout = FindObjectOfType<PlanetManager>().planetPressure.ToString();
         readout += " psi";
         displayScreen.text = readout;
         GameManager.Instance.planetProgresses[(int)FindObjectOfType<PlanetManager>().currentPlanet].hasPressure = true;
         GameManager.Instance.planetProgresses[(int)FindObjectOfType<PlanetManager>().currentPlanet].CheckIsComplete();
+        hasMeasurement = true;
     }
     #endregion
 }

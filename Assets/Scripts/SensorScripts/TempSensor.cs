@@ -13,12 +13,20 @@ public class TempSensor : Sensor
 
     #region Methods
 
+    protected override void Start() {
+        base.Start();
+        if(GameManager.Instance.planetProgresses[(int)FindObjectOfType<PlanetManager>().currentPlanet].hasTemperature) {
+            OnComplete();
+        }
+    }
+
     protected override void OnComplete() {
         string readout = FindObjectOfType<PlanetManager>().planetTemp.ToString();
         readout += "° F";
         displayScreen.text = readout;
         GameManager.Instance.planetProgresses[(int)FindObjectOfType<PlanetManager>().currentPlanet].hasTemperature = true;
         GameManager.Instance.planetProgresses[(int)FindObjectOfType<PlanetManager>().currentPlanet].CheckIsComplete();
+        hasMeasurement = true;
     }
     #endregion
 }

@@ -21,13 +21,14 @@ public class Sensor : MonoBehaviour {
     private Coroutine countRoutine;
     private bool hasFinished = false;
     private bool isRunning = false;
+    protected bool hasMeasurement = false;
     private Rigidbody rb;
     #endregion
 
 
     #region Methods
     //gets the rigidbody of the sensor
-    private void Start() {
+    protected virtual void Start() {
         rb = GetComponent<Rigidbody>();
     }
 
@@ -37,11 +38,13 @@ public class Sensor : MonoBehaviour {
     ///if the player is holding the sensor end the coroutine for timing
     /// </summary>
     private void Update() {
-        
-        if(!hasFinished && !rb.isKinematic) {
-            StopTimer();
-        } else if (!isRunning) {
-            StartTimer();
+        if(!hasMeasurement) {
+            if (!hasFinished && !rb.isKinematic) {
+                StopTimer();
+            }
+            else if (!isRunning) {
+                StartTimer();
+            }
         }
     }
 
