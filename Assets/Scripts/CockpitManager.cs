@@ -43,11 +43,14 @@ public class CockpitManager : MonoBehaviourPunCallbacks {
 
     private Renderer hologramPlanetRenderer;
     private Coroutine scrollingCoroutine;
-
+    private Color originalColor;
+    private Color32 customGreen;
 
     //Runs each time cockpit scene is loaded
     private void Awake() {
         hologramPlanetRenderer = hologramPlanet.GetComponent<Renderer>();
+        originalColor = hologramPlanetRenderer.material.GetColor("_MainColor");
+        customGreen = new Color32(49, 233, 86, 1);
         GameManager.Instance.SetGravity();
         UpdateScreenPositions();
     }
@@ -73,8 +76,15 @@ public class CockpitManager : MonoBehaviourPunCallbacks {
             return;
         }
         GameManager.Instance.ToggleIsConfirmed();
-        ThePlanetsGreen.SetActive(GameManager.Instance.isConfirmed);
-        ThePlanetsWhite.SetActive(!GameManager.Instance.isConfirmed);
+        if(GameManager.Instance.isConfirmed) {
+            ThePlanetsGreen.SetActive(true);
+            ThePlanetsWhite.SetActive(false);
+            hologramPlanet.GetComponent<Renderer>().material.SetColor("_MainColor", customGreen);
+        } else {
+            ThePlanetsWhite.SetActive(true);
+            ThePlanetsGreen.SetActive(false);
+            hologramPlanet.GetComponent<Renderer>().material.SetColor("_MainColor", originalColor);
+        }
     }
 
     //Scrolls screen left and updates selected planet as needed
