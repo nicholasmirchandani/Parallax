@@ -21,6 +21,7 @@ public class AtmosphereSensor: Sensor
     }
 
     protected override void OnComplete() {
+        base.OnComplete();
         string readout = FindObjectOfType<PlanetManager>().planetAtmosphere;
         displayScreen.text = readout;
         GameManager.Instance.planetProgresses[(int)FindObjectOfType<PlanetManager>().currentPlanet].hasAtmosphericComp = true;

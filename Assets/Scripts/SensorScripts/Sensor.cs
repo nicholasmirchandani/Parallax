@@ -11,6 +11,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using VRTK;
 
 //TODO: Use VRTK Grab Events
@@ -23,6 +24,11 @@ public class Sensor : MonoBehaviour {
     private bool isRunning = false;
     protected bool hasMeasurement = false;
     private Rigidbody rb;
+    private Transform pbTransform;
+    private Color32 completeColor = new Color32(49, 233, 86, 255);
+
+    [SerializeField]
+    private Image progressBar;
     #endregion
 
 
@@ -30,6 +36,8 @@ public class Sensor : MonoBehaviour {
     //gets the rigidbody of the sensor
     protected virtual void Start() {
         rb = GetComponent<Rigidbody>();
+        pbTransform = progressBar.GetComponent<Transform>();
+        pbTransform.localScale = new Vector3(0,1,1); 
     }
 
     /// <summary>
@@ -53,6 +61,7 @@ public class Sensor : MonoBehaviour {
     /// </summary>
     public void StartTimer() {
         countRoutine = StartCoroutine(Count());
+        pbTransform.localScale = new Vector3(0, 1, 1);
         isRunning = true;
     }
 
@@ -74,6 +83,7 @@ public class Sensor : MonoBehaviour {
     IEnumerator Count() {
         while(currentTime < timeMax) {
             currentTime += Time.deltaTime;
+            pbTransform.localScale = new Vector3(pbTransform.localScale.x + Time.deltaTime / timeMax,1,1);
             yield return new WaitForEndOfFrame();
         }
         hasFinished = true;
@@ -82,7 +92,8 @@ public class Sensor : MonoBehaviour {
     }
 
     protected virtual void OnComplete() {
-        
+        pbTransform.localScale = new Vector3(1, 1, 1);
+        progressBar.color = completeColor;
     }
     #endregion
 }

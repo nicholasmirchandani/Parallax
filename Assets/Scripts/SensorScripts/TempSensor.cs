@@ -21,6 +21,7 @@ public class TempSensor : Sensor
     }
 
     protected override void OnComplete() {
+        base.OnComplete();
         string readout = FindObjectOfType<PlanetManager>().planetTemp.ToString();
         readout += "° F";
         displayScreen.text = readout;

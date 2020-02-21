@@ -21,6 +21,7 @@ public class PressureSensor : Sensor
     }
 
     protected override void OnComplete() {
+        base.OnComplete();
         string readout = FindObjectOfType<PlanetManager>().planetPressure.ToString();
         readout += " psi";
         displayScreen.text = readout;
