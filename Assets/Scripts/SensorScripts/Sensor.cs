@@ -34,6 +34,7 @@ public class Sensor : MonoBehaviour {
 
     #region Methods
     //gets the rigidbody of the sensor
+    //Sets the initial scale in the x direction for the progress bar image to be Zero
     protected virtual void Start() {
         rb = GetComponent<Rigidbody>();
         pbTransform = progressBar.GetComponent<Transform>();
@@ -83,6 +84,8 @@ public class Sensor : MonoBehaviour {
     IEnumerator Count() {
         while(currentTime < timeMax) {
             currentTime += Time.deltaTime;
+            //changes the progress bar scale in the x direction by the change in time/max time so that
+            //the pb grow at a rate porportional to how the timer is advancing per frame
             pbTransform.localScale = new Vector3(pbTransform.localScale.x + Time.deltaTime / timeMax,1,1);
             yield return new WaitForEndOfFrame();
         }
@@ -92,6 +95,7 @@ public class Sensor : MonoBehaviour {
     }
 
     protected virtual void OnComplete() {
+        //set the progress bar to final scale size and set its color to green to show that it is complete
         pbTransform.localScale = new Vector3(1, 1, 1);
         progressBar.color = completeColor;
     }
