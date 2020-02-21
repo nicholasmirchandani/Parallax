@@ -28,6 +28,13 @@ public class MenuManager : MonoBehaviourPunCallbacks
     #region private fields
 
     private Coroutine timeRoutine;
+    private Coroutine MenuFollowingRoutine;
+
+    [SerializeField]
+    private GameObject follower;
+
+    private Vector3 startRotation;
+    
 
     [SerializeField]
     private Canvas Menu;
@@ -61,6 +68,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
     public void Start() {
         Debug.Log("Awake called by Menu Manager");
         Menu.enabled = false;
+        startRotation = Menu.transform.localEulerAngles;
         
         PrintPlayers();
     }
@@ -81,7 +89,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
         PrintPlayers();
         Menu.enabled = !Menu.enabled;
         if(Menu.enabled) {
-            StartTimer();
+            StartMenuRoutines();
 
             Menu.GetComponent<VRTK_UICanvas>().enabled = true;
             //Enable the straight Pointer Renderer attached to the controller
@@ -105,7 +113,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
             Rcontroller.GetComponent<VRTK_UIPointer>().enabled = true;
         }
         else {
-            StopTimer();
+            StopMenuRoutines();
 
             //enable the bezier pointer renderer
             Lcontroller.GetComponent<VRTK_BezierPointerRenderer>().enabled = true;
@@ -130,14 +138,16 @@ public class MenuManager : MonoBehaviourPunCallbacks
         
     }
 
-    private void StartTimer()
+    private void StartMenuRoutines()
     {
         timeRoutine = StartCoroutine(Timer());
+        MenuFollowingRoutine = StartCoroutine(Following());
     }
 
-    private void StopTimer()
+    private void StopMenuRoutines()
     {
         StopCoroutine(timeRoutine);
+        StopCoroutine(MenuFollowingRoutine);
     }
 
     IEnumerator Timer()
@@ -145,6 +155,16 @@ public class MenuManager : MonoBehaviourPunCallbacks
         while (true) {
             CurrentTime();
             yield return new WaitForSeconds(1);
+        }
+    }
+
+    IEnumerator Following()
+    {
+        while(true) {
+            Vector3 temp = follower.transform.localEulerAngles;
+            follower.transform.localEulerAngles = new Vector3(startRotation.x,temp.y,startRotation.z);
+            
+            yield return new WaitForEndOfFrame();
         }
     }
 
