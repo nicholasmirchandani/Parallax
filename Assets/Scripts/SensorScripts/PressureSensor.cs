@@ -22,7 +22,7 @@ public class PressureSensor : Sensor
 
     protected override void OnComplete() {
         base.OnComplete();
-        string readout = FindObjectOfType<PlanetManager>().planetPressure.ToString();
+        string readout = FindObjectOfType<PlanetManager>().planetPressure;
         readout += " atm";
         displayScreen.text = readout;
         GameManager.Instance.planetProgresses[(int)FindObjectOfType<PlanetManager>().currentPlanet].hasPressure = true;

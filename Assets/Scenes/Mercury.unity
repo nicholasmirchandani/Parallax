@@ -620,10 +620,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetGravity: -3.7
-  planetTemp: 0
-  planetPressure: 0
-  planetAtmosphere: 
-  planetChemicalComp: 
+  planetTemp: 795
+  planetPressure: 9.8692e-15
+  planetAtmosphere: Error No ATM
+  planetChemicalComp: ??? File Corrupted
   currentPlanet: 0
 --- !u!1001 &960152459
 PrefabInstance:

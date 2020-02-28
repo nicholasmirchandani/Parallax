@@ -973,6 +973,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5143181695465214885, guid: cdab1733b93714b459cd30adcf5ccfd1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5214682534603148969, guid: cdab1733b93714b459cd30adcf5ccfd1,
         type: 3}
       propertyPath: actualLeftController
@@ -991,11 +996,6 @@ PrefabInstance:
     - target: {fileID: 5214682534603148969, guid: cdab1733b93714b459cd30adcf5ccfd1,
         type: 3}
       propertyPath: modelAliasRightController
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5143181695465214885, guid: cdab1733b93714b459cd30adcf5ccfd1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1095,7 +1095,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &707516945
 MonoBehaviour:
@@ -1110,6 +1110,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetGravity: -8.87
+  planetTemp: 864
+  planetPressure: 91.7839
+  planetAtmosphere: CO2, N
+  planetChemicalComp: ??? File Corrupted
   currentPlanet: 1
 --- !u!1001 &727722789
 PrefabInstance:

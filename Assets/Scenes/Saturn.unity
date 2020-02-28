@@ -689,6 +689,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetGravity: -10.44
+  planetTemp: -202
+  planetPressure: 1
+  planetAtmosphere: 'Hydrogen, Helium '
+  planetChemicalComp: ???
   currentPlanet: 4
 --- !u!1001 &724598870
 PrefabInstance:
@@ -1416,6 +1420,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5143181695465214885, guid: cdab1733b93714b459cd30adcf5ccfd1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5214682534603148969, guid: cdab1733b93714b459cd30adcf5ccfd1,
         type: 3}
       propertyPath: actualLeftController
@@ -1434,11 +1443,6 @@ PrefabInstance:
     - target: {fileID: 5214682534603148969, guid: cdab1733b93714b459cd30adcf5ccfd1,
         type: 3}
       propertyPath: modelAliasRightController
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5143181695465214885, guid: cdab1733b93714b459cd30adcf5ccfd1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []

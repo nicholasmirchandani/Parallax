@@ -13,6 +13,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlanetManager : MonoBehaviour {
     #region PLanetVariables
@@ -22,7 +23,7 @@ public class PlanetManager : MonoBehaviour {
     /// </summary>
     [SerializeField] public float planetGravity; //allows us to keep track of the current planet's gravity
     [SerializeField] public float planetTemp;
-    [SerializeField] public float planetPressure;
+    [SerializeField] public string planetPressure;
     [SerializeField] public string planetAtmosphere;
     [SerializeField] public string planetChemicalComp;
 
