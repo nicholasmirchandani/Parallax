@@ -100,4 +100,20 @@ public class Sensor : MonoBehaviour {
         progressBar.color = completeColor;
     }
     #endregion
+
+    #region Snap Events
+
+    public void onSnap()
+    {
+        Debug.Log("Snap Called");
+        gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+
+    }
+
+    public void onSnapExit()
+    {
+        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+    }
+    #endregion
 }
