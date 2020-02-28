@@ -20,6 +20,7 @@ public class Sensor : MonoBehaviour {
     public float timeMax = 5;
     private float currentTime = 0;
     private Coroutine countRoutine;
+    private Coroutine resetRoutine;
     private bool hasFinished = false;
     private bool isRunning = false;
     protected bool hasMeasurement = false;
@@ -61,8 +62,10 @@ public class Sensor : MonoBehaviour {
     /// start the coroutine for timing
     /// </summary>
     public void StartTimer() {
+        if(resetRoutine != null) {
+            StopCoroutine(resetRoutine);
+        }
         countRoutine = StartCoroutine(Count());
-        pbTransform.localScale = new Vector3(0, 1, 1);
         isRunning = true;
     }
 
@@ -73,15 +76,26 @@ public class Sensor : MonoBehaviour {
     public void StopTimer() {
         if(!hasFinished && isRunning) {
             StopCoroutine(countRoutine);
+            resetRoutine = StartCoroutine(ResetLoadBar());
             currentTime = 0;
             isRunning = false;
         }
+    }
+
+    public IEnumerator ResetLoadBar() {
+        float currentXScale = pbTransform.localScale.x;
+        while(pbTransform.localScale.x >= 0f) {
+            pbTransform.localScale = new Vector3(Mathf.Lerp(pbTransform.localScale.x, -0.1f, 0.01f), 1, 1);
+            yield return new WaitForEndOfFrame();
+        }
+        pbTransform.localScale = new Vector3(0, 1, 1);
     }
 
     /// <summary>
     /// the coroutine to determine if the player is holding the sensor long enough for it to get a read
     /// </summary>
     IEnumerator Count() {
+        currentTime = pbTransform.localScale.x * timeMax;
         while(currentTime < timeMax) {
             currentTime += Time.deltaTime;
             //changes the progress bar scale in the x direction by the change in time/max time so that
@@ -98,6 +112,22 @@ public class Sensor : MonoBehaviour {
         //set the progress bar to final scale size and set its color to green to show that it is complete
         pbTransform.localScale = new Vector3(1, 1, 1);
         progressBar.color = completeColor;
+    }
+    #endregion
+
+    #region Snap Events
+
+    public void onSnap()
+    {
+        Debug.Log("Snap Called");
+        gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+
+    }
+
+    public void onSnapExit()
+    {
+        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
     }
     #endregion
 }
