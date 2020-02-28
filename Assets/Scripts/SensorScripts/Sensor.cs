@@ -20,6 +20,7 @@ public class Sensor : MonoBehaviour {
     public float timeMax = 5;
     private float currentTime = 0;
     private Coroutine countRoutine;
+    private Coroutine resetRoutine;
     private bool hasFinished = false;
     private bool isRunning = false;
     protected bool hasMeasurement = false;
@@ -61,6 +62,9 @@ public class Sensor : MonoBehaviour {
     /// start the coroutine for timing
     /// </summary>
     public void StartTimer() {
+        if(resetRoutine != null) {
+            StopCoroutine(ResetLoadBar());
+        }
         countRoutine = StartCoroutine(Count());
         pbTransform.localScale = new Vector3(0, 1, 1);
         isRunning = true;
@@ -73,9 +77,19 @@ public class Sensor : MonoBehaviour {
     public void StopTimer() {
         if(!hasFinished && isRunning) {
             StopCoroutine(countRoutine);
+            resetRoutine = StartCoroutine(ResetLoadBar());
             currentTime = 0;
             isRunning = false;
         }
+    }
+
+    public IEnumerator ResetLoadBar() {
+        float currentXScale = pbTransform.localScale.x;
+        while(pbTransform.localScale.x >= 0.03f) {
+            pbTransform.localScale = new Vector3(Mathf.Lerp(pbTransform.localScale.x, 0, 0.3f), 1, 1);
+            yield return new WaitForEndOfFrame();
+        }
+        pbTransform.localScale = new Vector3(0, 1, 1);
     }
 
     /// <summary>
