@@ -337,6 +337,36 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "???\xB0 F"
+--- !u!1 &2211008004122013715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4996689507641354183}
+  m_Layer: 0
+  m_Name: RightGrabAttach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4996689507641354183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2211008004122013715}
+  m_LocalRotation: {x: -0.08743915, y: -0.29232782, z: -0.6458812, w: 0.69981164}
+  m_LocalPosition: {x: -1, y: 0.05, z: 0}
+  m_LocalScale: {x: 0, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6527619373813684416}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -30, y: -20, z: -80}
 --- !u!1 &2635003747864720002
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,6 +781,36 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &6128266868804891877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8084200905761379450}
+  m_Layer: 0
+  m_Name: LeftGrabAttach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8084200905761379450
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6128266868804891877}
+  m_LocalRotation: {x: 0.10756746, y: 0.10756746, z: 0.69887716, w: 0.69887716}
+  m_LocalPosition: {x: 1, y: 0.05, z: 0}
+  m_LocalScale: {x: 0, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6527619373813684416}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 17.5, z: 90}
 --- !u!1 &6892243720645208053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,6 +1454,16 @@ PrefabInstance:
       propertyPath: displayScreen
       value: 
       objectReference: {fileID: 8669084748482647517}
+    - target: {fileID: 4195751049783997942, guid: a86b1ae3f4f5e7449affcef3ac3f83b6,
+        type: 3}
+      propertyPath: rightSnapHandle
+      value: 
+      objectReference: {fileID: 4996689507641354183}
+    - target: {fileID: 4195751049783997942, guid: a86b1ae3f4f5e7449affcef3ac3f83b6,
+        type: 3}
+      propertyPath: leftSnapHandle
+      value: 
+      objectReference: {fileID: 8084200905761379450}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a86b1ae3f4f5e7449affcef3ac3f83b6, type: 3}
 --- !u!4 &1628256446797894965 stripped
