@@ -63,10 +63,9 @@ public class Sensor : MonoBehaviour {
     /// </summary>
     public void StartTimer() {
         if(resetRoutine != null) {
-            StopCoroutine(ResetLoadBar());
+            StopCoroutine(resetRoutine);
         }
         countRoutine = StartCoroutine(Count());
-        pbTransform.localScale = new Vector3(0, 1, 1);
         isRunning = true;
     }
 
@@ -85,8 +84,8 @@ public class Sensor : MonoBehaviour {
 
     public IEnumerator ResetLoadBar() {
         float currentXScale = pbTransform.localScale.x;
-        while(pbTransform.localScale.x >= 0.03f) {
-            pbTransform.localScale = new Vector3(Mathf.Lerp(pbTransform.localScale.x, 0, 0.3f), 1, 1);
+        while(pbTransform.localScale.x >= 0f) {
+            pbTransform.localScale = new Vector3(Mathf.Lerp(pbTransform.localScale.x, -0.1f, 0.01f), 1, 1);
             yield return new WaitForEndOfFrame();
         }
         pbTransform.localScale = new Vector3(0, 1, 1);
@@ -96,6 +95,7 @@ public class Sensor : MonoBehaviour {
     /// the coroutine to determine if the player is holding the sensor long enough for it to get a read
     /// </summary>
     IEnumerator Count() {
+        currentTime = pbTransform.localScale.x * timeMax;
         while(currentTime < timeMax) {
             currentTime += Time.deltaTime;
             //changes the progress bar scale in the x direction by the change in time/max time so that
