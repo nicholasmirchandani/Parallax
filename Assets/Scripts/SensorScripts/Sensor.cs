@@ -3,8 +3,10 @@
  *                                                                      *
  *                                                                      *
  * The Purpose of the Sensor script it so check when the player is using*
- * The Sensor Object to get  temperature readout and after using it     
- * correctly the sensor finishes.                                      *
+ * The Sensor Object to get  temperature readout and after using it     *
+ * correctly the sensor finishes.                                       *       
+ *                                                                      *    
+ * Updated  by Nick Mirchandani and Sean Robbins February 2020          *
  *                                                                      *
  ************************************************************************/
 
@@ -83,6 +85,12 @@ public class Sensor : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Coroutine to create a lurp for the progress bar to return to zero
+    /// Used to measure how much of the sensor task the player has completed when they pick up the progress bar again
+    /// Will end when the scale gets under .03
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator ResetLoadBar() {
         float currentXScale = pbTransform.localScale.x;
         while(pbTransform.localScale.x >= 0.03f) {
@@ -117,6 +125,10 @@ public class Sensor : MonoBehaviour {
 
     #region Snap Events
 
+    /// <summary>
+    /// Method used to fix the way a snap sets an object to Kinematic which would cause the timer to start
+    /// and make the sensor script complete without the player doing anything
+    /// </summary>
     public void onSnap()
     {
         Debug.Log("Snap Called");
@@ -125,6 +137,9 @@ public class Sensor : MonoBehaviour {
 
     }
 
+    /// <summary>
+    /// Resets the rigidbody when the player picks up the object so it is can be moved by unfreezing its transforms
+    /// </summary>
     public void onSnapExit()
     {
         gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
