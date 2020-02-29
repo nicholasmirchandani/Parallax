@@ -2,23 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlanetOrbit : Orbit
+public class PlanetOrbit : MonoBehaviour
 {
-    [SerializeField]
-    private float HorizontalAxisLength;
+    [SerializeField] private float HorizontalAxisLength;
+    [SerializeField] private float VerticalAxisLength;
+    [SerializeField] private float timeInEarthYears;
 
-    [SerializeField]
-    private float VerticalAxisLength;
+    public bool lineUp;
 
+    private float currentT;
 
-    protected override void orbit(float t) {
-        if(lineUp && t == 0) {
-            return;
+    public void Orbit(float t, Vector3 origin) {
+        Debug.Log("HERE");
+        if(lineUp) {
+            if(currentT > Mathf.PI) {
+                currentT = Mathf.Lerp(currentT, 2 * Mathf.PI, 0.05f);
+            } else {
+                currentT = Mathf.Lerp(currentT, 0, 0.05f);
+            }
+        } else {
+            currentT = ((t / timeInEarthYears) + currentT) % (2 * Mathf.PI);
         }
-        float tempX = gameObject.transform.position.x;
-        float tempY = gameObject.transform.position.y;
-        float tempz = gameObject.transform.position.x;
-        tempX = HorizontalAxisLength * Mathf.Cos(t);
-        tempY = VerticalAxisLength * Mathf.Sin(t);
+        transform.position = new Vector3(HorizontalAxisLength * Mathf.Cos(currentT) + origin.x, origin.y, VerticalAxisLength * Mathf.Sin(currentT) + origin.z);
+        /*
+        HorizontalAxisLength * Mathf.Cos(currentT);
+        VerticalAxisLength * Mathf.Sin(currentT);
+        */
     }
 }

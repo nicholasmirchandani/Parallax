@@ -11,47 +11,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//TODO: Rename OrbitController
 public class Orbit : MonoBehaviour
 {
-    [SerializeField]
-    private Transform origin;
-
     private Coroutine OrbitRoutine;
-
     public bool lineUp;
+    private Vector3 origin;
 
     [SerializeField]
     [Tooltip("Float that parameter t will increment by. A negative value will cause reversed orbit")]
-    private float rotationSpeed;
-
-    private float originX;
-    private float originY;
-    private float originZ;
+    private float rotationSpeed = 1;
 
     public GameObject[] planets;
-    public float t;
+    public float controllerT = 0f;
 
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.J)) {
+            StartOrbit();
+        }
+    }
+    private void Start() {
+        origin = transform.position;
+    }
 
     public void StartOrbit() {
         OrbitRoutine = StartCoroutine(OrbitController());
     }
 
     IEnumerator OrbitController() {
-        while(true) {
-            for(int i = 0; i < planets.Length; ++i) {
-                planets[i].GetComponent<Orbit>().orbit(t);
+        Debug.Log("Orbit coroutine made");
+        while (true) {
+            controllerT = (controllerT + rotationSpeed) % (2 * Mathf.PI);
+            for (int i = 0; i < planets.Length; ++i) {
+                planets[i].GetComponent<PlanetOrbit>().Orbit(Time.deltaTime * rotationSpeed, origin);
             }
-            t = ( t + rotationSpeed ) % ( 2 * Mathf.PI );
             yield return new WaitForEndOfFrame();
         }
     }
 
     public void StopOrbit() {
-        StopCoroutine(OrbitController());
+        StopCoroutine(OrbitRoutine);
     }
-  
-    protected virtual void orbit(float t){
-
-    }
-
 }
