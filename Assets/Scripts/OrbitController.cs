@@ -4,6 +4,8 @@
  * Planet Holograms in the Simulation Room for lesson to based on       *
  * a parameterized version of the equation of an ellipse based on a     *
  * variable T.                                                          *
+ *                                                                      *
+ * Updated by Nicholas Mirchandani on 2/29/2020                         *
  * **********************************************************************/
 
 
@@ -11,8 +13,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//TODO: Rename OrbitController
-public class Orbit : MonoBehaviour
+public class OrbitController : MonoBehaviour
 {
     private Coroutine OrbitRoutine;
     private bool lineUp;
@@ -50,14 +51,14 @@ public class Orbit : MonoBehaviour
     }
 
     public void StartOrbit() {
-        OrbitRoutine = StartCoroutine(OrbitController());
+        OrbitRoutine = StartCoroutine(PlanetOrbits());
     }
 
     public void ToggleLineUp() {
         LineUp = !LineUp;
     }
 
-    IEnumerator OrbitController() {
+    IEnumerator PlanetOrbits() {
         Debug.Log("Orbit coroutine made");
         while (true) {
             controllerT = (controllerT + rotationSpeed) % (2 * Mathf.PI);
