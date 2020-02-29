@@ -6697,21 +6697,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Menu
       objectReference: {fileID: 0}
-    - target: {fileID: 1927788032992594380, guid: 1f89abda5f4f9974d836a2fc7bca8e56,
-        type: 3}
-      propertyPath: follower
-      value: 
-      objectReference: {fileID: 5143181695188329736}
-    - target: {fileID: 1927788032992594380, guid: 1f89abda5f4f9974d836a2fc7bca8e56,
-        type: 3}
-      propertyPath: Lcontroller
-      value: 
-      objectReference: {fileID: 5143181696781552761}
-    - target: {fileID: 1927788032992594380, guid: 1f89abda5f4f9974d836a2fc7bca8e56,
-        type: 3}
-      propertyPath: Rcontroller
-      value: 
-      objectReference: {fileID: 5143181696187432147}
     - target: {fileID: 579425748149984763, guid: 1f89abda5f4f9974d836a2fc7bca8e56,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6767,13 +6752,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6534957048885813626, guid: 1f89abda5f4f9974d836a2fc7bca8e56,
+    - target: {fileID: 1927788032992594380, guid: 1f89abda5f4f9974d836a2fc7bca8e56,
         type: 3}
-      propertyPath: m_Text
-      value: 'Players:
-
-'
-      objectReference: {fileID: 0}
+      propertyPath: follower
+      value: 
+      objectReference: {fileID: 5143181695188329736}
+    - target: {fileID: 1927788032992594380, guid: 1f89abda5f4f9974d836a2fc7bca8e56,
+        type: 3}
+      propertyPath: Lcontroller
+      value: 
+      objectReference: {fileID: 5143181696781552761}
+    - target: {fileID: 1927788032992594380, guid: 1f89abda5f4f9974d836a2fc7bca8e56,
+        type: 3}
+      propertyPath: Rcontroller
+      value: 
+      objectReference: {fileID: 5143181696187432147}
     - target: {fileID: 6534957048885813627, guid: 1f89abda5f4f9974d836a2fc7bca8e56,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -6789,15 +6782,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resume Button
       objectReference: {fileID: 0}
-    - target: {fileID: 6534957047306768970, guid: 1f89abda5f4f9974d836a2fc7bca8e56,
+    - target: {fileID: 6534957048885813626, guid: 1f89abda5f4f9974d836a2fc7bca8e56,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6534957047306768970, guid: 1f89abda5f4f9974d836a2fc7bca8e56,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LeaveRoom
+      propertyPath: m_Text
+      value: 'Players:
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f89abda5f4f9974d836a2fc7bca8e56, type: 3}

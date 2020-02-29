@@ -111,8 +111,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
             //Enable the UI pointer script when in the menu
             Lcontroller.GetComponent<VRTK_UIPointer>().enabled = true;
             Rcontroller.GetComponent<VRTK_UIPointer>().enabled = true;
-        }
-        else {
+        } else {
             StopMenuRoutines();
 
             //enable the bezier pointer renderer
@@ -134,8 +133,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
             //enable Teleport
             Lcontroller.GetComponent<VRTK_Pointer>().enableTeleport = true;
             Rcontroller.GetComponent<VRTK_Pointer>().enableTeleport = true;
-        }
-        
+        }        
     }
 
     private void StartMenuRoutines()
@@ -191,7 +189,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
         if(GameManager.Instance.isNetworked) {
             GameManager.Instance.LeaveRoom();
         } else {
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("UI Menu");
         }
     }
 
