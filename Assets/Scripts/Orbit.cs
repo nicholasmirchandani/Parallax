@@ -15,7 +15,19 @@ using UnityEngine;
 public class Orbit : MonoBehaviour
 {
     private Coroutine OrbitRoutine;
-    public bool lineUp;
+    private bool lineUp;
+    public bool LineUp {
+        get {
+            return lineUp;
+        }
+
+        set {
+            foreach (GameObject go in planets) {
+                go.GetComponent<PlanetOrbit>().lineUp = value;
+            }
+            lineUp = value;
+        }
+    }
     private Vector3 origin;
 
     [SerializeField]
@@ -29,6 +41,9 @@ public class Orbit : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J)) {
             StartOrbit();
         }
+        if(Input.GetKeyDown(KeyCode.E)) {
+            ToggleLineUp();
+        }
     }
     private void Start() {
         origin = transform.position;
@@ -36,6 +51,10 @@ public class Orbit : MonoBehaviour
 
     public void StartOrbit() {
         OrbitRoutine = StartCoroutine(OrbitController());
+    }
+
+    public void ToggleLineUp() {
+        LineUp = !LineUp;
     }
 
     IEnumerator OrbitController() {

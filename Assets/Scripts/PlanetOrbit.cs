@@ -8,7 +8,7 @@ public class PlanetOrbit : MonoBehaviour
     [SerializeField] private float VerticalAxisLength;
     [SerializeField] private float timeInEarthYears;
 
-    public bool lineUp;
+    public bool lineUp { get; set; }
 
     private float currentT;
 
