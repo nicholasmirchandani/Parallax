@@ -956,7 +956,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play
+  m_Text: Resume
 --- !u!1 &6534957048885813624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,7 +1474,7 @@ PrefabInstance:
     - target: {fileID: 4173292104883819965, guid: 4ffe1a70dc354b841b43eb543d03155d,
         type: 3}
       propertyPath: m_Text
-      value: Play
+      value: Resume
       objectReference: {fileID: 0}
     - target: {fileID: 4173292104883819965, guid: 4ffe1a70dc354b841b43eb543d03155d,
         type: 3}
