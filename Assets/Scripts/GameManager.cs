@@ -117,11 +117,6 @@ public class GameManager : MonoBehaviourPunCallbacks {
         if(Input.GetKeyDown(KeyCode.RightArrow)) {
             ScrollTargetPlanetRight();
         }
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            Debug.Log("Leaving the Networked Room");
-            LeaveRoom();
-        }
-        
     }
 
     //Mutator for target planet
