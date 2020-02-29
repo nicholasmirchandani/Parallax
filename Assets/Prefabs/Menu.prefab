@@ -163,8 +163,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80, y: 130}
-  m_SizeDelta: {x: 250, y: 30}
+  m_AnchoredPosition: {x: 0, y: 130}
+  m_SizeDelta: {x: 400, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9182034401209721322
 CanvasRenderer:
@@ -1291,6 +1291,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 579425748149984763}
     m_Modifications:
+    - target: {fileID: 4173292103351391317, guid: 4ffe1a70dc354b841b43eb543d03155d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173292103351391317, guid: 4ffe1a70dc354b841b43eb543d03155d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173292103351391317, guid: 4ffe1a70dc354b841b43eb543d03155d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173292103351391319, guid: 4ffe1a70dc354b841b43eb543d03155d,
+        type: 3}
+      propertyPath: m_Name
+      value: QuitGameButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173292103927385848, guid: 4ffe1a70dc354b841b43eb543d03155d,
+        type: 3}
+      propertyPath: m_Name
+      value: ResumeButton
+      objectReference: {fileID: 0}
     - target: {fileID: 4173292103107928830, guid: 4ffe1a70dc354b841b43eb543d03155d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1416,31 +1441,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 40
       objectReference: {fileID: 0}
-    - target: {fileID: 4173292103351391319, guid: 4ffe1a70dc354b841b43eb543d03155d,
-        type: 3}
-      propertyPath: m_Name
-      value: QuitGameButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173292103927385848, guid: 4ffe1a70dc354b841b43eb543d03155d,
-        type: 3}
-      propertyPath: m_Name
-      value: ResumeButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173292103351391317, guid: 4ffe1a70dc354b841b43eb543d03155d,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173292103351391317, guid: 4ffe1a70dc354b841b43eb543d03155d,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Quit
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173292103351391317, guid: 4ffe1a70dc354b841b43eb543d03155d,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 4173292103927385854, guid: 4ffe1a70dc354b841b43eb543d03155d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1495,6 +1495,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 579425748149984763}
     m_Modifications:
+    - target: {fileID: 2968473331065227049, guid: 9bfadb3bac21cec43bc39058f7e7f143,
+        type: 3}
+      propertyPath: m_Name
+      value: HeadsetFollower
+      objectReference: {fileID: 0}
     - target: {fileID: 2968473331065227051, guid: 9bfadb3bac21cec43bc39058f7e7f143,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1549,11 +1554,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2968473331065227049, guid: 9bfadb3bac21cec43bc39058f7e7f143,
-        type: 3}
-      propertyPath: m_Name
-      value: HeadsetFollower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bfadb3bac21cec43bc39058f7e7f143, type: 3}
