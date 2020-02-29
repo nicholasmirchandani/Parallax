@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 547926504}
   - component: {fileID: 547926503}
   m_Layer: 0
-  m_Name: Planet (3)
+  m_Name: Jupiter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,11 +148,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547926501}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.6274736, y: 0, z: 0}
+  m_LocalScale: {x: 0.3204067, y: 0.3204067, z: 0.3204067}
   m_Children: []
-  m_Father: {fileID: 1035441693}
-  m_RootOrder: 3
+  m_Father: {fileID: 1094999452}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &547926503
 MonoBehaviour:
@@ -166,9 +166,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7637f1c8f2bd5cf44a5cdf265c63010f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HorizontalAxisLength: 4
-  VerticalAxisLength: 4
-  timeInEarthYears: 0.5
+  HorizontalAxisLength: 2.225
+  VerticalAxisLength: 2.337
+  timeInEarthYears: 3.444
 --- !u!135 &547926504
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -199,7 +199,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ac999526de66e3c41904c0e62a5ccda4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -256,10 +256,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912985087}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.0002114, y: 0, z: 0}
+  m_LocalScale: {x: 0.093357325, y: 0.093357325, z: 0.093357325}
   m_Children: []
-  m_Father: {fileID: 1035441693}
+  m_Father: {fileID: 1094999452}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &912985089
@@ -274,9 +274,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7637f1c8f2bd5cf44a5cdf265c63010f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HorizontalAxisLength: 4
-  VerticalAxisLength: 4
-  timeInEarthYears: 0.5
+  HorizontalAxisLength: 847
+  VerticalAxisLength: 853
+  timeInEarthYears: 0.7843
 --- !u!135 &912985090
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -307,7 +307,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ecc3062ced426a748ae72221281c84cd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 974118246}
   - component: {fileID: 974118245}
   m_Layer: 0
-  m_Name: Planet (7)
+  m_Name: Neptune
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -364,10 +364,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974118243}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 6.4464626, y: 0, z: 0}
+  m_LocalScale: {x: 0.18866982, y: 0.18866982, z: 0.18866982}
   m_Children: []
-  m_Father: {fileID: 1035441693}
+  m_Father: {fileID: 1094999452}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &974118245
@@ -382,9 +382,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7637f1c8f2bd5cf44a5cdf265c63010f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HorizontalAxisLength: 4
-  VerticalAxisLength: 4
-  timeInEarthYears: 0.5
+  HorizontalAxisLength: 5.459
+  VerticalAxisLength: 5.514
+  timeInEarthYears: 12.837
 --- !u!135 &974118246
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -415,7 +415,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ca33fa971490fe146a147e4e1b8681bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 1003782312}
   - component: {fileID: 1003782311}
   m_Layer: 0
-  m_Name: Planet (5)
+  m_Name: Mars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -472,11 +472,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003782309}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.3875422, y: 0, z: 0}
+  m_LocalScale: {x: 0.06973078, y: 0.06973078, z: 0.06973078}
   m_Children: []
-  m_Father: {fileID: 1035441693}
-  m_RootOrder: 5
+  m_Father: {fileID: 1094999452}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1003782311
 MonoBehaviour:
@@ -490,9 +490,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7637f1c8f2bd5cf44a5cdf265c63010f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HorizontalAxisLength: 4
-  VerticalAxisLength: 4
-  timeInEarthYears: 0.5
+  HorizontalAxisLength: 1.175
+  VerticalAxisLength: 1.288
+  timeInEarthYears: 1.3715
 --- !u!135 &1003782312
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -523,7 +523,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2486373c71975c545a1a86240061b156, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -637,13 +637,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006970872}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.207, y: 2.443, z: -5.689}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1035441691
+--- !u!1 &1094999447
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -651,22 +651,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1035441693}
-  - component: {fileID: 1035441692}
+  - component: {fileID: 1094999452}
+  - component: {fileID: 1094999451}
+  - component: {fileID: 1094999450}
+  - component: {fileID: 1094999449}
+  - component: {fileID: 1094999448}
   m_Layer: 0
-  m_Name: OrbitController
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1035441692
+--- !u!114 &1094999448
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1035441691}
+  m_GameObject: {fileID: 1094999447}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 777f3e79605e48a4bbd2a15b7722a09d, type: 3}
@@ -675,14 +678,80 @@ MonoBehaviour:
   rotationSpeed: 1
   planets:
   - {fileID: 1998776931}
+  - {fileID: 912985087}
+  - {fileID: 1514030410}
+  - {fileID: 1003782309}
+  - {fileID: 547926501}
+  - {fileID: 1698633240}
+  - {fileID: 1480491790}
+  - {fileID: 974118243}
   controllerT: 0
---- !u!4 &1035441693
+--- !u!135 &1094999449
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094999447}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1094999450
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094999447}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5e4abef1e05930042aa242a693e57626, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1094999451
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094999447}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1094999452
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1035441691}
+  m_GameObject: {fileID: 1094999447}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -690,9 +759,9 @@ Transform:
   - {fileID: 1998776936}
   - {fileID: 912985088}
   - {fileID: 1514030411}
+  - {fileID: 1003782310}
   - {fileID: 547926502}
   - {fileID: 1698633241}
-  - {fileID: 1003782310}
   - {fileID: 1480491791}
   - {fileID: 974118244}
   m_Father: {fileID: 0}
@@ -763,7 +832,7 @@ GameObject:
   - component: {fileID: 1480491793}
   - component: {fileID: 1480491792}
   m_Layer: 0
-  m_Name: Planet (6)
+  m_Name: Uranus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -777,10 +846,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480491790}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 5.064825, y: 0, z: 0}
+  m_LocalScale: {x: 0.19252062, y: 0.19252062, z: 0.19252062}
   m_Children: []
-  m_Father: {fileID: 1035441693}
+  m_Father: {fileID: 1094999452}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1480491792
@@ -795,9 +864,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7637f1c8f2bd5cf44a5cdf265c63010f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HorizontalAxisLength: 4
-  VerticalAxisLength: 4
-  timeInEarthYears: 0.5
+  HorizontalAxisLength: 4.289
+  VerticalAxisLength: 4.833
+  timeInEarthYears: 9.165
 --- !u!135 &1480491793
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -828,7 +897,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 88c16b1bd90ccee48947f6624e59d779, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -885,10 +954,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514030410}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.1690782, y: 0, z: 0}
+  m_LocalScale: {x: 0.09578259, y: 0.09578259, z: 0.09578259}
   m_Children: []
-  m_Father: {fileID: 1035441693}
+  m_Father: {fileID: 1094999452}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1514030412
@@ -903,9 +972,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7637f1c8f2bd5cf44a5cdf265c63010f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HorizontalAxisLength: 4
-  VerticalAxisLength: 4
-  timeInEarthYears: 0.5
+  HorizontalAxisLength: 0.99
+  VerticalAxisLength: 1.005
+  timeInEarthYears: 1
 --- !u!135 &1514030413
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -936,7 +1005,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 21a8fb46aa4ed034b92891bbfc5be405, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1045,7 +1114,7 @@ GameObject:
   - component: {fileID: 1698633243}
   - component: {fileID: 1698633242}
   m_Layer: 0
-  m_Name: Planet (4)
+  m_Name: Saturn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1059,11 +1128,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698633240}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.5521083, y: 0, z: 0}
+  m_LocalScale: {x: 0.29366386, y: 0.29366383, z: 0.29366383}
   m_Children: []
-  m_Father: {fileID: 1035441693}
-  m_RootOrder: 4
+  m_Father: {fileID: 1094999452}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1698633242
 MonoBehaviour:
@@ -1077,9 +1146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7637f1c8f2bd5cf44a5cdf265c63010f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HorizontalAxisLength: 4
-  VerticalAxisLength: 4
-  timeInEarthYears: 0.5
+  HorizontalAxisLength: 3.008
+  VerticalAxisLength: 3.181
+  timeInEarthYears: 5.385
 --- !u!135 &1698633243
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1110,7 +1179,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 660c67af4739c9d48b75419ad0cd5e67, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1235,9 +1304,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7637f1c8f2bd5cf44a5cdf265c63010f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HorizontalAxisLength: 4
-  VerticalAxisLength: 4
-  timeInEarthYears: 0.5
+  HorizontalAxisLength: 0.554
+  VerticalAxisLength: 0.683
+  timeInEarthYears: 0.491
 --- !u!135 &1998776933
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1268,7 +1337,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6562d5db76c360b4393c2f5b72fa2caa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1305,10 +1374,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998776931}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.65421146, y: 0, z: 0}
+  m_LocalScale: {x: 0.059044357, y: 0.059044357, z: 0.059044357}
   m_Children: []
-  m_Father: {fileID: 1035441693}
+  m_Father: {fileID: 1094999452}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2080562581
@@ -1330,7 +1399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &2080562582
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1351,7 +1420,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080562581}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
