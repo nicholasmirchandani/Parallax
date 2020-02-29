@@ -23,7 +23,10 @@ public class PlanetOrbit : MonoBehaviour
         } else {
             currentT = ((t / timeInEarthYears) + currentT) % (2 * Mathf.PI);
         }
-        transform.position = new Vector3(HorizontalAxisLength * Mathf.Cos(currentT) + origin.x, origin.y, VerticalAxisLength * Mathf.Sin(currentT) + origin.z);
+        //Assuming planets are childed to controller
+        transform.localPosition = new Vector3(HorizontalAxisLength * Mathf.Cos(currentT), 0, VerticalAxisLength * Mathf.Sin(currentT));
+
+        //transform.position = new Vector3(HorizontalAxisLength * Mathf.Cos(currentT) + origin.x, origin.y, VerticalAxisLength * Mathf.Sin(currentT) + origin.z);
         /*
         HorizontalAxisLength * Mathf.Cos(currentT);
         VerticalAxisLength * Mathf.Sin(currentT);
