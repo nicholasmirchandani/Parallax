@@ -66,6 +66,9 @@ public class OrbitController : MonoBehaviour
     }
 
     public void StartOrbit() {
+        if(OrbitRoutine != null) {
+            StopCoroutine(OrbitRoutine);
+        }
         OrbitRoutine = StartCoroutine(PlanetOrbits());
     }
 

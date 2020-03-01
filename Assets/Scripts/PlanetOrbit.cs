@@ -27,12 +27,11 @@ public class PlanetOrbit : MonoBehaviour
         PlanetScaleExpanded = Mathf.Pow(PlanetScale, 2);
 
         currentHorzontalAxisLength = HorizontalAxisLength;
-        currentVerticalAxisLength = HorizontalAxisLength;
-        currentPlanetScale = HorizontalAxisLength;
+        currentVerticalAxisLength = VerticalAxisLength;
+        currentPlanetScale = PlanetScale;
     }
 
     public void Orbit(float t, Vector3 origin) {
-        Debug.Log("HERE");
         if(lineUp) {
             if(currentT > Mathf.PI) {
                 currentT = Mathf.Lerp(currentT, 2 * Mathf.PI, 0.05f);
@@ -42,6 +41,7 @@ public class PlanetOrbit : MonoBehaviour
         } else {
             currentT = ((t / timeInEarthYears) + currentT) % (2 * Mathf.PI);
         }
+
         if (expanded) {
             currentHorzontalAxisLength = Mathf.Lerp(currentHorzontalAxisLength, HorizontalAxisLengthExpanded, 0.05f);
             currentVerticalAxisLength = Mathf.Lerp(currentVerticalAxisLength, VerticalAxisLengthExpanded, 0.05f);
