@@ -68,6 +68,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
     public void Start() {
         Debug.Log("Awake called by Menu Manager");
         Menu.enabled = false;
+        Menu.gameObject.GetComponent<VRTK_UICanvas>().enabled = false;
         startRotation = Menu.transform.localEulerAngles;
         
         PrintPlayers();
@@ -88,6 +89,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
         PlayerNameLocation.text = GameManager.Instance.PlayerName + " - " + LocationName;
         PrintPlayers();
         Menu.enabled = !Menu.enabled;
+        Menu.gameObject.GetComponent<VRTK_UICanvas>().enabled = Menu.enabled;
         if(Menu.enabled) {
             StartMenuRoutines();
 

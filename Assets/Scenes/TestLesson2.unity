@@ -148,7 +148,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &481123507
 GameObject:
@@ -549,7 +549,7 @@ Transform:
   - {fileID: 731360398}
   - {fileID: 1094694421}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &912985087
 GameObject:
@@ -964,7 +964,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1094694420
 GameObject:
@@ -1070,7 +1070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HorizontalAxisLength: 0
   VerticalAxisLength: 0
-  timeInEarthYears: 0
+  timeInEarthYears: 1
 --- !u!135 &1094999449
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1631,7 +1631,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1698633240
 GameObject:
@@ -1741,70 +1741,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698633240}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1852616262
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1852616264}
-  - component: {fileID: 1852616263}
-  m_Layer: 0
-  m_Name: CockpitManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1852616263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852616262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86be136ef15b98846a98fdcd2f46fcaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hologramPlanets:
-  - {fileID: 0}
-  - {fileID: 0}
-  mercuryMaterial: {fileID: 2100000, guid: 9b35c14841d260149b6f90ac840bb3e6, type: 2}
-  venusMaterial: {fileID: 2100000, guid: fd3349b35fd65094fb87bc7eda1e3014, type: 2}
-  marsMaterial: {fileID: 2100000, guid: 290d175fbef392d4292cbb5ee4878628, type: 2}
-  jupiterMaterial: {fileID: 2100000, guid: 85c42a4c8bce420408d07d4856dae3ee, type: 2}
-  saturnMaterial: {fileID: 2100000, guid: 87b1c9707b1653c4684055bfbd76c0fc, type: 2}
-  uranusMaterial: {fileID: 2100000, guid: e20f2e5c66016884bb2c6b3387751d6c, type: 2}
-  neptuneMaterial: {fileID: 2100000, guid: 01b97766480be124baf93b5588f8f3b0, type: 2}
-  ThePlanetsGreen: {fileID: 0}
-  ThePlanetsWhite: {fileID: 0}
-  ThePlanetsHolder: {fileID: 0}
-  ThePlanetsMercury: {fileID: 0}
-  ThePlanetsVenus: {fileID: 0}
-  ThePlanetsMars: {fileID: 0}
-  ThePlanetsJupiter: {fileID: 0}
-  ThePlanetsSaturn: {fileID: 0}
-  ThePlanetsUranus: {fileID: 0}
-  ThePlanetsNeptune: {fileID: 0}
-  PlanetCompleteIndicator: {fileID: 0}
---- !u!4 &1852616264
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852616262}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1998776931
 GameObject:
   m_ObjectHideFlags: 0
@@ -1975,7 +1911,7 @@ Transform:
   - {fileID: 1480491791}
   - {fileID: 974118244}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2039884837
 GameObject:
@@ -2196,7 +2132,7 @@ Transform:
   m_LocalScale: {x: -17.479546, y: -0.56775254, z: -22.750708}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2080562586
 MonoBehaviour:
@@ -2539,7 +2475,7 @@ PrefabInstance:
     - target: {fileID: 5143181695449730099, guid: cdab1733b93714b459cd30adcf5ccfd1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5143181695449730099, guid: cdab1733b93714b459cd30adcf5ccfd1,
         type: 3}
