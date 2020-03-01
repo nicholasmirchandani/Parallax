@@ -973,11 +973,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5143181695465214885, guid: cdab1733b93714b459cd30adcf5ccfd1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5214682534603148969, guid: cdab1733b93714b459cd30adcf5ccfd1,
         type: 3}
       propertyPath: actualLeftController
@@ -1165,7 +1160,7 @@ PrefabInstance:
     - target: {fileID: 3724423250742792957, guid: c64a5e5c74a4b474da8b3a2ac17ef8dc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3724423250742792957, guid: c64a5e5c74a4b474da8b3a2ac17ef8dc,
         type: 3}
