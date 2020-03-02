@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Network Testing/UI Menu.unity
+    path: Assets/Scenes/UI Menu.unity
     guid: 4985435c50db79840b00db761430f9d9
   - enabled: 1
     path: Assets/Scenes/Cockpit.unity
-    guid: ae8df9d4d968be2498479b3de76e05fa
+    guid: 408c478f95f339e4791f3f1bbf97e7c7
   - enabled: 1
     path: Assets/Scenes/Mercury.unity
     guid: b442af498c4d4814cbcc8d0eb837a1fb
