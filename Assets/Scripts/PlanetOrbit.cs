@@ -7,6 +7,7 @@ public class PlanetOrbit : MonoBehaviour
     [SerializeField] private float HorizontalAxisLength;
     [SerializeField] private float VerticalAxisLength;
     [SerializeField] private float timeInEarthYears;
+    [SerializeField] private TrailRenderer trail;
     private float PlanetScale;
     private float HorizontalAxisLengthExpanded;
     private float VerticalAxisLengthExpanded;
@@ -33,12 +34,19 @@ public class PlanetOrbit : MonoBehaviour
 
     public void Orbit(float t, Vector3 origin) {
         if(lineUp) {
+            
+            if (trail.emitting){
+                trail.emitting = false;
+                trail.Clear();
+            }
+            
             if(currentT > Mathf.PI) {
                 currentT = Mathf.Lerp(currentT, 2 * Mathf.PI, 0.05f);
             } else {
                 currentT = Mathf.Lerp(currentT, 0, 0.05f);
             }
         } else {
+            trail.emitting = true;
             currentT = ((t / timeInEarthYears) + currentT) % (2 * Mathf.PI);
         }
 
@@ -46,10 +54,38 @@ public class PlanetOrbit : MonoBehaviour
             currentHorzontalAxisLength = Mathf.Lerp(currentHorzontalAxisLength, HorizontalAxisLengthExpanded, 0.05f);
             currentVerticalAxisLength = Mathf.Lerp(currentVerticalAxisLength, VerticalAxisLengthExpanded, 0.05f);
             currentPlanetScale = Mathf.Lerp(currentPlanetScale, PlanetScaleExpanded, 0.05f);
+
+            if(!Mathf.Approximately(currentHorzontalAxisLength, HorizontalAxisLengthExpanded) &&
+                !Mathf.Approximately(currentVerticalAxisLength, VerticalAxisLengthExpanded) &&
+                !Mathf.Approximately(currentPlanetScale, PlanetScaleExpanded)){
+                if (trail.emitting)
+                {
+                    trail.emitting = false;
+                    trail.Clear();
+                }
+            } else if(!lineUp){
+                trail.emitting = true;
+            }
+
         } else {
             currentHorzontalAxisLength = Mathf.Lerp(currentHorzontalAxisLength, HorizontalAxisLength, 0.05f);
             currentVerticalAxisLength = Mathf.Lerp(currentVerticalAxisLength, VerticalAxisLength, 0.05f);
             currentPlanetScale = Mathf.Lerp(currentPlanetScale, PlanetScale, 0.05f);
+
+            if (!Mathf.Approximately(currentHorzontalAxisLength, HorizontalAxisLength) &&
+                !Mathf.Approximately(currentVerticalAxisLength, VerticalAxisLength) &&
+                !Mathf.Approximately(currentPlanetScale, PlanetScale))
+            {
+                if (trail.emitting)
+                {
+                    trail.emitting = false;
+                    trail.Clear();
+                }
+            }
+            else if (!lineUp)
+            {
+                trail.emitting = true;
+            }
         }
         //Assuming planets are childed to controller
         transform.localPosition = new Vector3(currentHorzontalAxisLength * Mathf.Cos(currentT), 0, currentVerticalAxisLength * Mathf.Sin(currentT));
