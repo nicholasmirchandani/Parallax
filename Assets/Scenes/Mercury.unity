@@ -576,18 +576,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!114 &275235983 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1846695362, guid: 0893c52f2bacdac4692c2738285aa585,
-    type: 3}
-  m_PrefabInstance: {fileID: 7626919685639560676}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &707516943
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,18 +625,6 @@ MonoBehaviour:
   planetAtmosphere: Error No ATM
   planetChemicalComp: ??? File Corrupted
   currentPlanet: 0
---- !u!114 &855352602 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7888099049835316928, guid: 0893c52f2bacdac4692c2738285aa585,
-    type: 3}
-  m_PrefabInstance: {fileID: 7626919685639560676}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &960152459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1765,17 +1741,17 @@ PrefabInstance:
     - target: {fileID: 6852966175834586983, guid: e744850b725500441b7504dae0bf33f0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.445
+      value: 2.4301
       objectReference: {fileID: 0}
     - target: {fileID: 6852966175834586983, guid: e744850b725500441b7504dae0bf33f0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.988
+      value: 1.01
       objectReference: {fileID: 0}
     - target: {fileID: 6852966175834586983, guid: e744850b725500441b7504dae0bf33f0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.9438
+      value: -0.9602
       objectReference: {fileID: 0}
     - target: {fileID: 6852966175834586983, guid: e744850b725500441b7504dae0bf33f0,
         type: 3}
@@ -1817,16 +1793,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90.00001
       objectReference: {fileID: 0}
-    - target: {fileID: 6644103792172181258, guid: e744850b725500441b7504dae0bf33f0,
-        type: 3}
-      propertyPath: progressBar
-      value: 
-      objectReference: {fileID: 275235983}
-    - target: {fileID: 6644103792172181258, guid: e744850b725500441b7504dae0bf33f0,
-        type: 3}
-      propertyPath: displayScreen
-      value: 
-      objectReference: {fileID: 855352602}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e744850b725500441b7504dae0bf33f0, type: 3}
 --- !u!1001 &7626919685639560676
@@ -1910,6 +1876,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.276
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722923189641629056, guid: 0893c52f2bacdac4692c2738285aa585,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0893c52f2bacdac4692c2738285aa585, type: 3}
