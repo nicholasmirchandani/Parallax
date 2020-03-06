@@ -190,7 +190,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 57.3
+  m_Time: 14.325
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.1
@@ -356,7 +356,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 82
+  m_Time: 20.5
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.1
@@ -492,7 +492,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 4.9
+  m_Time: 1.225
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.02
@@ -628,7 +628,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 8.7
+  m_Time: 2.175
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.01
@@ -764,7 +764,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 5
+  m_Time: 1.25
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -999,7 +999,6 @@ MonoBehaviour:
   HorizontalAxisLength: 2.225
   VerticalAxisLength: 2.337
   timeInEarthYears: 3.444
-  trail: {fileID: 1466720234}
 --- !u!135 &547926504
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1199,7 +1198,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 2.96
+  m_Time: 0.74
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.01
@@ -1410,7 +1409,6 @@ MonoBehaviour:
   HorizontalAxisLength: 0.847
   VerticalAxisLength: 0.853
   timeInEarthYears: 0.7843
-  trail: {fileID: 219453709}
 --- !u!135 &912985090
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1520,7 +1518,6 @@ MonoBehaviour:
   HorizontalAxisLength: 5.459
   VerticalAxisLength: 5.514
   timeInEarthYears: 12.837
-  trail: {fileID: 137207607}
 --- !u!135 &974118246
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1630,7 +1627,6 @@ MonoBehaviour:
   HorizontalAxisLength: 1.175
   VerticalAxisLength: 1.288
   timeInEarthYears: 1.3715
-  trail: {fileID: 292456103}
 --- !u!135 &1003782312
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1886,7 +1882,6 @@ MonoBehaviour:
   HorizontalAxisLength: 0
   VerticalAxisLength: 0
   timeInEarthYears: 1
-  trail: {fileID: 436865389}
 --- !u!135 &1094999449
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2031,7 +2026,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 33.7
+  m_Time: 8.425
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.1
@@ -2296,7 +2291,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 21.5
+  m_Time: 5.375
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.1
@@ -2412,7 +2407,6 @@ MonoBehaviour:
   HorizontalAxisLength: 4.289
   VerticalAxisLength: 4.833
   timeInEarthYears: 9.165
-  trail: {fileID: 25904272}
 --- !u!135 &1480491793
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2522,7 +2516,6 @@ MonoBehaviour:
   HorizontalAxisLength: 0.99
   VerticalAxisLength: 1.005
   timeInEarthYears: 1
-  trail: {fileID: 1921528686}
 --- !u!135 &1514030413
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2776,7 +2769,6 @@ MonoBehaviour:
   HorizontalAxisLength: 3.008
   VerticalAxisLength: 3.181
   timeInEarthYears: 5.385
-  trail: {fileID: 1241222421}
 --- !u!135 &1698633243
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2906,7 +2898,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 6.19
+  m_Time: 1.5475
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.01
@@ -3007,7 +2999,6 @@ MonoBehaviour:
   HorizontalAxisLength: 0.554
   VerticalAxisLength: 0.683
   timeInEarthYears: 0.491
-  trail: {fileID: 744781846}
 --- !u!135 &1998776933
 SphereCollider:
   m_ObjectHideFlags: 0
