@@ -98,5 +98,8 @@ public class TutorialManager : MonoBehaviour {
             ChallengeZones[i].SetActive(true);
         }
     }
+    public bool CheckAfterTeleport() {
+        return true;
+    }
 }
 
