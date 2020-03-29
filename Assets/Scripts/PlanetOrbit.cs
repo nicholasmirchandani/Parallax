@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VRTK;
 
 public class PlanetOrbit : MonoBehaviour
 {
     [SerializeField] private float HorizontalAxisLength;
     [SerializeField] private float VerticalAxisLength;
-    [SerializeField] private float timeInEarthYears;
+    [SerializeField] private float yearLengthInEarthYears;
+    [SerializeField] private float siderealPeriodInEarthYears; //Time for planet to rotate once, not respective to the sun
+    [SerializeField] private VRTK_InteractableObject interactable;
+
     private float PlanetScale;
     private float HorizontalAxisLengthExpanded;
     private float VerticalAxisLengthExpanded;
@@ -15,12 +19,22 @@ public class PlanetOrbit : MonoBehaviour
     public bool lineUp { get; set; }
     public bool expanded { get; set; }
 
-    private float currentT;
+    private float currentOrbitT;
+    private float currentRotationT;
     private float currentHorzontalAxisLength;
     private float currentVerticalAxisLength;
     private float currentPlanetScale;
 
+    private float lerpDuration = 5f;
+    private bool onTargetPos = true;
+    private bool lerpingBackToTarget = false;
+
+    private Vector3 previousExpectedPosition;
+    private Vector3 previousExpectedScale;
+
     private void Start() {
+        previousExpectedPosition = transform.position;
+        previousExpectedScale = transform.localScale;
         PlanetScale = gameObject.transform.localScale.x;
         HorizontalAxisLengthExpanded = Mathf.Pow(HorizontalAxisLength, 2);
         VerticalAxisLengthExpanded = Mathf.Pow(VerticalAxisLength, 2);
@@ -31,15 +45,15 @@ public class PlanetOrbit : MonoBehaviour
         currentPlanetScale = PlanetScale;
     }
 
-    public void Orbit(float t, Vector3 origin) {
+    public void Orbit(float t) {
         if(lineUp) {
-            if(currentT > Mathf.PI) {
-                currentT = Mathf.Lerp(currentT, 2 * Mathf.PI, 0.05f);
+            if(currentOrbitT > Mathf.PI) {
+                currentOrbitT = Mathf.Lerp(currentOrbitT, 2 * Mathf.PI, 0.05f);
             } else {
-                currentT = Mathf.Lerp(currentT, 0, 0.05f);
+                currentOrbitT = Mathf.Lerp(currentOrbitT, 0, 0.05f);
             }
         } else {
-            currentT = ((t / timeInEarthYears) + currentT) % (2 * Mathf.PI);
+            currentOrbitT = ((t / yearLengthInEarthYears) + currentOrbitT) % (2 * Mathf.PI);
         }
 
         if (expanded) {
@@ -53,7 +67,61 @@ public class PlanetOrbit : MonoBehaviour
             currentPlanetScale = Mathf.Lerp(currentPlanetScale, PlanetScale, 0.05f);
         }
         //Assuming planets are childed to controller
-        transform.localPosition = new Vector3(currentHorzontalAxisLength * Mathf.Cos(currentT), 0, currentVerticalAxisLength * Mathf.Sin(currentT));
-        transform.localScale = new Vector3(currentPlanetScale, currentPlanetScale, currentPlanetScale);
+
+        if (!interactable.IsGrabbed())
+        {
+            if (!onTargetPos && !lerpingBackToTarget)
+            {
+                lerpingBackToTarget = true;
+                StartCoroutine(LerpDuration());
+            }
+            Vector3 targetPosition = new Vector3(currentHorzontalAxisLength * Mathf.Cos(currentOrbitT), 0, currentVerticalAxisLength * Mathf.Sin(currentOrbitT));
+
+            if (onTargetPos)
+            {
+
+                transform.localPosition = targetPosition;
+            }
+            else
+            {
+                transform.localPosition = Vector3.Lerp(transform.localPosition, targetPosition, 0.05f);
+            }
+
+            Vector3 targetScale = new Vector3(currentPlanetScale, currentPlanetScale, currentPlanetScale);
+
+            if (Mathf.Approximately(transform.localScale.x, previousExpectedScale.x) &&
+                Mathf.Approximately(transform.localScale.z, previousExpectedScale.z))
+            {
+                transform.localScale = targetScale;
+            }
+            else
+            {
+                Debug.Log("SCALE LERP");
+                transform.localScale = Vector3.Lerp(transform.localScale, targetScale, 0.05f);
+            }
+        }
+        else
+        {
+            onTargetPos = false;
+        }
+
+        previousExpectedPosition = new Vector3(currentHorzontalAxisLength * Mathf.Cos(currentOrbitT), 0, currentVerticalAxisLength * Mathf.Sin(currentOrbitT));
+        previousExpectedScale = new Vector3(currentPlanetScale, currentPlanetScale, currentPlanetScale);
+    }
+
+    public void Rotate(float t)
+    {
+        if (!interactable.IsGrabbed())
+        {
+            transform.Rotate(0f, (((t / siderealPeriodInEarthYears) + currentRotationT) % (2 * Mathf.PI)), 0f);
+        }
+    }
+
+    IEnumerator LerpDuration()
+    {
+        yield return new WaitForSeconds(lerpDuration);
+        lerpingBackToTarget = false;
+        onTargetPos = true;
+
     }
 }

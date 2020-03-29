@@ -85,7 +85,8 @@ public class OrbitController : MonoBehaviour
         while (true) {
             controllerT = (controllerT + rotationSpeed) % (2 * Mathf.PI);
             for (int i = 0; i < planets.Length; ++i) {
-                planets[i].GetComponent<PlanetOrbit>().Orbit(Time.deltaTime * rotationSpeed, origin);
+                planets[i].GetComponent<PlanetOrbit>().Orbit(Time.deltaTime * rotationSpeed);
+                planets[i].GetComponent<PlanetOrbit>().Rotate(Time.deltaTime * rotationSpeed);
             }
             yield return new WaitForEndOfFrame();
         }
