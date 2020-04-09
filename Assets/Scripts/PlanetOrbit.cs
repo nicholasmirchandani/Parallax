@@ -84,7 +84,7 @@ public class PlanetOrbit : MonoBehaviour
             }
             else
             {
-                transform.localPosition = Vector3.Lerp(transform.localPosition, targetPosition, 0.05f);
+                transform.localPosition = Vector3.Lerp(transform.localPosition, targetPosition, 1f);
             }
 
             Vector3 targetScale = new Vector3(currentPlanetScale, currentPlanetScale, currentPlanetScale);
@@ -97,7 +97,7 @@ public class PlanetOrbit : MonoBehaviour
             else
             {
                 Debug.Log("SCALE LERP");
-                transform.localScale = Vector3.Lerp(transform.localScale, targetScale, 0.05f);
+                transform.localScale = Vector3.Lerp(transform.localScale, targetScale, 1f);
             }
         }
         else
