@@ -1106,6 +1106,7 @@ GameObject:
   - component: {fileID: 547926509}
   - component: {fileID: 547926508}
   - component: {fileID: 547926507}
+  - component: {fileID: 547926513}
   m_Layer: 0
   m_Name: Jupiter
   m_TagString: Untagged
@@ -1144,7 +1145,6 @@ MonoBehaviour:
   VerticalAxisLength: 2.337
   yearLengthInEarthYears: 11.871233
   siderealPeriodInEarthYears: 0.0011329909
-  interactable: {fileID: 547926512}
 --- !u!135 &547926504
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1336,6 +1336,24 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
+--- !u!114 &547926513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547926501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!1 &731360397
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,6 +1674,7 @@ GameObject:
   - component: {fileID: 912985095}
   - component: {fileID: 912985094}
   - component: {fileID: 912985093}
+  - component: {fileID: 912985099}
   m_Layer: 0
   m_Name: Venus
   m_TagString: Untagged
@@ -1694,7 +1713,6 @@ MonoBehaviour:
   VerticalAxisLength: 0.853
   yearLengthInEarthYears: 0.6164383
   siderealPeriodInEarthYears: 0.6658082
-  interactable: {fileID: 912985098}
 --- !u!135 &912985090
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1886,6 +1904,24 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
+--- !u!114 &912985099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912985087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!1 &974118243
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,6 +1941,7 @@ GameObject:
   - component: {fileID: 974118251}
   - component: {fileID: 974118250}
   - component: {fileID: 974118249}
+  - component: {fileID: 974118255}
   m_Layer: 0
   m_Name: Neptune
   m_TagString: Untagged
@@ -1943,7 +1980,6 @@ MonoBehaviour:
   VerticalAxisLength: 5.514
   yearLengthInEarthYears: 164.90411
   siderealPeriodInEarthYears: 0.0018390411
-  interactable: {fileID: 974118254}
 --- !u!135 &974118246
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2135,6 +2171,24 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
+--- !u!114 &974118255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974118243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!1 &1003782309
 GameObject:
   m_ObjectHideFlags: 0
@@ -2154,6 +2208,7 @@ GameObject:
   - component: {fileID: 1003782317}
   - component: {fileID: 1003782316}
   - component: {fileID: 1003782315}
+  - component: {fileID: 1003782321}
   m_Layer: 0
   m_Name: Mars
   m_TagString: Untagged
@@ -2192,7 +2247,6 @@ MonoBehaviour:
   VerticalAxisLength: 1.288
   yearLengthInEarthYears: 1.8821918
   siderealPeriodInEarthYears: 0.0028108403
-  interactable: {fileID: 1003782320}
 --- !u!135 &1003782312
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2384,6 +2438,24 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
+--- !u!114 &1003782321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003782309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!1 &1006970872
 GameObject:
   m_ObjectHideFlags: 0
@@ -2564,6 +2636,7 @@ GameObject:
   - component: {fileID: 1094999455}
   - component: {fileID: 1094999454}
   - component: {fileID: 1094999453}
+  - component: {fileID: 1094999459}
   m_Layer: 0
   m_Name: Sun
   m_TagString: Untagged
@@ -2587,7 +2660,6 @@ MonoBehaviour:
   VerticalAxisLength: 0
   yearLengthInEarthYears: 1
   siderealPeriodInEarthYears: 0.0657534
-  interactable: {fileID: 1094999458}
 --- !u!135 &1094999449
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2794,6 +2866,24 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
+--- !u!114 &1094999459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094999447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!1 &1241222419
 GameObject:
   m_ObjectHideFlags: 0
@@ -3214,6 +3304,7 @@ GameObject:
   - component: {fileID: 1480491798}
   - component: {fileID: 1480491797}
   - component: {fileID: 1480491796}
+  - component: {fileID: 1480491802}
   m_Layer: 0
   m_Name: Uranus
   m_TagString: Untagged
@@ -3252,7 +3343,6 @@ MonoBehaviour:
   VerticalAxisLength: 4.833
   yearLengthInEarthYears: 84.073975
   siderealPeriodInEarthYears: 0.0019680364
-  interactable: {fileID: 1480491801}
 --- !u!135 &1480491793
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3444,6 +3534,24 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
+--- !u!114 &1480491802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480491790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!1 &1514030410
 GameObject:
   m_ObjectHideFlags: 0
@@ -3463,6 +3571,7 @@ GameObject:
   - component: {fileID: 1514030418}
   - component: {fileID: 1514030417}
   - component: {fileID: 1514030416}
+  - component: {fileID: 1514030422}
   m_Layer: 0
   m_Name: Earth
   m_TagString: Untagged
@@ -3501,7 +3610,6 @@ MonoBehaviour:
   VerticalAxisLength: 1.005
   yearLengthInEarthYears: 1
   siderealPeriodInEarthYears: 0.0027322457
-  interactable: {fileID: 1514030421}
 --- !u!135 &1514030413
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3693,6 +3801,24 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
+--- !u!114 &1514030422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514030410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!1 &1664156800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3856,6 +3982,7 @@ GameObject:
   - component: {fileID: 1698633248}
   - component: {fileID: 1698633247}
   - component: {fileID: 1698633246}
+  - component: {fileID: 1698633252}
   m_Layer: 0
   m_Name: Saturn
   m_TagString: Untagged
@@ -3894,7 +4021,6 @@ MonoBehaviour:
   VerticalAxisLength: 3.181
   yearLengthInEarthYears: 29.476713
   siderealPeriodInEarthYears: 0.0012035453
-  interactable: {fileID: 1698633251}
 --- !u!135 &1698633243
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4086,6 +4212,24 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
+--- !u!114 &1698633252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698633240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!1 &1921528684
 GameObject:
   m_ObjectHideFlags: 0
@@ -4241,6 +4385,7 @@ GameObject:
   - component: {fileID: 1998776939}
   - component: {fileID: 1998776938}
   - component: {fileID: 1998776937}
+  - component: {fileID: 1998776943}
   m_Layer: 0
   m_Name: Mercury
   m_TagString: Untagged
@@ -4264,7 +4409,6 @@ MonoBehaviour:
   VerticalAxisLength: 0.683
   yearLengthInEarthYears: 0.24109589
   siderealPeriodInEarthYears: 0.16067588
-  interactable: {fileID: 1998776942}
 --- !u!135 &1998776933
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4471,6 +4615,24 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
+--- !u!114 &1998776943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998776931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!1 &2022984723
 GameObject:
   m_ObjectHideFlags: 0
