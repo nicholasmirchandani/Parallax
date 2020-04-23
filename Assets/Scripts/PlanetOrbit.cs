@@ -137,6 +137,8 @@ public class PlanetOrbit : MonoBehaviour
         // Sets flag when grabbed
         else
         {
+            lerpingBackToTarget = false;
+            StopAllCoroutines();
             onTargetPos = false;
         }
 
@@ -173,7 +175,7 @@ public class PlanetOrbit : MonoBehaviour
             lerpTimer += Time.deltaTime;
 
             //Calculates lerp rate based on lerpTimer and total duration
-            lerpRate = Mathf.Pow((lerpTimer / (lerpDuration * 2f)), 3f);
+            lerpRate = Mathf.Clamp(Mathf.Pow((lerpTimer / (lerpDuration * 2f)), 3f), 0.002f, 1f);
         }
     }
 }
