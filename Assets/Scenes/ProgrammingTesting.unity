@@ -2807,6 +2807,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1808384010}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1808384012 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5143181695449730098, guid: cdab1733b93714b459cd30adcf5ccfd1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1808384010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1808384013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808384012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48080a57d0b4cb746aa2ef7581779f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1814466277
 GameObject:
   m_ObjectHideFlags: 0
@@ -3172,6 +3190,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8079755151638527149, guid: 166f8ed07e681af4688af9b45f3f7bdd,
+        type: 3}
+      propertyPath: m_Name
+      value: Scale
+      objectReference: {fileID: 0}
     - target: {fileID: 5078467567062683326, guid: 166f8ed07e681af4688af9b45f3f7bdd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3226,11 +3249,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8079755151638527149, guid: 166f8ed07e681af4688af9b45f3f7bdd,
-        type: 3}
-      propertyPath: m_Name
-      value: Scale
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 166f8ed07e681af4688af9b45f3f7bdd, type: 3}
@@ -3640,6 +3658,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5267980454167293154, guid: a86b1ae3f4f5e7449affcef3ac3f83b6,
+        type: 3}
+      propertyPath: m_Name
+      value: TemperatureSensor
+      objectReference: {fileID: 0}
     - target: {fileID: 9169603268425375473, guid: a86b1ae3f4f5e7449affcef3ac3f83b6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3695,11 +3718,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5267980454167293154, guid: a86b1ae3f4f5e7449affcef3ac3f83b6,
-        type: 3}
-      propertyPath: m_Name
-      value: TemperatureSensor
-      objectReference: {fileID: 0}
     - target: {fileID: 4195751049783997942, guid: a86b1ae3f4f5e7449affcef3ac3f83b6,
         type: 3}
       propertyPath: rightSnapHandle
@@ -3724,6 +3742,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7798786066309601891, guid: 09637040a27591c40aac8b16817119f8,
+        type: 3}
+      propertyPath: m_Name
+      value: DebugPressureSensor
+      objectReference: {fileID: 0}
     - target: {fileID: 7798786066309601896, guid: 09637040a27591c40aac8b16817119f8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3779,11 +3802,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7798786066309601891, guid: 09637040a27591c40aac8b16817119f8,
-        type: 3}
-      propertyPath: m_Name
-      value: DebugPressureSensor
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09637040a27591c40aac8b16817119f8, type: 3}
 --- !u!1001 &8088849511266487382
@@ -3793,6 +3811,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 243388788178614011, guid: bef399435ff58e849acced8a2b044825,
+        type: 3}
+      propertyPath: m_Name
+      value: PickAxe
+      objectReference: {fileID: 0}
     - target: {fileID: 3835915731864913128, guid: bef399435ff58e849acced8a2b044825,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3863,11 +3886,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 243388788178614011, guid: bef399435ff58e849acced8a2b044825,
-        type: 3}
-      propertyPath: m_Name
-      value: PickAxe
-      objectReference: {fileID: 0}
     - target: {fileID: 8088849512258187261, guid: bef399435ff58e849acced8a2b044825,
         type: 3}
       propertyPath: rightSnapHandle
@@ -3898,6 +3916,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 813204993483680184, guid: 266e1b8e2c0959b48a5f15256ca4f232,
+        type: 3}
+      propertyPath: m_Name
+      value: SampleCollector
+      objectReference: {fileID: 0}
     - target: {fileID: 4400663876551433131, guid: 266e1b8e2c0959b48a5f15256ca4f232,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3953,11 +3976,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 813204993483680184, guid: 266e1b8e2c0959b48a5f15256ca4f232,
-        type: 3}
-      propertyPath: m_Name
-      value: SampleCollector
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 266e1b8e2c0959b48a5f15256ca4f232, type: 3}
 --- !u!1001 &9093135471218618748
@@ -3967,6 +3985,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9093135472416022774, guid: b0a71637869ef244091a638483ef070f,
+        type: 3}
+      propertyPath: m_Name
+      value: Atmosphere Sensor
+      objectReference: {fileID: 0}
     - target: {fileID: 9093135472416022767, guid: b0a71637869ef244091a638483ef070f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4021,11 +4044,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9093135472416022774, guid: b0a71637869ef244091a638483ef070f,
-        type: 3}
-      propertyPath: m_Name
-      value: Atmosphere Sensor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0a71637869ef244091a638483ef070f, type: 3}

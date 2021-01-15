@@ -7,6 +7,7 @@ public class TutorialManager : MonoBehaviour {
     public string[] stepList;
 
     public GameObject[] ChallengeZones;
+    private bool[] CheckZones;
     public GameObject TeleportZone;
     public int stepNumber = 0;
     public Text messageDisplay;
@@ -21,6 +22,15 @@ public class TutorialManager : MonoBehaviour {
         AssignSteps();
         UpdateText();
         Invoke("SetToZero", 1f);
+
+    }
+    private void Awake()
+    {
+        CheckZones = new bool[ChallengeZones.Length];
+        for(int i = 0; i < CheckZones.Length; ++i)
+        {
+            CheckZones[i] = false;
+        }
 
     }
 
@@ -38,6 +48,7 @@ public class TutorialManager : MonoBehaviour {
             "When you teleport to it, the zone will snap you to its center, or to another location. Try it for yourself!";
         stepList[6] = "Try to land your teleport curve onto the blue teleport zone. When the zone turns green, release the touchpad!";
         stepList[7] = "HURRAY!";
+        stepList[8] = "Now teleport to each of the teleport zones around you to practice!";
     }
     void SetToZero() {
         stepNumber = 0;
@@ -48,6 +59,12 @@ public class TutorialManager : MonoBehaviour {
     void SetToOne() {
         stepNumber = 1;
         UpdateText();
+    }
+    void SetToEight()
+    {
+        stepNumber = 8;
+        UpdateText();
+        RevealAllZones();
     }
 
     void UpdateText() {
@@ -75,11 +92,26 @@ public class TutorialManager : MonoBehaviour {
             Invoke("ZoneStep1", 2f);
         }
         else if(!firstZoneComplete) {
-            if (true) { //will check if player teleported to teleport zone
+            if ((FindPlayer.instance.transform.position.x == TeleportZone.transform.position.x) && (FindPlayer.instance.transform.position.z == TeleportZone.transform.position.z)) { //will check if player teleported to teleport zone
                 stepNumber = 7;
+                firstZoneComplete = true;
                 UpdateText();
+                Invoke("SetToEight", 3f);
+
+
+            }
+            else
+            {
+                Debug.Log("Try to teleport to each the zones!");
             }
 
+        }
+        else if (!allZoneComplete)
+        {
+            for(int i = 0; i < CheckZones.Length; ++i)
+            {
+
+            }
         }
 
 
@@ -100,6 +132,7 @@ public class TutorialManager : MonoBehaviour {
     }
     public bool CheckAfterTeleport() {
         return true;
+
     }
 }
 
